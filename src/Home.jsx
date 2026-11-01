@@ -1,0 +1,370 @@
+import React, { useRef } from "react";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Calendar,
+  Check,
+  ChevronLeft,
+  ChevronRight,
+  Download,
+  GitFork,
+  Github,
+  Globe,
+  Lock,
+  Mic,
+  Shield,
+  Sparkles,
+  Star,
+  Users,
+  FileText,
+  Code,
+} from "lucide-react";
+import { Accordion, Button, SmartLink, Stars, RollingStat } from "./components";
+import Demo from "./Demo";
+import data from "./data/home.json";
+import { config } from "./data/config";
+const featureIcons = [Lock, Sparkles, Globe, Sparkles, Mic, Users, FileText];
+function Laurel({ flip = false }) {
+  return (
+    <img
+      className={`laurel ${flip ? "flipped" : ""}`}
+      src="/assets/laurel.svg"
+      alt=""
+      aria-hidden="true"
+    />
+  );
+}
+export function Hero({ openDialog }) {
+  return (
+    <section className="hero">
+      <div className="hero-proof">
+        <Laurel />
+        <div>
+          <strong className="number-one">#1</strong>
+          <span>Privacy first</span>
+          <span>Ai Meeting Assistant</span>
+          <a href={config.reviews}>
+            <Stars />
+          </a>
+          <a href={config.github} className="users-proof">
+            <strong>{data.stats.users} users</strong>
+            <span>32.3K+ Github Stars</span>
+          </a>
+        </div>
+        <Laurel flip />
+      </div>
+      <h1>The Privacy-First AI Meeting Assistant &amp; Note Taker</h1>
+      <p className="hero-description">
+        Meetily records, transcribes, and summarizes meetings, 100% on your
+        device. Audio and data never leave. Private, secure, in your control.
+      </p>
+      <div className="hero-actions">
+        <Button to="/buy-now" variant="green">
+          Buy Now
+        </Button>
+        <Button variant="light" onClick={() => openDialog("trial")}>
+          Start free trial
+        </Button>
+        <Button variant="light" onClick={() => openDialog("contact")}>
+          <Calendar size={16} />
+          Talk to Us
+        </Button>
+      </div>
+      <div className="benefits" aria-label="Benefits">
+        <span>Open-Source Core</span>
+        <span>Works with Zoom, Teams, Meet</span>
+        <span>GDPR &amp; HIPAA Ready</span>
+        <span>Offline ready</span>
+      </div>
+    </section>
+  );
+}
+export function Articles({ all = false }) {
+  const ref = useRef();
+  return (
+    <section className={`articles-section ${all ? "all-articles" : ""}`}>
+      <div className="section-title">
+        <h2>{all ? "The Meetily Blog" : "Latest from Our Blog"}</h2>
+        <p>Stay updated with our latest insights and announcements</p>
+      </div>
+      <div className="article-carousel">
+        <div className="article-track" ref={ref}>
+          {data.articles.map((article, i) => (
+            <article className="article-card" key={`${article.href}-${i}`}>
+              <SmartLink to={article.href}>
+                <img
+                  src={
+                    article.image?.startsWith("https://meetily.ai")
+                      ? `/assets/${article.image.split("/").pop()}`
+                      : article.image
+                  }
+                  alt={article.title}
+                  loading="lazy"
+                />
+              </SmartLink>
+              <div className="article-content">
+                <time>{article.date}</time>
+                <h3>
+                  <SmartLink to={article.href}>{article.title}</SmartLink>
+                </h3>
+                <p>{article.excerpt}</p>
+                <SmartLink className="article-link" to={article.href}>
+                  {article.href?.startsWith("https://dev.to")
+                    ? "Read on Dev.to"
+                    : "Read Article"}
+                  <ChevronRight size={16} />
+                </SmartLink>
+              </div>
+            </article>
+          ))}
+        </div>
+        {!all && (
+          <>
+            <button
+              className="carousel-arrow prev"
+              aria-label="Previous articles"
+              onClick={() =>
+                ref.current.scrollBy({
+                  left: -ref.current.clientWidth,
+                  behavior: "smooth",
+                })
+              }
+            >
+              <ChevronLeft size={18} />
+            </button>
+            <button
+              className="carousel-arrow next"
+              aria-label="Next articles"
+              onClick={() =>
+                ref.current.scrollBy({
+                  left: ref.current.clientWidth,
+                  behavior: "smooth",
+                })
+              }
+            >
+              <ChevronRight size={18} />
+            </button>
+          </>
+        )}
+      </div>
+    </section>
+  );
+}
+function Community() {
+  return (
+    <section className="community">
+      <a className="discord-pill" href={config.discord}>
+        <i />
+        Join our discord channel 🎊
+        <ChevronRight size={14} />
+      </a>
+      <p className="community-eyebrow">Privacy-First AI Copilot for meetings</p>
+      <h2>Loved by teams worldwide</h2>
+      <p className="community-subtitle">
+        #1 Trending Repository on GitHub - Loved by the open source community
+      </p>
+      <div className="stats">
+        {[
+          [Star, data.stats.stars, "Stars"],
+          [Download, data.stats.downloads, "Downloads"],
+          [GitFork, data.stats.forks, "Forks"],
+        ].map(([Icon, value, label]) => (
+          <div key={label}>
+            <div>
+              <Icon size={24} />
+              <RollingStat value={value} />
+            </div>
+            <span>{label}</span>
+          </div>
+        ))}
+      </div>
+      <a className="rating-pill" href={config.reviews}>
+        <Stars />
+        Rated 5/5 on G2
+      </a>
+      <div className="testimonial-viewport">
+        <div className="testimonial-track">
+          {[...data.testimonials, ...data.testimonials].map((item, i) => {
+            const lines = item.text.split("\n").filter(Boolean);
+            return (
+              <article className="testimonial" key={i}>
+                <div className="testimonial-author">
+                  <Github size={14} />
+                  <strong>{lines[0]}</strong>
+                  <span>{lines[1]}</span>
+                </div>
+                <p>{lines.slice(2).join(" ").replace("Read more →", "")}</p>
+                {item.href !== "#" && <a href={item.href}>Read more →</a>}
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+const privacyCards = [
+  {
+    title: "Why Choose Meetily?",
+    icon: Sparkles,
+    items: [
+      "31,094+ GitHub Stars. 599,000+ Downloads",
+      "Trusted by developers, founders, and privacy-first companies",
+      "Fully Open Source & MIT Licensed",
+      "Active community and regular updates",
+    ],
+  },
+  {
+    title: "Privacy by Default",
+    icon: Shield,
+    items: [
+      "Transcription and recordings processed locally on your device",
+      "Pluggable AI for summaries: local models or your own API keys",
+      "GDPR/HIPAA/NIS2 compliant by design",
+      "You choose how your data is handled. Always in control.",
+    ],
+  },
+  {
+    title: "Works with Any Platform",
+    icon: Globe,
+    items: [
+      "Google Meet, Zoom, Microsoft Teams",
+      "Any video conferencing software",
+      "Any desktop microphone. Meetings & more",
+      "Zero external accounts or cloud services required",
+    ],
+  },
+];
+function Privacy() {
+  return (
+    <section className="privacy-section" id="privacy-highlights">
+      <span className="eyebrow-pill">
+        <Lock size={12} />
+        Open Source &amp; Privacy-First
+      </span>
+      <h2>Take Back Control of Your Meeting Data</h2>
+      <p className="privacy-subtitle">
+        AI-Powered Meeting Transcriptions - 100% Private, 100% Local, Open
+        Source
+      </p>
+      <div className="privacy-grid">
+        {privacyCards.map(({ title, icon: Icon, items }) => (
+          <article className="privacy-card" key={title}>
+            <h3>
+              <span>
+                <Icon size={18} />
+              </span>
+              {title}
+            </h3>
+            <ul>
+              {items.map((item) => (
+                <li key={item}>
+                  <Check size={13} />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+export function Features() {
+  return (
+    <section className="features-section" id="features">
+      <div className="section-title">
+        <h2>Why Choose Meetily?</h2>
+        <p>Open source, privacy-focused, and built for developers</p>
+      </div>
+      <div className="feature-grid">
+        {data.features.map((feature, i) => {
+          const Icon = featureIcons[i];
+          return (
+            <article className="feature-card" key={feature.title}>
+              <Icon size={24} />
+              <h3>{feature.title}</h3>
+              <p>{feature.text}</p>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+export function Deployment() {
+  return (
+    <section className="deployment-section" id="pricing">
+      <div className="deployment-panel">
+        <Sparkles size={30} />
+        <h2>Choose Your Deployment Option</h2>
+        <p>Free with Community. Pro from $10/user/month.</p>
+        <Button to="/pricing">
+          View Pricing &amp; Start Free Trial <ArrowRight size={17} />
+        </Button>
+        <div className="reassurance">
+          <span>
+            <Check />
+            14-day free trial
+          </span>
+          <span>
+            <Check />
+            No credit card required
+          </span>
+        </div>
+      </div>
+    </section>
+  );
+}
+export function Values({ openDialog }) {
+  return (
+    <section className="values-section" id="about">
+      <div className="section-title">
+        <h2>What We Stand For</h2>
+        <p>The principles that guide everything we build</p>
+      </div>
+      <div className="values-grid">
+        {data.values.map((value, i) => {
+          const Icon = [Shield, Code, Users][i];
+          return (
+            <article className="value-card" key={value.title}>
+              <Icon size={26} />
+              <h3>{value.title}</h3>
+              <p>{value.text}</p>
+            </article>
+          );
+        })}
+      </div>
+      <div className="values-actions">
+        <Button to="/about">Know more about us</Button>
+        <Button variant="light" onClick={() => openDialog("contact")}>
+          Contact Us
+        </Button>
+      </div>
+      <p className="small-muted">
+        Learn more about our services at{" "}
+        <a href="https://www.zackriya.com">zackriya.com</a>
+      </p>
+    </section>
+  );
+}
+export default function Home({ openDialog }) {
+  return (
+    <>
+      <div className="hero-atmosphere">
+        <Hero openDialog={openDialog} />
+        <Demo openDialog={openDialog} />
+      </div>
+      <Community />
+      <Privacy />
+      <Features />
+      <Deployment />
+      <Articles />
+      <section className="faq-section" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <Accordion />
+      </section>
+      <Values openDialog={openDialog} />
+    </>
+  );
+}

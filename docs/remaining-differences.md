@@ -1,0 +1,13 @@
+# Remaining differences
+
+Reference observation: 2026-11-01. This is a close homepage recreation with broad route coverage, not a claim of pixel accuracy across every page.
+
+- The homepage has been compared visually at matching desktop and mobile widths. The original fonts, hero wraps, principal widths, illustration, section order, seven-card feature grid, and 23-question FAQ are reproduced. Fine spacing, shadows, background particles, and testimonial motion timing still differ.
+- The desktop demo is newly implemented HTML/CSS. Transcript wording is deterministic sample content consistent with the observed Q3 summary. Timings, speaker naming transitions and audio waveforms approximate the reference. Speaker “Listen” controls identify a sample speaker without playing a voice recording. Summary and transcript controls work locally.
+- Statistics are dated snapshots; they do not fetch live GitHub/download counts. Their count-up transition approximates the reference's rolling digits. The reference itself shows different counters in different sections; those historical claims are preserved as observed copy.
+- Pricing, downloads, purchase, Pro and blog have dedicated layouts. Other routes use their own captured content, headings, cards, tables and FAQs with shared page-family styling. Their individual spacing, iconography, callouts, sidebars, release filters and specialized selectors have not all received manual screenshot matching. Generic secondary filters currently show selection feedback rather than reproducing every original filtering behavior.
+- The blog language selector currently exposes English. Captured translated articles are accessible through their direct routes and article links. The reference's floating blog download bar is not reproduced.
+- The booking entry opens the real calendar in a new tab instead of embedding Cal.com's full calendar dialog. Pro video playback loads the observed YouTube privacy-enhanced embed only after the user presses Play.
+- Trial, license request and waitlist submissions are intentionally unconfigured. The purchase form never processes payment; validated users continue to the official checkout. These boundaries are shown explicitly instead of displaying pretend success.
+- The original landscape, fonts, portraits, platform icons, laurel SVG, product preview and first-party article images are local. Syndicated Dev.to article images remain remote and depend on that service. No landscape image substitute was needed.
+- Documentation redirects remain external. Browser smoke checks establish that local routes render without errors and fit their tested widths; they do not establish that the reference's product guarantees, download binaries, checkout, licensing or third-party services work.

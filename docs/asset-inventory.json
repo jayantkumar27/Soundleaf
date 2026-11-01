@@ -1,0 +1,680 @@
+[
+  {
+    "source": "https://meetily.ai/_next/static/media/ba9851c3c22cd980-s.woff2",
+    "local": "public/assets/ba9851c3c22cd980-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/21350d82a1f187e9-s.woff2",
+    "local": "public/assets/21350d82a1f187e9-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/c5fe6dc8356a8c31-s.woff2",
+    "local": "public/assets/c5fe6dc8356a8c31-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/19cfc7226ec3afaa-s.woff2",
+    "local": "public/assets/19cfc7226ec3afaa-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/df0a9ae256c0569c-s.woff2",
+    "local": "public/assets/df0a9ae256c0569c-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/8e9860b6e62d6359-s.woff2",
+    "local": "public/assets/8e9860b6e62d6359-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+    "local": "public/assets/e4af272ccee01ff0-s.p.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/f5827634a45acf2c-s.woff2",
+    "local": "public/assets/f5827634a45acf2c-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/b60c06ae0855d929-s.woff2",
+    "local": "public/assets/b60c06ae0855d929-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/baa16a772fc5f9bc-s.woff2",
+    "local": "public/assets/baa16a772fc5f9bc-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/5ece437c7024c161-s.woff2",
+    "local": "public/assets/5ece437c7024c161-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/9cc5b37ab1350db7-s.p.woff2",
+    "local": "public/assets/9cc5b37ab1350db7-s.p.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/35f3de0ebb1cfc70-s.woff2",
+    "local": "public/assets/35f3de0ebb1cfc70-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/e6099e249fd938cc-s.p.woff2",
+    "local": "public/assets/e6099e249fd938cc-s.p.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/edc640959b0c7826-s.woff2",
+    "local": "public/assets/edc640959b0c7826-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/ac0e76ddaeeb7981-s.woff2",
+    "local": "public/assets/ac0e76ddaeeb7981-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/64d784ea54a4acde-s.woff2",
+    "local": "public/assets/64d784ea54a4acde-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/ff71da380fbe67dd-s.woff2",
+    "local": "public/assets/ff71da380fbe67dd-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/6d831b18ae5b01dc-s.woff2",
+    "local": "public/assets/6d831b18ae5b01dc-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/558ca1a6aa3cb55e-s.woff2",
+    "local": "public/assets/558ca1a6aa3cb55e-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/edc640959b0c7826-s.woff2",
+    "local": "public/assets/edc640959b0c7826-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/ac0e76ddaeeb7981-s.woff2",
+    "local": "public/assets/ac0e76ddaeeb7981-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/64d784ea54a4acde-s.woff2",
+    "local": "public/assets/64d784ea54a4acde-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/ff71da380fbe67dd-s.woff2",
+    "local": "public/assets/ff71da380fbe67dd-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/6d831b18ae5b01dc-s.woff2",
+    "local": "public/assets/6d831b18ae5b01dc-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/_next/static/media/558ca1a6aa3cb55e-s.woff2",
+    "local": "public/assets/558ca1a6aa3cb55e-s.woff2",
+    "role": "font",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/nature/hero-760.webp",
+    "local": "public/assets/hero-760.webp",
+    "role": "landscape",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/nature/hero-1280.webp",
+    "local": "public/assets/hero-1280.webp",
+    "role": "landscape",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/avatars/sarah.webp",
+    "local": "public/assets/sarah.webp",
+    "role": "participant",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/avatars/lauren.webp",
+    "local": "public/assets/lauren.webp",
+    "role": "participant",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/avatars/daniel.webp",
+    "local": "public/assets/daniel.webp",
+    "role": "participant",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/logos/zoom.png",
+    "local": "public/assets/zoom.png",
+    "role": "platform",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/logos/teams.png",
+    "local": "public/assets/teams.png",
+    "role": "platform",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/avatars/michael.webp",
+    "local": "public/assets/michael.webp",
+    "role": "participant",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/logos/meet.png",
+    "local": "public/assets/meet.png",
+    "role": "platform",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/logos/slack.webp",
+    "local": "public/assets/slack.webp",
+    "role": "platform",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/logos/webex.png",
+    "local": "public/assets/webex.png",
+    "role": "platform",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/logos/gotomeeting.png",
+    "local": "public/assets/gotomeeting.png",
+    "role": "platform",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/ProV1.5.0.png",
+    "local": "public/assets/ProV1.5.0.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/release-1.11.0-enable-automation-api-1200w.png",
+    "local": "public/assets/release-1.11.0-enable-automation-api-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/release-1.11.0-assistant-permissions-1200w.png",
+    "local": "public/assets/release-1.11.0-assistant-permissions-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/home.png",
+    "local": "public/assets/home.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/why-we-built-meetily-1200w.png",
+    "local": "public/assets/why-we-built-meetily-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/ai-meeting-notes-for-schools-ferpa-1200w.png",
+    "local": "public/assets/ai-meeting-notes-for-schools-ferpa-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/eu-ai-act-meeting-tools-risk-level-1200w.png",
+    "local": "public/assets/eu-ai-act-meeting-tools-risk-level-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/record-transcribe-teams-meeting-without-bot-1200w.png",
+    "local": "public/assets/record-transcribe-teams-meeting-without-bot-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/the-decision-makers-second-brain-1200w.png",
+    "local": "public/assets/the-decision-makers-second-brain-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/which-ai-providers-train-on-your-data-1200w.png",
+    "local": "public/assets/which-ai-providers-train-on-your-data-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/why-we-chose-experience-over-features-1200w.png",
+    "local": "public/assets/why-we-chose-experience-over-features-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/where-does-your-meeting-data-go-1200w.png",
+    "local": "public/assets/where-does-your-meeting-data-go-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/privacy-policy-vs-privacy-architecture-1200w.png",
+    "local": "public/assets/privacy-policy-vs-privacy-architecture-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/compliant-meeting-notes-without-a-bot-1200w.png",
+    "local": "public/assets/compliant-meeting-notes-without-a-bot-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/how-to-record-a-meeting-1200w.png",
+    "local": "public/assets/how-to-record-a-meeting-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/why-meeting-data-belongs-on-your-device-1200w.png",
+    "local": "public/assets/why-meeting-data-belongs-on-your-device-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/meetily-v0-3-0-release-1200w.png",
+    "local": "public/assets/meetily-v0-3-0-release-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/meetily-10k-github-stars-dark-1200w.png",
+    "local": "public/assets/meetily-10k-github-stars-dark-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/hosted-ai-meeting-summaries-1200w.png",
+    "local": "public/assets/hosted-ai-meeting-summaries-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/the-story-behind-meetily-1200w.png",
+    "local": "public/assets/the-story-behind-meetily-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/our-quest-for-meeting-summary-accuracy-1200w.png",
+    "local": "public/assets/our-quest-for-meeting-summary-accuracy-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/how-to-install-meetily-1200w.png",
+    "local": "public/assets/how-to-install-meetily-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/ai-meeting-assistants-safe-privacy-risks-1200w.png",
+    "local": "public/assets/ai-meeting-assistants-safe-privacy-risks-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/best-meeting-notes-software-2026-1200w.png",
+    "local": "public/assets/best-meeting-notes-software-2026-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/10-best-self-hosted-transcription-tools-2026-1200w.png",
+    "local": "public/assets/10-best-self-hosted-transcription-tools-2026-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/Self-hosted-meeting-note-taker-complete-privacy-guide-2026-1200w.png",
+    "local": "public/assets/Self-hosted-meeting-note-taker-complete-privacy-guide-2026-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/best-free-meeting-recorder-in-2026-1200w.png",
+    "local": "public/assets/best-free-meeting-recorder-in-2026-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/meetily-vs-fireflies-1200w.png",
+    "local": "public/assets/meetily-vs-fireflies-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/meetily-vs-otter-ai-1200w.jpg",
+    "local": "public/assets/meetily-vs-otter-ai-1200w.jpg",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/install-meetily-guide-1200w.png",
+    "local": "public/assets/install-meetily-guide-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/default-1200w.jpg",
+    "local": "public/assets/default-1200w.jpg",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/bot-free-self-hosted-1200w.png",
+    "local": "public/assets/bot-free-self-hosted-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/apple-logo.png",
+    "local": "public/assets/apple-logo.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/windows-ogo.png",
+    "local": "public/assets/windows-ogo.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/icon_128x128.png",
+    "local": "public/assets/icon_128x128.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/release-1.11.0-allow-cli-1200w.png",
+    "local": "public/assets/release-1.11.0-allow-cli-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/team/sandeep.jpeg",
+    "local": "public/assets/sandeep.jpeg",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/ai-meeting-notes-for-schools-data-flow-1200w.png",
+    "local": "public/assets/ai-meeting-notes-for-schools-data-flow-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/icon_256x256.png",
+    "local": "public/assets/icon_256x256.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/teams-without-bot-10-meetily-live-transcript-hero-1200w.png",
+    "local": "public/assets/teams-without-bot-10-meetily-live-transcript-hero-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/teams-without-bot-01-teams-record-menu-1200w.png",
+    "local": "public/assets/teams-without-bot-01-teams-record-menu-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/teams-without-bot-02-teams-start-dialog-1200w.png",
+    "local": "public/assets/teams-without-bot-02-teams-start-dialog-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/teams-without-bot-04-teams-saved-onedrive-1200w.png",
+    "local": "public/assets/teams-without-bot-04-teams-saved-onedrive-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/teams-without-bot-05-teams-download-transcript-1200w.png",
+    "local": "public/assets/teams-without-bot-05-teams-download-transcript-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/teams-without-bot-06-teams-guest-unavailable-1200w.png",
+    "local": "public/assets/teams-without-bot-06-teams-guest-unavailable-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/teams-without-bot-07-macos-system-audio-800w.png",
+    "local": "public/assets/teams-without-bot-07-macos-system-audio-800w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/teams-without-bot-08-meetily-start-recording-1200w.png",
+    "local": "public/assets/teams-without-bot-08-meetily-start-recording-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/teams-without-bot-09-meetily-recording-reminder-800w.png",
+    "local": "public/assets/teams-without-bot-09-meetily-recording-reminder-800w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/teams-without-bot-11-meetily-summary-model-1200w.png",
+    "local": "public/assets/teams-without-bot-11-meetily-summary-model-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/teams-without-bot-12-meetily-transcript-summary-1200w.png",
+    "local": "public/assets/teams-without-bot-12-meetily-transcript-summary-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/teams-without-bot-03-teams-started-notice-800w.png",
+    "local": "public/assets/teams-without-bot-03-teams-started-notice-800w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/teams-without-bot-14-meetily-pro-name-speakers-800w.png",
+    "local": "public/assets/teams-without-bot-14-meetily-pro-name-speakers-800w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/team/sujith.jpg",
+    "local": "public/assets/sujith.jpg",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/same-company-two-defaults-1200w.png",
+    "local": "public/assets/same-company-two-defaults-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/what-a-cloud-notetaker-holds-1200w.png",
+    "local": "public/assets/what-a-cloud-notetaker-holds-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/team/sadeed.jpg",
+    "local": "public/assets/sadeed.jpg",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/meetily-where-meeting-audio-goes-1200w.png",
+    "local": "public/assets/meetily-where-meeting-audio-goes-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/bot-vs-local-who-is-in-the-room-1200w.png",
+    "local": "public/assets/bot-vs-local-who-is-in-the-room-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/where-meeting-audio-goes-bot-vs-local-1200w.png",
+    "local": "public/assets/where-meeting-audio-goes-bot-vs-local-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/record-meeting-meetily-live-transcription-1200w.png",
+    "local": "public/assets/record-meeting-meetily-live-transcription-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/record-zoom-meeting-local-recording-settings-1200w.png",
+    "local": "public/assets/record-zoom-meeting-local-recording-settings-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/record-google-meet-recording-menu-1200w.png",
+    "local": "public/assets/record-google-meet-recording-menu-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/record-teams-meeting-start-recording-1200w.png",
+    "local": "public/assets/record-teams-meeting-start-recording-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/record-meeting-obs-studio-scenes-sources-1200w.png",
+    "local": "public/assets/record-meeting-obs-studio-scenes-sources-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/install-guide-home-page-800w.png",
+    "local": "public/assets/install-guide-home-page-800w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/install-guide-trial-form-800w.png",
+    "local": "public/assets/install-guide-trial-form-800w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/install-guide-trial-processing.png",
+    "local": "public/assets/install-guide-trial-processing.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/install-guide-trial-approved-640w.png",
+    "local": "public/assets/install-guide-trial-approved-640w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/install-guide-downloading.png",
+    "local": "public/assets/install-guide-downloading.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/install-guide-license-key-800w.png",
+    "local": "public/assets/install-guide-license-key-800w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/meetily-7.png",
+    "local": "public/assets/meetily-7.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/release-1.9.2-automatic-recording-settings-1200w.png",
+    "local": "public/assets/release-1.9.2-automatic-recording-settings-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/release-1.9.2-floating-recording-pill-800w.png",
+    "local": "public/assets/release-1.9.2-floating-recording-pill-800w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/blog/release-1.11.1-summary-template-button-1200w.png",
+    "local": "public/assets/release-1.11.1-summary-template-button-1200w.png",
+    "role": "linked-page image",
+    "available": true
+  },
+  {
+    "source": "https://meetily.ai/#hero",
+    "local": "public/assets/laurel.svg",
+    "role": "Hero laurel, extracted original inline SVG",
+    "available": true
+  }
+]

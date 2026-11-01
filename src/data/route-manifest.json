@@ -1,0 +1,732 @@
+{
+  "/downloads": {
+    "title": "Download Meetily - AI Meeting Assistant | Community & Pro Editions",
+    "announcement": false,
+    "file": "downloads"
+  },
+  "/free": {
+    "title": "Meetily Free - Free AI Meeting Recorder & Transcription",
+    "announcement": true,
+    "file": "free"
+  },
+  "/bot-free": {
+    "title": "Bot-Free Meeting Recorder - No Bot Joins Your Call | Meetily",
+    "announcement": true,
+    "file": "bot-free"
+  },
+  "/speaker-diarization": {
+    "title": "Speaker Diarization - Know Who Said What, On-Device | Meetily",
+    "announcement": true,
+    "file": "speaker-diarization"
+  },
+  "/mcp": {
+    "title": "Meetily MCP Server, CLI & API for Your Meeting Notes | Meetily",
+    "announcement": true,
+    "file": "mcp"
+  },
+  "/workflows": {
+    "title": "Meetily Workflows: Meeting Notes to Obsidian, Notion & Jira | Meetily",
+    "announcement": true,
+    "file": "workflows"
+  },
+  "/pro": {
+    "title": "Meetily Pro - Local Transcription, Choose Your AI | Meetily",
+    "announcement": true,
+    "file": "pro"
+  },
+  "/enterprise": {
+    "title": "Self-Hosted Enterprise Meeting Transcription | Meetily",
+    "announcement": true,
+    "file": "enterprise"
+  },
+  "/granola-for-linux": {
+    "title": "Granola for Linux Alternative - Meetily Linux Native (Coming Soon)",
+    "announcement": true,
+    "file": "granola-for-linux"
+  },
+  "/pricing": {
+    "title": "Pricing - $10/user/month (Pro), Free & Enterprise | Meetily",
+    "announcement": false,
+    "file": "pricing"
+  },
+  "/open-source-ai-note-taker": {
+    "title": "Open Source AI Note Taker for Meetings - 100% Local, MIT Licensed | Meetily",
+    "announcement": true,
+    "file": "open-source-ai-note-taker"
+  },
+  "/releases": {
+    "title": "Release Notes and Changelog | Meetily Pro and Community",
+    "announcement": true,
+    "file": "releases"
+  },
+  "/use-cases": {
+    "title": "Privacy-First AI Meeting Assistant for Every Industry | Meetily",
+    "announcement": true,
+    "file": "use-cases"
+  },
+  "/use-cases/healthcare": {
+    "title": "HIPAA Meeting Transcription, Bot-Free & On-Device | Meetily",
+    "announcement": true,
+    "file": "use-cases--healthcare"
+  },
+  "/use-cases/legal": {
+    "title": "Private Meeting Transcription for Law Firms | Meetily",
+    "announcement": true,
+    "file": "use-cases--legal"
+  },
+  "/use-cases/financial-services": {
+    "title": "SEC 17a-4 & MiFID II Meeting Transcription | Meetily",
+    "announcement": true,
+    "file": "use-cases--financial-services"
+  },
+  "/use-cases/government": {
+    "title": "Meetily for Government - Secure AI Meeting Assistant for Public Sector",
+    "announcement": true,
+    "file": "use-cases--government"
+  },
+  "/use-cases/technology": {
+    "title": "Meetily for Tech Teams - Developer-Friendly AI Meeting Assistant | Engineering",
+    "announcement": true,
+    "file": "use-cases--technology"
+  },
+  "/ai-meeting-assistant": {
+    "title": "AI Meeting Assistant That Works Across Meetings | Meetily",
+    "announcement": true,
+    "file": "ai-meeting-assistant"
+  },
+  "/ai-note-taker": {
+    "title": "AI Note Taker - Private Meeting Notes, No Bot | Meetily",
+    "announcement": true,
+    "file": "ai-note-taker"
+  },
+  "/ai-transcription": {
+    "title": "AI Transcription - Local & Private Audio to Text | Meetily",
+    "announcement": true,
+    "file": "ai-transcription"
+  },
+  "/voice-recorder": {
+    "title": "Voice Recorder with Transcription - Free AI Recording App | Meetily",
+    "announcement": true,
+    "file": "voice-recorder"
+  },
+  "/hipaa-meeting-assistant": {
+    "title": "HIPAA Meeting Assistant for Healthcare Teams | Meetily",
+    "announcement": true,
+    "file": "hipaa-meeting-assistant"
+  },
+  "/vs": {
+    "title": "Meetily Comparisons: vs Otter.ai, Fireflies, Granola | Privacy-First Alternatives",
+    "announcement": true,
+    "file": "vs"
+  },
+  "/vs/otter-ai": {
+    "title": "Meetily vs Otter.ai 2026 - Privacy-Focused Open Source Alternative",
+    "announcement": true,
+    "file": "vs--otter-ai"
+  },
+  "/vs/fireflies": {
+    "title": "Best Fireflies Alternative 2026 - Bot-Free, Open Source | Meetily",
+    "announcement": true,
+    "file": "vs--fireflies"
+  },
+  "/vs/granola": {
+    "title": "Meetily vs Granola - Open Source Self-Hosted Meeting Assistant",
+    "announcement": true,
+    "file": "vs--granola"
+  },
+  "/vs/read-ai": {
+    "title": "Meetily vs Read AI - Open Source Privacy-First Alternative",
+    "announcement": true,
+    "file": "vs--read-ai"
+  },
+  "/vs/zoom-ai": {
+    "title": "Meetily vs Zoom AI Companion - Platform-Agnostic Meeting Assistant",
+    "announcement": true,
+    "file": "vs--zoom-ai"
+  },
+  "/vs/chatgpt-record-mode": {
+    "title": "ChatGPT Record Mode vs Meetily - Local, No Account | Meetily",
+    "announcement": true,
+    "file": "vs--chatgpt-record-mode"
+  },
+  "/vs/meetly-vs-meetily": {
+    "title": "Meetly vs Meetily - Understanding the Branding & Product Name",
+    "announcement": true,
+    "file": "vs--meetly-vs-meetily"
+  },
+  "/guides": {
+    "title": "Implementation Guides | Meetily - Privacy-First AI Meeting Assistant",
+    "announcement": true,
+    "file": "guides"
+  },
+  "/meeting-templates": {
+    "title": "Meeting Templates - Free Minutes, Notes & Agenda Templates | Meetily",
+    "announcement": true,
+    "file": "meeting-templates"
+  },
+  "/guides/gdpr-compliance": {
+    "title": "GDPR Compliance Guide for AI Meeting Assistants - Complete 2025 Checklist",
+    "announcement": true,
+    "file": "guides--gdpr-compliance"
+  },
+  "/guides/hipaa-setup": {
+    "title": "HIPAA Compliance Setup for Healthcare Meeting Software - Complete Guide",
+    "announcement": true,
+    "file": "guides--hipaa-setup"
+  },
+  "/guides/enterprise-deployment": {
+    "title": "Enterprise Deployment Guide for Self-Hosted AI Meeting Assistant",
+    "announcement": true,
+    "file": "guides--enterprise-deployment"
+  },
+  "/privacy/data-sovereignty": {
+    "title": "Data Sovereignty with Meetily | Complete Data Control for Global Organizations",
+    "announcement": true,
+    "file": "privacy--data-sovereignty"
+  },
+  "/llm-privacy": {
+    "title": "Zero Data Retention (ZDR) by AI Provider, 2026 | Meetily",
+    "announcement": true,
+    "file": "llm-privacy"
+  },
+  "/blog": {
+    "title": "Blog | Meetily - AI Meeting Assistant Insights",
+    "announcement": true,
+    "file": "blog"
+  },
+  "/about": {
+    "title": "About Meetily - Privacy-First AI Meeting Assistant | Our Mission",
+    "announcement": true,
+    "file": "about"
+  },
+  "/open-source": {
+    "title": "Meetily - Open Source Note-Taking App for Meetings | Free AI Transcription",
+    "announcement": true,
+    "file": "open-source"
+  },
+  "/privacy": {
+    "title": "Privacy Policy & Data Protection | Meetily - Local Transcription",
+    "announcement": false,
+    "file": "privacy"
+  },
+  "/privacy/pro-terms": {
+    "title": "Pro Subscription & Support Terms | Meetily",
+    "announcement": false,
+    "file": "privacy--pro-terms"
+  },
+  "/buy-now": {
+    "title": "Buy Meetily Pro - Privacy-First AI Meeting Transcription",
+    "announcement": false,
+    "file": "buy-now"
+  },
+  "/license-request/organization": {
+    "title": "My License - Meetily | Trial Key, Download & Setup",
+    "announcement": false,
+    "file": "license-request--organization"
+  },
+  "/cli": {
+    "title": "Meetily CLI: Meeting Notes From the Command Line | Meetily",
+    "announcement": true,
+    "file": "cli"
+  },
+  "/blog/why-meeting-data-belongs-on-your-device": {
+    "title": "Why Your Meeting Data Belongs on Your Device, Not Someone Else's Server | Meetily Blog",
+    "announcement": false,
+    "file": "blog--why-meeting-data-belongs-on-your-device"
+  },
+  "/blog/why-we-built-meetily": {
+    "title": "Why We Built Meetily When Every Meeting Tool Already Existed | Meetily Blog",
+    "announcement": true,
+    "file": "blog--why-we-built-meetily"
+  },
+  "/blog/ai-meeting-notes-for-schools-ferpa": {
+    "title": "AI Meeting Notes for Schools: Why the Safest Student Data Agreement Has Almost Nothing to Cover",
+    "announcement": true,
+    "file": "blog--ai-meeting-notes-for-schools-ferpa"
+  },
+  "/blog/eu-ai-act-meeting-tools-risk-level": {
+    "title": "Your Meeting Tool's Risk Level Under the EU AI Act Isn't Set by the Vendor. It's Set by You.",
+    "announcement": true,
+    "file": "blog--eu-ai-act-meeting-tools-risk-level"
+  },
+  "/blog/record-transcribe-teams-meeting-without-bot": {
+    "title": "How to Record and Transcribe a Teams Meeting Without a Bot",
+    "announcement": true,
+    "file": "blog--record-transcribe-teams-meeting-without-bot"
+  },
+  "/blog/the-decision-makers-second-brain": {
+    "title": "The Decision Maker's Second Brain | Meetily Blog",
+    "announcement": true,
+    "file": "blog--the-decision-makers-second-brain"
+  },
+  "/blog/which-ai-providers-train-on-your-data": {
+    "title": "Which AI Providers Train on Your Data? A 2026 Comparison",
+    "announcement": true,
+    "file": "blog--which-ai-providers-train-on-your-data"
+  },
+  "/blog/why-we-chose-experience-over-features": {
+    "title": "Why We Chose Experience Over Features And How Hard That Was",
+    "announcement": true,
+    "file": "blog--why-we-chose-experience-over-features"
+  },
+  "/blog/where-does-your-meeting-data-go": {
+    "title": "Where Does Your Meeting Data Actually Go? 5 Questions IT Buyers Should Ask",
+    "announcement": true,
+    "file": "blog--where-does-your-meeting-data-go"
+  },
+  "/blog/privacy-policy-vs-privacy-architecture": {
+    "title": "Why \"Privacy Policy\" Is Not the Same as \"Privacy Architecture\"",
+    "announcement": true,
+    "file": "blog--privacy-policy-vs-privacy-architecture"
+  },
+  "/blog/compliant-meeting-notes-without-a-bot": {
+    "title": "You Don't Need a Bot in the Room to Take Compliant Meeting Notes",
+    "announcement": true,
+    "file": "blog--compliant-meeting-notes-without-a-bot"
+  },
+  "/blog/how-to-record-a-meeting": {
+    "title": "How to Record a Meeting on Zoom, Meet & Teams (No Bot, Free) | Meetily Blog",
+    "announcement": true,
+    "file": "blog--how-to-record-a-meeting"
+  },
+  "/blog/meetily-v0-3-0-import-audio-retranscribe": {
+    "title": "Meetily v0.3.0: Import Audio Files, Retranscribe, and What's Coming Next | Meetily Blog",
+    "announcement": true,
+    "file": "blog--meetily-v0-3-0-import-audio-retranscribe"
+  },
+  "/blog/meetily-10k-github-stars": {
+    "title": "10,000 GitHub Stars: Thank You for Believing in Privacy-First AI | Meetily Blog",
+    "announcement": true,
+    "file": "blog--meetily-10k-github-stars"
+  },
+  "/blog/ai-meeting-summaries-without-api-keys-hosted-ai": {
+    "title": "AI Meeting Summaries Without Sending Your Audio: Local or Bring-Your-Own-Key | Meetily Blog",
+    "announcement": true,
+    "file": "blog--ai-meeting-summaries-without-api-keys-hosted-ai"
+  },
+  "/blog/the-story-behind-meetily": {
+    "title": "The Story Behind Meetily | Meetily Blog",
+    "announcement": true,
+    "file": "blog--the-story-behind-meetily"
+  },
+  "/blog/our-quest-for-meeting-summary-accuracy": {
+    "title": "Our Quest for Meeting Summary Accuracy: What We Learned Building Meetily | Meetily Blog",
+    "announcement": true,
+    "file": "blog--our-quest-for-meeting-summary-accuracy"
+  },
+  "/blog/how-to-install-meetily": {
+    "title": "How to Install Meetily on Windows & macOS: Complete Setup Guide | Meetily Blog",
+    "announcement": true,
+    "file": "blog--how-to-install-meetily"
+  },
+  "/blog/ai-meeting-assistants-safe-privacy-risks": {
+    "title": "Are AI Meeting Assistants Safe? 2026 Privacy Risks Exposed | Meetily Blog",
+    "announcement": true,
+    "file": "blog--ai-meeting-assistants-safe-privacy-risks"
+  },
+  "/blog/best-meeting-notes-software-2026": {
+    "title": "AI Meeting Assistant Comparison 2026: 8 Tools & Pricing | Meetily Blog",
+    "announcement": true,
+    "file": "blog--best-meeting-notes-software-2026"
+  },
+  "/blog/best-self-hosted-meeting-transcription-tools-2026": {
+    "title": "Self-Hosted Meeting Transcription: 10 Open Source Tools Compared (2026) | Meetily Blog",
+    "announcement": true,
+    "file": "blog--best-self-hosted-meeting-transcription-tools-2026"
+  },
+  "/blog/self-hosted-meeting-note-taker-guide-2026": {
+    "title": "Self-Hosted Meeting Note Taker: Complete Privacy Guide 2026 | Meetily Blog",
+    "announcement": true,
+    "file": "blog--self-hosted-meeting-note-taker-guide-2026"
+  },
+  "/blog/best-free-meeting-recorder-2026": {
+    "title": "10 Best Free Meeting Recorder Apps 2026 (Transcribe, No Bot)",
+    "announcement": true,
+    "file": "blog--best-free-meeting-recorder-2026"
+  },
+  "/blog/meetily-vs-fireflies-bot-free-meeting-assistant": {
+    "title": "Meetily vs Fireflies.ai: The Bot-Free Meeting Assistant Alternative | Meetily | Meetily Blog",
+    "announcement": true,
+    "file": "blog--meetily-vs-fireflies-bot-free-meeting-assistant"
+  },
+  "/blog/meetily-vs-otter-ai-privacy-first-alternative-2025": {
+    "title": "Meetily vs Otter.ai: Privacy-First Alternative for 2025 | Meetily | Meetily Blog",
+    "announcement": true,
+    "file": "blog--meetily-vs-otter-ai-privacy-first-alternative-2025"
+  },
+  "/blog/how-to-install-meetily-complete-desktop-setup-guide": {
+    "title": "How to Install Meetily: Complete Desktop Setup Guide (Windows & macOS) | Meetily | Meetily Blog",
+    "announcement": true,
+    "file": "blog--how-to-install-meetily-complete-desktop-setup-guide"
+  },
+  "/blog/best-privacy-focused-meeting-transcription-tools-2025": {
+    "title": "Best Privacy-Focused Meeting Transcription Tools (2025-2026) | Meetily Blog",
+    "announcement": true,
+    "file": "blog--best-privacy-focused-meeting-transcription-tools-2025"
+  },
+  "/blog/bot-free-self-hosted-meeting-transcription": {
+    "title": "Bot-Free Meeting Transcription 2026: No Bot Joins Calls | Meetily Blog",
+    "announcement": true,
+    "file": "blog--bot-free-self-hosted-meeting-transcription"
+  },
+  "/use-cases/psychology": {
+    "title": "Meetily for Psychology - Private AI Session Notes for Therapists & Counselors",
+    "announcement": true,
+    "file": "use-cases--psychology"
+  },
+  "/downloads/pro": {
+    "title": "Download Meetily Pro - Speaker ID, Custom Templates & Exports | Windows & macOS",
+    "announcement": false,
+    "file": "downloads--pro"
+  },
+  "/releases/pro/1.8.2": {
+    "title": "Meetily Pro 1.8.2 - Speaker Diarisation & a Fresh Interface Release Notes | Meetily",
+    "announcement": true,
+    "file": "releases--pro--1.8.2"
+  },
+  "/mcp/claude": {
+    "title": "Connect Claude to Your Meeting Notes (Desktop & Code) | Meetily",
+    "announcement": true,
+    "file": "mcp--claude"
+  },
+  "/mcp/cursor": {
+    "title": "Meeting Notes in Cursor, Windsurf & Codex via MCP | Meetily",
+    "announcement": true,
+    "file": "mcp--cursor"
+  },
+  "/releases/pro/1.11.0": {
+    "title": "Meetily Pro 1.11.0 - Connect Meetily to the Tools You Use Release Notes | Meetily",
+    "announcement": true,
+    "file": "releases--pro--1.11.0"
+  },
+  "/llm-privacy/ollama": {
+    "title": "Ollama Local LLM Privacy 2026 - Why Local Inference Has Zero Retention | Meetily",
+    "announcement": true,
+    "file": "llm-privacy--ollama"
+  },
+  "/releases/pro/1.11.2": {
+    "title": "Meetily Pro 1.11.2 - Recording and Whisper Transcription Improvements Release Notes | Meetily",
+    "announcement": true,
+    "file": "releases--pro--1.11.2"
+  },
+  "/security": {
+    "title": "Secure AI Meeting Transcription | Privacy-First | Meetily",
+    "announcement": true,
+    "file": "security"
+  },
+  "/vs/notion-ai": {
+    "title": "Meetily vs Notion AI - Specialized Meeting Transcription Tool",
+    "announcement": true,
+    "file": "vs--notion-ai"
+  },
+  "/voice-recording-transcription": {
+    "title": "Voice Recording Transcription - Free AI Audio to Text | Meetily",
+    "announcement": true,
+    "file": "voice-recording-transcription"
+  },
+  "/free-transcription": {
+    "title": "Free Transcription - Unlimited Audio to Text | Meetily",
+    "announcement": true,
+    "file": "free-transcription"
+  },
+  "/vs/microsoft-copilot": {
+    "title": "Meetily vs Microsoft Copilot - Universal Meeting AI vs Teams-Only",
+    "announcement": true,
+    "file": "vs--microsoft-copilot"
+  },
+  "/templates/standard-meeting": {
+    "title": "Meeting Minutes Template + Notes Template (Free, 2026) | Meetily",
+    "announcement": true,
+    "file": "templates--standard-meeting"
+  },
+  "/templates/daily-standup": {
+    "title": "Daily Standup Template + Notes Template (Free, 2026) | Meetily",
+    "announcement": true,
+    "file": "templates--daily-standup"
+  },
+  "/templates/sales-call": {
+    "title": "Sales Call Template + Notes Template (Free, 2026) | Meetily",
+    "announcement": true,
+    "file": "templates--sales-call"
+  },
+  "/templates/project-sync": {
+    "title": "Project Sync Template + Notes Template (Free, 2026) | Meetily",
+    "announcement": true,
+    "file": "templates--project-sync"
+  },
+  "/templates/retrospective": {
+    "title": "Sprint Retrospective Template + Notes Template (Free, 2026) | Meetily",
+    "announcement": true,
+    "file": "templates--retrospective"
+  },
+  "/templates/psychiatric-session": {
+    "title": "Psychiatric Session SOAP Note Template (Free, 2026) | Meetily",
+    "announcement": true,
+    "file": "templates--psychiatric-session"
+  },
+  "/llm-privacy/llama-cpp": {
+    "title": "llama.cpp Data Privacy 2026 - Fully Local, On-Device LLM Inference | Meetily",
+    "announcement": true,
+    "file": "llm-privacy--llama-cpp"
+  },
+  "/llm-privacy/lm-studio": {
+    "title": "LM Studio Data Privacy 2026 - Fully Local, On-Device LLM Inference | Meetily",
+    "announcement": true,
+    "file": "llm-privacy--lm-studio"
+  },
+  "/llm-privacy/anthropic": {
+    "title": "Anthropic Claude Data Retention Policy 2026 - Does Anthropic Train on Your Data? | Meetily",
+    "announcement": true,
+    "file": "llm-privacy--anthropic"
+  },
+  "/llm-privacy/azure": {
+    "title": "Azure OpenAI ZDR & Modified Abuse Monitoring | Meetily",
+    "announcement": true,
+    "file": "llm-privacy--azure"
+  },
+  "/llm-privacy/cohere": {
+    "title": "Cohere API Data Retention Policy 2026 - Does Cohere Train on Your Data? | Meetily",
+    "announcement": true,
+    "file": "llm-privacy--cohere"
+  },
+  "/llm-privacy/deepseek": {
+    "title": "DeepSeek API Data Retention Policy 2026 - Does DeepSeek Train on Your Data? | Meetily",
+    "announcement": true,
+    "file": "llm-privacy--deepseek"
+  },
+  "/llm-privacy/fireworks": {
+    "title": "Fireworks AI Data Retention Policy 2026 - Does Fireworks AI Train on Your Data? | Meetily",
+    "announcement": true,
+    "file": "llm-privacy--fireworks"
+  },
+  "/llm-privacy/gemini": {
+    "title": "Gemini Zero Data Retention: Paid API vs Free Tier | Meetily",
+    "announcement": true,
+    "file": "llm-privacy--gemini"
+  },
+  "/llm-privacy/groq": {
+    "title": "Groq Data Retention & ZDR: What's Stored? | Meetily",
+    "announcement": true,
+    "file": "llm-privacy--groq"
+  },
+  "/llm-privacy/mistral": {
+    "title": "Mistral Zero Data Retention, DPA & Training | Meetily",
+    "announcement": true,
+    "file": "llm-privacy--mistral"
+  },
+  "/llm-privacy/openai": {
+    "title": "OpenAI API Data Retention & ZDR in 2026 | Meetily",
+    "announcement": true,
+    "file": "llm-privacy--openai"
+  },
+  "/llm-privacy/openrouter": {
+    "title": "OpenRouter ZDR: Does It Log or Train on Prompts? | Meetily",
+    "announcement": true,
+    "file": "llm-privacy--openrouter"
+  },
+  "/llm-privacy/perplexity": {
+    "title": "Perplexity API Data Retention Policy 2026 - Does Perplexity Train on Your Data? | Meetily",
+    "announcement": true,
+    "file": "llm-privacy--perplexity"
+  },
+  "/llm-privacy/together": {
+    "title": "Together AI Data Retention Policy 2026 - Does Together AI Train on Your Data? | Meetily",
+    "announcement": true,
+    "file": "llm-privacy--together"
+  },
+  "/llm-privacy/xai": {
+    "title": "xAI Grok API Data Retention Policy 2026 - Does xAI Train on Your Data? | Meetily",
+    "announcement": true,
+    "file": "llm-privacy--xai"
+  },
+  "/help": {
+    "title": "Get help with your Meetily trial - Meetily",
+    "announcement": false,
+    "file": "help"
+  },
+  "/author/sandeep": {
+    "title": "Sandeep Zachariah - CEO, Zackriya Solutions | Meetily",
+    "announcement": true,
+    "file": "author--sandeep"
+  },
+  "/choose-summary-model": {
+    "title": "Choose Summary Model - Meetily",
+    "announcement": false,
+    "file": "choose-summary-model"
+  },
+  "/author/meetily-team": {
+    "title": "Meetily Team - Zackriya Solutions | Meetily",
+    "announcement": true,
+    "file": "author--meetily-team"
+  },
+  "/author/sujith": {
+    "title": "Sujith S - CTO, Product Owner, Zackriya Solutions | Meetily",
+    "announcement": true,
+    "file": "author--sujith"
+  },
+  "/author/sadeed": {
+    "title": "Sadeed Ameen P.O - GTM Lead Engineer, Zackriya Solutions | Meetily",
+    "announcement": true,
+    "file": "author--sadeed"
+  },
+  "/vs/fathom": {
+    "title": "Meetily vs Fathom - Free Open Source Alternative with Local Processing",
+    "announcement": true,
+    "file": "vs--fathom"
+  },
+  "/gdpr-meeting-transcription": {
+    "title": "GDPR Compliant Meeting Transcription | No Data Transfer | Meetily",
+    "announcement": true,
+    "file": "gdpr-meeting-transcription"
+  },
+  "/docs/integrations/custom-apis": {
+    "title": "Custom APIs & Local LLMs | Meetily",
+    "announcement": false,
+    "file": "docs--integrations--custom-apis"
+  },
+  "/use-cases/education": {
+    "title": "Meetily for Education - AI Meeting Assistant for Schools & Universities",
+    "announcement": true,
+    "file": "use-cases--education"
+  },
+  "/author/meetily-security-team": {
+    "title": "Meetily Security Team - Zackriya Solutions | Meetily",
+    "announcement": true,
+    "file": "author--meetily-security-team"
+  },
+  "/downloads/mac": {
+    "title": "Meetily for macOS - Free Otter.ai Alternative for Mac | Open Source",
+    "announcement": false,
+    "file": "downloads--mac"
+  },
+  "/downloads/windows": {
+    "title": "Meetily for Windows - Free Otter.ai Alternative for PC | Open Source",
+    "announcement": false,
+    "file": "downloads--windows"
+  },
+  "/releases/pro/1.7.6": {
+    "title": "Meetily Pro 1.7.6 - Background Imports & Re-transcription Release Notes | Meetily",
+    "announcement": true,
+    "file": "releases--pro--1.7.6"
+  },
+  "/releases/pro/1.9.2": {
+    "title": "Meetily Pro 1.9.2 - Automatic Recording & Floating Pill Release Notes | Meetily",
+    "announcement": true,
+    "file": "releases--pro--1.9.2"
+  },
+  "/releases/pro/1.11.1": {
+    "title": "Meetily Pro 1.11.1 - Long Meetings Summarize, Recordings Stay Safe Release Notes | Meetily",
+    "announcement": true,
+    "file": "releases--pro--1.11.1"
+  },
+  "/license-request": {
+    "title": "My License - Meetily | Trial Key, Download & Setup",
+    "announcement": false,
+    "file": "license-request"
+  },
+  "/blog/beste-kostenlose-meeting-recorder-2026": {
+    "title": "10 beste kostenlose Meeting-Recorder 2026 (Getestet) - Jetzt downloaden | Meetily Blog",
+    "announcement": true,
+    "file": "blog--beste-kostenlose-meeting-recorder-2026"
+  },
+  "/blog/mejor-grabador-reuniones-gratis-2026": {
+    "title": "10 mejores grabadores de reuniones gratis 2026 (Probados) - Descarga gratis | Meetily Blog",
+    "announcement": true,
+    "file": "blog--mejor-grabador-reuniones-gratis-2026"
+  },
+  "/blog/melhor-gravador-reunioes-gratis-2026": {
+    "title": "10 melhores gravadores de reunioes gratis 2026 (Testados) - Download gratis | Meetily Blog",
+    "announcement": true,
+    "file": "blog--melhor-gravador-reunioes-gratis-2026"
+  },
+  "/blog/zuijia-mianfei-huiyi-luyinji-2026": {
+    "title": "2026年10款最佳免费会议录制软件（实测）- 免费下载 | Meetily Blog",
+    "announcement": true,
+    "file": "blog--zuijia-mianfei-huiyi-luyinji-2026"
+  },
+  "/blog/ai-huiyi-zhushou-anquan-yinsi-fengxian": {
+    "title": "AI会议助手安全吗？隐私风险揭秘（2026指南） | Meetily Blog",
+    "announcement": true,
+    "file": "blog--ai-huiyi-zhushou-anquan-yinsi-fengxian"
+  },
+  "/blog/asistentes-reuniones-ia-seguros-riesgos-privacidad": {
+    "title": "Son Seguros los Asistentes IA para Reuniones? Riesgos Expuestos (2026) | Meetily Blog",
+    "announcement": true,
+    "file": "blog--asistentes-reuniones-ia-seguros-riesgos-privacidad"
+  },
+  "/blog/assistants-reunion-ia-securite-risques-confidentialite": {
+    "title": "Les assistants IA pour reunions sont-ils surs ? Risques exposes (2026) | Meetily Blog",
+    "announcement": true,
+    "file": "blog--assistants-reunion-ia-securite-risques-confidentialite"
+  },
+  "/blog/assistentes-reuniao-ia-seguros-riscos-privacidade": {
+    "title": "Assistentes IA para Reunioes Sao Seguros? Riscos Expostos (2026) | Meetily Blog",
+    "announcement": true,
+    "file": "blog--assistentes-reuniao-ia-seguros-riscos-privacidade"
+  },
+  "/releases/pro/1.7.3": {
+    "title": "Meetily Pro 1.7.3 - Host vs Guest, Bluetooth Survives, Windows GPU Works Release Notes | Meetily",
+    "announcement": true,
+    "file": "releases--pro--1.7.3"
+  },
+  "/releases/pro/1.5.0": {
+    "title": "Meetily Pro 1.5.0 - Your Most Requested Features Release Notes | Meetily",
+    "announcement": true,
+    "file": "releases--pro--1.5.0"
+  },
+  "/releases/pro/1.1.1": {
+    "title": "Meetily Pro 1.1.1 - The New Beginning Release Notes | Meetily",
+    "announcement": true,
+    "file": "releases--pro--1.1.1"
+  },
+  "/releases/pro/0.1.16": {
+    "title": "Meetily Pro 0.1.16 Release Notes | Meetily",
+    "announcement": true,
+    "file": "releases--pro--0.1.16"
+  },
+  "/releases/pro/0.1.15": {
+    "title": "Meetily Pro 0.1.15 Release Notes | Meetily",
+    "announcement": true,
+    "file": "releases--pro--0.1.15"
+  },
+  "/releases/pro/0.1.14": {
+    "title": "Meetily Pro 0.1.14 Release Notes | Meetily",
+    "announcement": true,
+    "file": "releases--pro--0.1.14"
+  },
+  "/releases/pro/0.1.13": {
+    "title": "Meetily Pro 0.1.13 Release Notes | Meetily",
+    "announcement": true,
+    "file": "releases--pro--0.1.13"
+  },
+  "/releases/pro/0.1.12": {
+    "title": "Meetily Pro 0.1.12 Release Notes | Meetily",
+    "announcement": true,
+    "file": "releases--pro--0.1.12"
+  },
+  "/releases/pro/0.1.8": {
+    "title": "Meetily Pro 0.1.8 Release Notes | Meetily",
+    "announcement": true,
+    "file": "releases--pro--0.1.8"
+  },
+  "/releases/pro/0.1.7": {
+    "title": "Meetily Pro 0.1.7 Release Notes | Meetily",
+    "announcement": true,
+    "file": "releases--pro--0.1.7"
+  },
+  "/releases/pro/0.1.6": {
+    "title": "Meetily Pro 0.1.6 Release Notes | Meetily",
+    "announcement": true,
+    "file": "releases--pro--0.1.6"
+  },
+  "/releases/pro/0.1.5": {
+    "title": "Meetily Pro 0.1.5 Release Notes | Meetily",
+    "announcement": true,
+    "file": "releases--pro--0.1.5"
+  },
+  "/releases/pro/0.1.4": {
+    "title": "Meetily Pro 0.1.4 Release Notes | Meetily",
+    "announcement": true,
+    "file": "releases--pro--0.1.4"
+  }
+}

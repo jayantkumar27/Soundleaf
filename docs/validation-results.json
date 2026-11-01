@@ -1,0 +1,1391 @@
+{
+  "date": "2026-11-01T17:24:24.597Z",
+  "results": [
+    {
+      "check": "homepage 1440px",
+      "pass": true
+    },
+    {
+      "check": "homepage 1280px",
+      "pass": true
+    },
+    {
+      "check": "homepage 1024px",
+      "pass": true
+    },
+    {
+      "check": "homepage 768px",
+      "pass": true
+    },
+    {
+      "check": "homepage 390px",
+      "pass": true
+    },
+    {
+      "check": "homepage 375px",
+      "pass": true
+    },
+    {
+      "check": "desktop dropdown opens",
+      "pass": true
+    },
+    {
+      "check": "dropdown Escape closes",
+      "pass": true
+    },
+    {
+      "check": "demo Recording",
+      "pass": true
+    },
+    {
+      "check": "demo Transcription",
+      "pass": true
+    },
+    {
+      "check": "demo People",
+      "pass": true
+    },
+    {
+      "check": "demo Summary",
+      "pass": true
+    },
+    {
+      "check": "summary copy",
+      "pass": true
+    },
+    {
+      "check": "FAQ expands",
+      "pass": true
+    },
+    {
+      "check": "trial dialog",
+      "pass": true
+    },
+    {
+      "check": "required form validation",
+      "pass": true
+    },
+    {
+      "check": "honest unconfigured submission",
+      "pass": true
+    },
+    {
+      "check": "dialog Escape closes",
+      "pass": true
+    },
+    {
+      "check": "mobile menu opens",
+      "pass": true
+    },
+    {
+      "check": "mobile navigation",
+      "pass": true
+    },
+    {
+      "check": "route /downloads",
+      "pass": true,
+      "heading": "Download Meetily"
+    },
+    {
+      "check": "mobile route /downloads",
+      "pass": true
+    },
+    {
+      "check": "route /free",
+      "pass": true,
+      "heading": "Free Meeting Recorder\n& AI Transcription"
+    },
+    {
+      "check": "mobile route /free",
+      "pass": true
+    },
+    {
+      "check": "route /bot-free",
+      "pass": true,
+      "heading": "Bot-Free Meeting Recording: No Bots Join Your Calls"
+    },
+    {
+      "check": "mobile route /bot-free",
+      "pass": true
+    },
+    {
+      "check": "route /speaker-diarization",
+      "pass": true,
+      "heading": "Speaker Diarization: Know Who Said What"
+    },
+    {
+      "check": "mobile route /speaker-diarization",
+      "pass": true
+    },
+    {
+      "check": "route /mcp",
+      "pass": true,
+      "heading": "Meetily MCP Server, CLI and API"
+    },
+    {
+      "check": "mobile route /mcp",
+      "pass": true
+    },
+    {
+      "check": "route /workflows",
+      "pass": true,
+      "heading": "Meetily Workflows: Send Meeting Notes Where Your Team Works"
+    },
+    {
+      "check": "mobile route /workflows",
+      "pass": true
+    },
+    {
+      "check": "route /pro",
+      "pass": true,
+      "heading": "Meetily Pro\nFor Individuals & Teams"
+    },
+    {
+      "check": "mobile route /pro",
+      "pass": true
+    },
+    {
+      "check": "route /enterprise",
+      "pass": true,
+      "heading": "Self-Hosted AI Meeting Transcription for Enterprise"
+    },
+    {
+      "check": "mobile route /enterprise",
+      "pass": true
+    },
+    {
+      "check": "route /granola-for-linux",
+      "pass": true,
+      "heading": "Granola for Linux: Native Linux App, Coming Soon"
+    },
+    {
+      "check": "mobile route /granola-for-linux",
+      "pass": true
+    },
+    {
+      "check": "route /pricing",
+      "pass": true,
+      "heading": "Simple, Transparent Pricing"
+    },
+    {
+      "check": "mobile route /pricing",
+      "pass": true
+    },
+    {
+      "check": "route /open-source-ai-note-taker",
+      "pass": true,
+      "heading": "Open Source AI Note Taker for Meetings - 100% Local, MIT Licensed"
+    },
+    {
+      "check": "mobile route /open-source-ai-note-taker",
+      "pass": true
+    },
+    {
+      "check": "route /releases",
+      "pass": true,
+      "heading": "Release Notes"
+    },
+    {
+      "check": "mobile route /releases",
+      "pass": true
+    },
+    {
+      "check": "route /use-cases",
+      "pass": true,
+      "heading": "AI Meeting Solutions for Every Industry"
+    },
+    {
+      "check": "mobile route /use-cases",
+      "pass": true
+    },
+    {
+      "check": "route /use-cases/healthcare",
+      "pass": true,
+      "heading": "HIPAA-Compliant Meeting Transcription for Healthcare Teams"
+    },
+    {
+      "check": "mobile route /use-cases/healthcare",
+      "pass": true
+    },
+    {
+      "check": "route /use-cases/legal",
+      "pass": true,
+      "heading": "Private Meeting Transcription for Law Firms (No Bot, No Cloud)"
+    },
+    {
+      "check": "mobile route /use-cases/legal",
+      "pass": true
+    },
+    {
+      "check": "route /use-cases/financial-services",
+      "pass": true,
+      "heading": "SEC 17a-4 & MiFID II Meeting Transcription, On-Device"
+    },
+    {
+      "check": "mobile route /use-cases/financial-services",
+      "pass": true
+    },
+    {
+      "check": "route /use-cases/government",
+      "pass": true,
+      "heading": "Secure Government Meeting Documentation with Complete Data Sovereignty"
+    },
+    {
+      "check": "mobile route /use-cases/government",
+      "pass": true
+    },
+    {
+      "check": "route /use-cases/technology",
+      "pass": true,
+      "heading": "Bot-Free Meeting Notes for Engineering and Product Teams"
+    },
+    {
+      "check": "mobile route /use-cases/technology",
+      "pass": true
+    },
+    {
+      "check": "route /ai-meeting-assistant",
+      "pass": true,
+      "heading": "AI Meeting Assistant\nThat Works Across Your Meetings"
+    },
+    {
+      "check": "mobile route /ai-meeting-assistant",
+      "pass": true
+    },
+    {
+      "check": "route /ai-note-taker",
+      "pass": true,
+      "heading": "AI Note Taker\nThat Respects Your Privacy"
+    },
+    {
+      "check": "mobile route /ai-note-taker",
+      "pass": true
+    },
+    {
+      "check": "route /ai-transcription",
+      "pass": true,
+      "heading": "AI Transcription\nOn Your Device, Not the Cloud"
+    },
+    {
+      "check": "mobile route /ai-transcription",
+      "pass": true
+    },
+    {
+      "check": "route /voice-recorder",
+      "pass": true,
+      "heading": "Voice Recorder\nwith Built-in Transcription"
+    },
+    {
+      "check": "mobile route /voice-recorder",
+      "pass": true
+    },
+    {
+      "check": "route /hipaa-meeting-assistant",
+      "pass": true,
+      "heading": "HIPAA Meeting Assistant\nThat Keeps Audio on Your Device"
+    },
+    {
+      "check": "mobile route /hipaa-meeting-assistant",
+      "pass": true
+    },
+    {
+      "check": "route /vs",
+      "pass": true,
+      "heading": "Why Teams Choose Meetily Over Alternatives"
+    },
+    {
+      "check": "mobile route /vs",
+      "pass": true
+    },
+    {
+      "check": "route /vs/otter-ai",
+      "pass": true,
+      "heading": "Meetily vs Otter.ai: Complete Privacy Without Subscriptions"
+    },
+    {
+      "check": "mobile route /vs/otter-ai",
+      "pass": true
+    },
+    {
+      "check": "route /vs/fireflies",
+      "pass": true,
+      "heading": "Meetily vs Fireflies: No Bots, No Interruptions, Free Community Edition"
+    },
+    {
+      "check": "mobile route /vs/fireflies",
+      "pass": true
+    },
+    {
+      "check": "route /vs/granola",
+      "pass": true,
+      "heading": "Meetily vs Granola: Local Transcription & Privacy First"
+    },
+    {
+      "check": "mobile route /vs/granola",
+      "pass": true
+    },
+    {
+      "check": "route /vs/read-ai",
+      "pass": true,
+      "heading": "Meetily vs Read AI: Local Processing, No Meeting Bot"
+    },
+    {
+      "check": "mobile route /vs/read-ai",
+      "pass": true
+    },
+    {
+      "check": "route /vs/zoom-ai",
+      "pass": true,
+      "heading": "Meetily vs Zoom AI: Works with All Platforms, Not Just Zoom"
+    },
+    {
+      "check": "mobile route /vs/zoom-ai",
+      "pass": true
+    },
+    {
+      "check": "route /vs/chatgpt-record-mode",
+      "pass": true,
+      "heading": "ChatGPT Record Mode vs Meetily: Local-First Meeting Recording (No Cloud, No Account)"
+    },
+    {
+      "check": "mobile route /vs/chatgpt-record-mode",
+      "pass": true
+    },
+    {
+      "check": "route /vs/meetly-vs-meetily",
+      "pass": true,
+      "heading": "Brand Clarification Notice"
+    },
+    {
+      "check": "mobile route /vs/meetly-vs-meetily",
+      "pass": true
+    },
+    {
+      "check": "route /guides",
+      "pass": true,
+      "heading": "Deploy Meetily with Confidence"
+    },
+    {
+      "check": "mobile route /guides",
+      "pass": true
+    },
+    {
+      "check": "route /meeting-templates",
+      "pass": true,
+      "heading": "Meeting Templates\nMinutes, Notes & Agendas"
+    },
+    {
+      "check": "mobile route /meeting-templates",
+      "pass": true
+    },
+    {
+      "check": "route /guides/gdpr-compliance",
+      "pass": true,
+      "heading": "GDPR Compliance with Meetily"
+    },
+    {
+      "check": "mobile route /guides/gdpr-compliance",
+      "pass": true
+    },
+    {
+      "check": "route /guides/hipaa-setup",
+      "pass": true,
+      "heading": "HIPAA Setup with Meetily"
+    },
+    {
+      "check": "mobile route /guides/hipaa-setup",
+      "pass": true
+    },
+    {
+      "check": "route /guides/enterprise-deployment",
+      "pass": true,
+      "heading": "Enterprise Deployment for Meetily"
+    },
+    {
+      "check": "mobile route /guides/enterprise-deployment",
+      "pass": true
+    },
+    {
+      "check": "route /privacy/data-sovereignty",
+      "pass": true,
+      "heading": "Data Sovereignty with Meetily"
+    },
+    {
+      "check": "mobile route /privacy/data-sovereignty",
+      "pass": true
+    },
+    {
+      "check": "route /llm-privacy",
+      "pass": true,
+      "heading": "Zero data retention (ZDR) and data retention by AI provider"
+    },
+    {
+      "check": "mobile route /llm-privacy",
+      "pass": true
+    },
+    {
+      "check": "route /blog",
+      "pass": true,
+      "heading": "Meetily Blogs"
+    },
+    {
+      "check": "mobile route /blog",
+      "pass": true
+    },
+    {
+      "check": "route /about",
+      "pass": true,
+      "heading": "Our Story"
+    },
+    {
+      "check": "mobile route /about",
+      "pass": true
+    },
+    {
+      "check": "route /open-source",
+      "pass": true,
+      "heading": "Open Source AI Meeting Assistant"
+    },
+    {
+      "check": "mobile route /open-source",
+      "pass": true
+    },
+    {
+      "check": "route /privacy",
+      "pass": true,
+      "heading": "Privacy Policy & Data Protection"
+    },
+    {
+      "check": "mobile route /privacy",
+      "pass": true
+    },
+    {
+      "check": "route /privacy/pro-terms",
+      "pass": true,
+      "heading": "Meetily: Subscription & Support Terms (Self-Hosted)"
+    },
+    {
+      "check": "mobile route /privacy/pro-terms",
+      "pass": true
+    },
+    {
+      "check": "route /buy-now",
+      "pass": true,
+      "heading": "Buy Meetily Pro 60% Off"
+    },
+    {
+      "check": "mobile route /buy-now",
+      "pass": true
+    },
+    {
+      "check": "route /license-request/organization",
+      "pass": true,
+      "heading": "Start Your 14-Day Pro Trial"
+    },
+    {
+      "check": "mobile route /license-request/organization",
+      "pass": true
+    },
+    {
+      "check": "route /cli",
+      "pass": true,
+      "heading": "Meetily CLI: Meeting Notes From the Command Line"
+    },
+    {
+      "check": "mobile route /cli",
+      "pass": true
+    },
+    {
+      "check": "route /blog/why-meeting-data-belongs-on-your-device",
+      "pass": true,
+      "heading": "Why Your Meeting Data Belongs on Your Device, Not Someone Else's Server"
+    },
+    {
+      "check": "mobile route /blog/why-meeting-data-belongs-on-your-device",
+      "pass": true
+    },
+    {
+      "check": "route /blog/why-we-built-meetily",
+      "pass": true,
+      "heading": "Why We Built Meetily When Every Meeting Tool Already Existed"
+    },
+    {
+      "check": "mobile route /blog/why-we-built-meetily",
+      "pass": true
+    },
+    {
+      "check": "route /blog/ai-meeting-notes-for-schools-ferpa",
+      "pass": true,
+      "heading": "AI Meeting Notes for Schools: Why the Safest Student Data Agreement Has Almost Nothing to Cover"
+    },
+    {
+      "check": "mobile route /blog/ai-meeting-notes-for-schools-ferpa",
+      "pass": true
+    },
+    {
+      "check": "route /blog/eu-ai-act-meeting-tools-risk-level",
+      "pass": true,
+      "heading": "Your Meeting Tool's Risk Level Under the EU AI Act Isn't Set by the Vendor. It's Set by You."
+    },
+    {
+      "check": "mobile route /blog/eu-ai-act-meeting-tools-risk-level",
+      "pass": true
+    },
+    {
+      "check": "route /blog/record-transcribe-teams-meeting-without-bot",
+      "pass": true,
+      "heading": "How to Record and Transcribe a Teams Meeting Without a Bot"
+    },
+    {
+      "check": "mobile route /blog/record-transcribe-teams-meeting-without-bot",
+      "pass": true
+    },
+    {
+      "check": "route /blog/the-decision-makers-second-brain",
+      "pass": true,
+      "heading": "The Decision Maker's Second Brain"
+    },
+    {
+      "check": "mobile route /blog/the-decision-makers-second-brain",
+      "pass": true
+    },
+    {
+      "check": "route /blog/which-ai-providers-train-on-your-data",
+      "pass": true,
+      "heading": "Which AI Providers Train on Your Data? A 2026 Comparison"
+    },
+    {
+      "check": "mobile route /blog/which-ai-providers-train-on-your-data",
+      "pass": true
+    },
+    {
+      "check": "route /blog/why-we-chose-experience-over-features",
+      "pass": true,
+      "heading": "Why We Chose Experience Over Features And How Hard That Was"
+    },
+    {
+      "check": "mobile route /blog/why-we-chose-experience-over-features",
+      "pass": true
+    },
+    {
+      "check": "route /blog/where-does-your-meeting-data-go",
+      "pass": true,
+      "heading": "Where Does Your Meeting Data Actually Go? 5 Questions IT Buyers Should Ask"
+    },
+    {
+      "check": "mobile route /blog/where-does-your-meeting-data-go",
+      "pass": true
+    },
+    {
+      "check": "route /blog/privacy-policy-vs-privacy-architecture",
+      "pass": true,
+      "heading": "Why \"Privacy Policy\" Is Not the Same as \"Privacy Architecture\""
+    },
+    {
+      "check": "mobile route /blog/privacy-policy-vs-privacy-architecture",
+      "pass": true
+    },
+    {
+      "check": "route /blog/compliant-meeting-notes-without-a-bot",
+      "pass": true,
+      "heading": "You Don't Need a Bot in the Room to Take Compliant Meeting Notes"
+    },
+    {
+      "check": "mobile route /blog/compliant-meeting-notes-without-a-bot",
+      "pass": true
+    },
+    {
+      "check": "route /blog/how-to-record-a-meeting",
+      "pass": true,
+      "heading": "How to Record a Meeting on Zoom, Meet & Teams (No Bot, Free)"
+    },
+    {
+      "check": "mobile route /blog/how-to-record-a-meeting",
+      "pass": true
+    },
+    {
+      "check": "route /blog/meetily-v0-3-0-import-audio-retranscribe",
+      "pass": true,
+      "heading": "Meetily v0.3.0: Import Audio Files, Retranscribe, and What's Coming Next"
+    },
+    {
+      "check": "mobile route /blog/meetily-v0-3-0-import-audio-retranscribe",
+      "pass": true
+    },
+    {
+      "check": "route /blog/meetily-10k-github-stars",
+      "pass": true,
+      "heading": "10,000 GitHub Stars: Thank You for Believing in Privacy-First AI"
+    },
+    {
+      "check": "mobile route /blog/meetily-10k-github-stars",
+      "pass": true
+    },
+    {
+      "check": "route /blog/ai-meeting-summaries-without-api-keys-hosted-ai",
+      "pass": true,
+      "heading": "AI Meeting Summaries Without Sending Your Audio: Local or Bring-Your-Own-Key"
+    },
+    {
+      "check": "mobile route /blog/ai-meeting-summaries-without-api-keys-hosted-ai",
+      "pass": true
+    },
+    {
+      "check": "route /blog/the-story-behind-meetily",
+      "pass": true,
+      "heading": "The Story Behind Meetily"
+    },
+    {
+      "check": "mobile route /blog/the-story-behind-meetily",
+      "pass": true
+    },
+    {
+      "check": "route /blog/our-quest-for-meeting-summary-accuracy",
+      "pass": true,
+      "heading": "Our Quest for Meeting Summary Accuracy: What We Learned Building Meetily"
+    },
+    {
+      "check": "mobile route /blog/our-quest-for-meeting-summary-accuracy",
+      "pass": true
+    },
+    {
+      "check": "route /blog/how-to-install-meetily",
+      "pass": true,
+      "heading": "How to Install Meetily on Windows & macOS: Complete Setup Guide"
+    },
+    {
+      "check": "mobile route /blog/how-to-install-meetily",
+      "pass": true
+    },
+    {
+      "check": "route /blog/ai-meeting-assistants-safe-privacy-risks",
+      "pass": true,
+      "heading": "Are AI Meeting Assistants Safe? 2026 Privacy Risks Exposed"
+    },
+    {
+      "check": "mobile route /blog/ai-meeting-assistants-safe-privacy-risks",
+      "pass": true
+    },
+    {
+      "check": "route /blog/best-meeting-notes-software-2026",
+      "pass": true,
+      "heading": "AI Meeting Assistant Comparison 2026: 8 Tools & Pricing"
+    },
+    {
+      "check": "mobile route /blog/best-meeting-notes-software-2026",
+      "pass": true
+    },
+    {
+      "check": "route /blog/best-self-hosted-meeting-transcription-tools-2026",
+      "pass": true,
+      "heading": "Self-Hosted Meeting Transcription: 10 Open Source Tools Compared (2026)"
+    },
+    {
+      "check": "mobile route /blog/best-self-hosted-meeting-transcription-tools-2026",
+      "pass": true
+    },
+    {
+      "check": "route /blog/self-hosted-meeting-note-taker-guide-2026",
+      "pass": true,
+      "heading": "Self-Hosted Meeting Note Taker: Complete Privacy Guide 2026"
+    },
+    {
+      "check": "mobile route /blog/self-hosted-meeting-note-taker-guide-2026",
+      "pass": true
+    },
+    {
+      "check": "route /blog/best-free-meeting-recorder-2026",
+      "pass": true,
+      "heading": "10 Best Free Meeting Recorder Apps 2026 (Transcribe, No Bot)"
+    },
+    {
+      "check": "mobile route /blog/best-free-meeting-recorder-2026",
+      "pass": true
+    },
+    {
+      "check": "route /blog/meetily-vs-fireflies-bot-free-meeting-assistant",
+      "pass": true,
+      "heading": "Meetily vs Fireflies.ai: The Bot-Free Meeting Assistant Alternative"
+    },
+    {
+      "check": "mobile route /blog/meetily-vs-fireflies-bot-free-meeting-assistant",
+      "pass": true
+    },
+    {
+      "check": "route /blog/meetily-vs-otter-ai-privacy-first-alternative-2025",
+      "pass": true,
+      "heading": "Meetily vs Otter.ai: Privacy-First Alternative for 2025"
+    },
+    {
+      "check": "mobile route /blog/meetily-vs-otter-ai-privacy-first-alternative-2025",
+      "pass": true
+    },
+    {
+      "check": "route /blog/how-to-install-meetily-complete-desktop-setup-guide",
+      "pass": true,
+      "heading": "How to Install Meetily: Complete Desktop Setup Guide (Windows & macOS)"
+    },
+    {
+      "check": "mobile route /blog/how-to-install-meetily-complete-desktop-setup-guide",
+      "pass": true
+    },
+    {
+      "check": "route /blog/best-privacy-focused-meeting-transcription-tools-2025",
+      "pass": true,
+      "heading": "Best Privacy-Focused Meeting Transcription Tools (2025-2026): 7 Tools Compared for GDPR & HIPAA Teams"
+    },
+    {
+      "check": "mobile route /blog/best-privacy-focused-meeting-transcription-tools-2025",
+      "pass": true
+    },
+    {
+      "check": "route /blog/bot-free-self-hosted-meeting-transcription",
+      "pass": true,
+      "heading": "Bot-Free Meeting Transcription (2026): How to Record Calls Without a Bot Joining"
+    },
+    {
+      "check": "mobile route /blog/bot-free-self-hosted-meeting-transcription",
+      "pass": true
+    },
+    {
+      "check": "route /use-cases/psychology",
+      "pass": true,
+      "heading": "Secure Patient Session Transcription for Mental Health Professionals"
+    },
+    {
+      "check": "mobile route /use-cases/psychology",
+      "pass": true
+    },
+    {
+      "check": "route /downloads/pro",
+      "pass": true,
+      "heading": "Download Meetily Pro"
+    },
+    {
+      "check": "mobile route /downloads/pro",
+      "pass": true
+    },
+    {
+      "check": "route /releases/pro/1.8.2",
+      "pass": true,
+      "heading": "Meetily Pro 1.8.2 - Speaker Diarisation & a Fresh Interface"
+    },
+    {
+      "check": "mobile route /releases/pro/1.8.2",
+      "pass": true
+    },
+    {
+      "check": "route /mcp/claude",
+      "pass": true,
+      "heading": "Connect Claude to Your Meeting Notes"
+    },
+    {
+      "check": "mobile route /mcp/claude",
+      "pass": true
+    },
+    {
+      "check": "route /mcp/cursor",
+      "pass": true,
+      "heading": "Your Meeting Notes in Cursor, Windsurf and Codex"
+    },
+    {
+      "check": "mobile route /mcp/cursor",
+      "pass": true
+    },
+    {
+      "check": "route /releases/pro/1.11.0",
+      "pass": true,
+      "heading": "Meetily Pro 1.11.0 - Connect Meetily to the Tools You Use"
+    },
+    {
+      "check": "mobile route /releases/pro/1.11.0",
+      "pass": true
+    },
+    {
+      "check": "route /llm-privacy/ollama",
+      "pass": true,
+      "heading": "Ollama data retention policy"
+    },
+    {
+      "check": "mobile route /llm-privacy/ollama",
+      "pass": true
+    },
+    {
+      "check": "route /releases/pro/1.11.2",
+      "pass": true,
+      "heading": "Meetily Pro 1.11.2 - Recording and Whisper Transcription Improvements"
+    },
+    {
+      "check": "mobile route /releases/pro/1.11.2",
+      "pass": true
+    },
+    {
+      "check": "route /security",
+      "pass": true,
+      "heading": "The Most Secure AI\nMeeting Transcription"
+    },
+    {
+      "check": "mobile route /security",
+      "pass": true
+    },
+    {
+      "check": "route /vs/notion-ai",
+      "pass": true,
+      "heading": "Meetily vs Notion AI: Complete Privacy Without Subscriptions"
+    },
+    {
+      "check": "mobile route /vs/notion-ai",
+      "pass": true
+    },
+    {
+      "check": "route /voice-recording-transcription",
+      "pass": true,
+      "heading": "Voice Recording Transcription\nFree & 100% Private"
+    },
+    {
+      "check": "mobile route /voice-recording-transcription",
+      "pass": true
+    },
+    {
+      "check": "route /free-transcription",
+      "pass": true,
+      "heading": "Free Transcription\nUnlimited & Private"
+    },
+    {
+      "check": "mobile route /free-transcription",
+      "pass": true
+    },
+    {
+      "check": "route /vs/microsoft-copilot",
+      "pass": true,
+      "heading": "Meetily vs Microsoft Copilot: Break Free from Microsoft Lock-in"
+    },
+    {
+      "check": "mobile route /vs/microsoft-copilot",
+      "pass": true
+    },
+    {
+      "check": "route /templates/standard-meeting",
+      "pass": true,
+      "heading": "Meeting Minutes Template"
+    },
+    {
+      "check": "mobile route /templates/standard-meeting",
+      "pass": true
+    },
+    {
+      "check": "route /templates/daily-standup",
+      "pass": true,
+      "heading": "Daily Standup Template"
+    },
+    {
+      "check": "mobile route /templates/daily-standup",
+      "pass": true
+    },
+    {
+      "check": "route /templates/sales-call",
+      "pass": true,
+      "heading": "Sales Call Template"
+    },
+    {
+      "check": "mobile route /templates/sales-call",
+      "pass": true
+    },
+    {
+      "check": "route /templates/project-sync",
+      "pass": true,
+      "heading": "Project Sync Template"
+    },
+    {
+      "check": "mobile route /templates/project-sync",
+      "pass": true
+    },
+    {
+      "check": "route /templates/retrospective",
+      "pass": true,
+      "heading": "Sprint Retrospective Template"
+    },
+    {
+      "check": "mobile route /templates/retrospective",
+      "pass": true
+    },
+    {
+      "check": "route /templates/psychiatric-session",
+      "pass": true,
+      "heading": "Psychiatric Session SOAP Note Template"
+    },
+    {
+      "check": "mobile route /templates/psychiatric-session",
+      "pass": true
+    },
+    {
+      "check": "route /llm-privacy/llama-cpp",
+      "pass": true,
+      "heading": "llama.cpp data retention policy"
+    },
+    {
+      "check": "mobile route /llm-privacy/llama-cpp",
+      "pass": true
+    },
+    {
+      "check": "route /llm-privacy/lm-studio",
+      "pass": true,
+      "heading": "LM Studio data retention policy"
+    },
+    {
+      "check": "mobile route /llm-privacy/lm-studio",
+      "pass": true
+    },
+    {
+      "check": "route /llm-privacy/anthropic",
+      "pass": true,
+      "heading": "Anthropic Claude data retention policy"
+    },
+    {
+      "check": "mobile route /llm-privacy/anthropic",
+      "pass": true
+    },
+    {
+      "check": "route /llm-privacy/azure",
+      "pass": true,
+      "heading": "Azure OpenAI zero data retention and abuse monitoring"
+    },
+    {
+      "check": "mobile route /llm-privacy/azure",
+      "pass": true
+    },
+    {
+      "check": "route /llm-privacy/cohere",
+      "pass": true,
+      "heading": "Cohere data retention policy"
+    },
+    {
+      "check": "mobile route /llm-privacy/cohere",
+      "pass": true
+    },
+    {
+      "check": "route /llm-privacy/deepseek",
+      "pass": true,
+      "heading": "DeepSeek data retention policy"
+    },
+    {
+      "check": "mobile route /llm-privacy/deepseek",
+      "pass": true
+    },
+    {
+      "check": "route /llm-privacy/fireworks",
+      "pass": true,
+      "heading": "Fireworks AI data retention policy"
+    },
+    {
+      "check": "mobile route /llm-privacy/fireworks",
+      "pass": true
+    },
+    {
+      "check": "route /llm-privacy/gemini",
+      "pass": true,
+      "heading": "Gemini API zero data retention (ZDR) and training"
+    },
+    {
+      "check": "mobile route /llm-privacy/gemini",
+      "pass": true
+    },
+    {
+      "check": "route /llm-privacy/groq",
+      "pass": true,
+      "heading": "Groq data retention and zero data retention (ZDR)"
+    },
+    {
+      "check": "mobile route /llm-privacy/groq",
+      "pass": true
+    },
+    {
+      "check": "route /llm-privacy/mistral",
+      "pass": true,
+      "heading": "Mistral zero data retention, DPA and training"
+    },
+    {
+      "check": "mobile route /llm-privacy/mistral",
+      "pass": true
+    },
+    {
+      "check": "route /llm-privacy/openai",
+      "pass": true,
+      "heading": "OpenAI API data retention and zero data retention (ZDR)"
+    },
+    {
+      "check": "mobile route /llm-privacy/openai",
+      "pass": true
+    },
+    {
+      "check": "route /llm-privacy/openrouter",
+      "pass": true,
+      "heading": "OpenRouter zero data retention (ZDR) and prompt logging"
+    },
+    {
+      "check": "mobile route /llm-privacy/openrouter",
+      "pass": true
+    },
+    {
+      "check": "route /llm-privacy/perplexity",
+      "pass": true,
+      "heading": "Perplexity data retention policy"
+    },
+    {
+      "check": "mobile route /llm-privacy/perplexity",
+      "pass": true
+    },
+    {
+      "check": "route /llm-privacy/together",
+      "pass": true,
+      "heading": "Together AI data retention policy"
+    },
+    {
+      "check": "mobile route /llm-privacy/together",
+      "pass": true
+    },
+    {
+      "check": "route /llm-privacy/xai",
+      "pass": true,
+      "heading": "xAI Grok data retention policy"
+    },
+    {
+      "check": "mobile route /llm-privacy/xai",
+      "pass": true
+    },
+    {
+      "check": "route /help",
+      "pass": true,
+      "heading": "Let us help you get going"
+    },
+    {
+      "check": "mobile route /help",
+      "pass": true
+    },
+    {
+      "check": "route /author/sandeep",
+      "pass": true,
+      "heading": "Sandeep Zachariah"
+    },
+    {
+      "check": "mobile route /author/sandeep",
+      "pass": true
+    },
+    {
+      "check": "route /choose-summary-model",
+      "pass": true,
+      "heading": "Summary Generation"
+    },
+    {
+      "check": "mobile route /choose-summary-model",
+      "pass": true
+    },
+    {
+      "check": "route /author/meetily-team",
+      "pass": true,
+      "heading": "Meetily Team"
+    },
+    {
+      "check": "mobile route /author/meetily-team",
+      "pass": true
+    },
+    {
+      "check": "route /author/sujith",
+      "pass": true,
+      "heading": "Sujith S"
+    },
+    {
+      "check": "mobile route /author/sujith",
+      "pass": true
+    },
+    {
+      "check": "route /author/sadeed",
+      "pass": true,
+      "heading": "Sadeed Ameen P.O"
+    },
+    {
+      "check": "mobile route /author/sadeed",
+      "pass": true
+    },
+    {
+      "check": "route /vs/fathom",
+      "pass": true,
+      "heading": "Meetily vs Fathom: Free, Private, No Bots"
+    },
+    {
+      "check": "mobile route /vs/fathom",
+      "pass": true
+    },
+    {
+      "check": "route /gdpr-meeting-transcription",
+      "pass": true,
+      "heading": "GDPR Compliant\nMeeting Transcription"
+    },
+    {
+      "check": "mobile route /gdpr-meeting-transcription",
+      "pass": true
+    },
+    {
+      "check": "route /use-cases/education",
+      "pass": true,
+      "heading": "Education AI Meeting Assistant"
+    },
+    {
+      "check": "mobile route /use-cases/education",
+      "pass": true
+    },
+    {
+      "check": "route /author/meetily-security-team",
+      "pass": true,
+      "heading": "Meetily Security Team"
+    },
+    {
+      "check": "mobile route /author/meetily-security-team",
+      "pass": true
+    },
+    {
+      "check": "route /downloads/mac",
+      "pass": true,
+      "heading": "Meetily for macOS"
+    },
+    {
+      "check": "mobile route /downloads/mac",
+      "pass": true
+    },
+    {
+      "check": "route /downloads/windows",
+      "pass": true,
+      "heading": "Meetily for Windows"
+    },
+    {
+      "check": "mobile route /downloads/windows",
+      "pass": true
+    },
+    {
+      "check": "route /releases/pro/1.7.6",
+      "pass": true,
+      "heading": "Meetily Pro 1.7.6 - Background Imports & Re-transcription"
+    },
+    {
+      "check": "mobile route /releases/pro/1.7.6",
+      "pass": true
+    },
+    {
+      "check": "route /releases/pro/1.9.2",
+      "pass": true,
+      "heading": "Meetily Pro 1.9.2 - Automatic Recording & Floating Pill"
+    },
+    {
+      "check": "mobile route /releases/pro/1.9.2",
+      "pass": true
+    },
+    {
+      "check": "route /releases/pro/1.11.1",
+      "pass": true,
+      "heading": "Meetily Pro 1.11.1 - Long Meetings Summarize, Recordings Stay Safe"
+    },
+    {
+      "check": "mobile route /releases/pro/1.11.1",
+      "pass": true
+    },
+    {
+      "check": "route /license-request",
+      "pass": true,
+      "heading": "Trial questions"
+    },
+    {
+      "check": "mobile route /license-request",
+      "pass": true
+    },
+    {
+      "check": "route /blog/beste-kostenlose-meeting-recorder-2026",
+      "pass": true,
+      "heading": "10 beste kostenlose Meeting-Recorder 2026 (Getestet) - Jetzt downloaden"
+    },
+    {
+      "check": "mobile route /blog/beste-kostenlose-meeting-recorder-2026",
+      "pass": true
+    },
+    {
+      "check": "route /blog/mejor-grabador-reuniones-gratis-2026",
+      "pass": true,
+      "heading": "10 mejores grabadores de reuniones gratis 2026 (Probados) - Descarga gratis"
+    },
+    {
+      "check": "mobile route /blog/mejor-grabador-reuniones-gratis-2026",
+      "pass": true
+    },
+    {
+      "check": "route /blog/melhor-gravador-reunioes-gratis-2026",
+      "pass": true,
+      "heading": "10 melhores gravadores de reunioes gratis 2026 (Testados) - Download gratis"
+    },
+    {
+      "check": "mobile route /blog/melhor-gravador-reunioes-gratis-2026",
+      "pass": true
+    },
+    {
+      "check": "route /blog/zuijia-mianfei-huiyi-luyinji-2026",
+      "pass": true,
+      "heading": "2026年10款最佳免费会议录制软件（实测）- 免费下载"
+    },
+    {
+      "check": "mobile route /blog/zuijia-mianfei-huiyi-luyinji-2026",
+      "pass": true
+    },
+    {
+      "check": "route /blog/ai-huiyi-zhushou-anquan-yinsi-fengxian",
+      "pass": true,
+      "heading": "AI会议助手安全吗？隐私风险揭秘（2026指南）"
+    },
+    {
+      "check": "mobile route /blog/ai-huiyi-zhushou-anquan-yinsi-fengxian",
+      "pass": true
+    },
+    {
+      "check": "route /blog/asistentes-reuniones-ia-seguros-riesgos-privacidad",
+      "pass": true,
+      "heading": "Son Seguros los Asistentes IA para Reuniones? Riesgos Expuestos (2026)"
+    },
+    {
+      "check": "mobile route /blog/asistentes-reuniones-ia-seguros-riesgos-privacidad",
+      "pass": true
+    },
+    {
+      "check": "route /blog/assistants-reunion-ia-securite-risques-confidentialite",
+      "pass": true,
+      "heading": "Les assistants IA pour reunions sont-ils surs ? Risques exposes (2026)"
+    },
+    {
+      "check": "mobile route /blog/assistants-reunion-ia-securite-risques-confidentialite",
+      "pass": true
+    },
+    {
+      "check": "route /blog/assistentes-reuniao-ia-seguros-riscos-privacidade",
+      "pass": true,
+      "heading": "Assistentes IA para Reunioes Sao Seguros? Riscos Expostos (2026)"
+    },
+    {
+      "check": "mobile route /blog/assistentes-reuniao-ia-seguros-riscos-privacidade",
+      "pass": true
+    },
+    {
+      "check": "route /releases/pro/1.7.3",
+      "pass": true,
+      "heading": "Meetily Pro 1.7.3 - Host vs Guest, Bluetooth Survives, Windows GPU Works"
+    },
+    {
+      "check": "mobile route /releases/pro/1.7.3",
+      "pass": true
+    },
+    {
+      "check": "route /releases/pro/1.5.0",
+      "pass": true,
+      "heading": "Meetily Pro 1.5.0 - Your Most Requested Features"
+    },
+    {
+      "check": "mobile route /releases/pro/1.5.0",
+      "pass": true
+    },
+    {
+      "check": "route /releases/pro/1.1.1",
+      "pass": true,
+      "heading": "Meetily Pro 1.1.1 - The New Beginning"
+    },
+    {
+      "check": "mobile route /releases/pro/1.1.1",
+      "pass": true
+    },
+    {
+      "check": "route /releases/pro/0.1.16",
+      "pass": true,
+      "heading": "Meetily Pro 0.1.16"
+    },
+    {
+      "check": "mobile route /releases/pro/0.1.16",
+      "pass": true
+    },
+    {
+      "check": "route /releases/pro/0.1.15",
+      "pass": true,
+      "heading": "Meetily Pro 0.1.15"
+    },
+    {
+      "check": "mobile route /releases/pro/0.1.15",
+      "pass": true
+    },
+    {
+      "check": "route /releases/pro/0.1.14",
+      "pass": true,
+      "heading": "Meetily Pro 0.1.14"
+    },
+    {
+      "check": "mobile route /releases/pro/0.1.14",
+      "pass": true
+    },
+    {
+      "check": "route /releases/pro/0.1.13",
+      "pass": true,
+      "heading": "Meetily Pro 0.1.13"
+    },
+    {
+      "check": "mobile route /releases/pro/0.1.13",
+      "pass": true
+    },
+    {
+      "check": "route /releases/pro/0.1.12",
+      "pass": true,
+      "heading": "Meetily Pro 0.1.12"
+    },
+    {
+      "check": "mobile route /releases/pro/0.1.12",
+      "pass": true
+    },
+    {
+      "check": "route /releases/pro/0.1.8",
+      "pass": true,
+      "heading": "Meetily Pro 0.1.8"
+    },
+    {
+      "check": "mobile route /releases/pro/0.1.8",
+      "pass": true
+    },
+    {
+      "check": "route /releases/pro/0.1.7",
+      "pass": true,
+      "heading": "Meetily Pro 0.1.7"
+    },
+    {
+      "check": "mobile route /releases/pro/0.1.7",
+      "pass": true
+    },
+    {
+      "check": "route /releases/pro/0.1.6",
+      "pass": true,
+      "heading": "Meetily Pro 0.1.6"
+    },
+    {
+      "check": "mobile route /releases/pro/0.1.6",
+      "pass": true
+    },
+    {
+      "check": "route /releases/pro/0.1.5",
+      "pass": true,
+      "heading": "Meetily Pro 0.1.5"
+    },
+    {
+      "check": "mobile route /releases/pro/0.1.5",
+      "pass": true
+    },
+    {
+      "check": "route /releases/pro/0.1.4",
+      "pass": true,
+      "heading": "Meetily Pro 0.1.4"
+    },
+    {
+      "check": "mobile route /releases/pro/0.1.4",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

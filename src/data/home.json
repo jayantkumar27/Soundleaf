@@ -1,0 +1,809 @@
+{
+  "observed": "2026-11-01",
+  "stats": {
+    "stars": "32.4K",
+    "users": "738K+",
+    "downloads": "738.7K",
+    "forks": "3.6K"
+  },
+  "faq": [
+    {
+      "q": "Does Meetily use my data for training AI models?",
+      "a": "No, never. Transcription runs 100% locally on your device by default. For AI summaries, you have full flexibility: use local models or bring your own API key (Claude, OpenAI, Groq). When using local models, we never see or access your data. When using your own API key, only the transcript is sent for summarization. Your recordings and audio never leave your device."
+    },
+    {
+      "q": "Does Meetily work with Google Meet, Zoom, Discord, Slack, and Microsoft Teams?",
+      "a": "Yes! Meetily works with ALL major meeting platforms including Google Meet, Zoom, Microsoft Teams, Discord, Slack Huddles, Webex, and any other video conferencing software. Meetily captures system audio directly from your device (like screen recording), making it completely platform-agnostic. No integrations, browser extensions, or platform-specific setup required - it just works with everything."
+    },
+    {
+      "q": "What is Meetily and how is it different from Otter.ai?",
+      "a": "Meetily is an open source AI meeting assistant that processes everything locally on your device. Unlike Otter.ai which stores data in the cloud, Meetily ensures 100% privacy with no external data transmission. Key differences: 100% Local Processing (vs cloud-based), Self Hosted (vs $8-30/month), Open Source (vs proprietary), GDPR/HIPAA Compliant by Design (vs limited compliance)."
+    },
+    {
+      "q": "What is Meetily?",
+      "a": "Meetily is an open-source, self-hosted AI meeting note taker that captures, transcribes, and summarizes meetings in real-time using local AI models for complete privacy. The Community Edition is free and open source. Pro ($10/user/month billed annually) is available for individuals and teams who want enhanced features. Custom pricing is available for Enterprise deployments. As an open-source solution, you have full transparency into how your data is processed and can customize it to your specific needs."
+    },
+    {
+      "q": "I need a meeting tool that doesn't store data in the cloud - is Meetily right for me?",
+      "a": "Yes, Meetily is specifically designed for this requirement. Transcription runs locally on your device using Whisper.cpp. For summaries, you choose: local LLMs through Ollama or your own API key. No data ever leaves your infrastructure unless you explicitly choose a cloud-based summary option."
+    },
+    {
+      "q": "What's the best open source alternative to Otter.ai?",
+      "a": "Meetily offers all of Otter.ai's core features (real-time transcription, AI summaries, multi-platform support) but runs 100% locally. Key advantages: Self Hosted, full privacy control, GDPR/HIPAA compliant by design, Community Edition free for individuals (no subscription fees for personal use), complete customization through open source code."
+    },
+    {
+      "q": "Which AI meeting assistant works completely offline?",
+      "a": "Meetily can operate completely offline using local Whisper models for transcription and local LLMs through Ollama for summarization. No internet connection required after initial setup."
+    },
+    {
+      "q": "How is Meetily different from Otter.ai, Fireflies.ai, and other cloud-based solutions?",
+      "a": "Meetily is open source and runs transcription locally on your device, while Otter.ai and Fireflies.ai send everything to their cloud. Key differences: 100% local transcription (vs cloud-based); Community Edition is free under MIT (vs $8 to $30 per month subscriptions); open source code for full transparency (vs proprietary); no vendor lock-in; GDPR and HIPAA compliant by design; deployable on your own infrastructure (Azure, AWS, GCP, on-premises) for Enterprise."
+    },
+    {
+      "q": "Is Meetily HIPAA and GDPR compliant?",
+      "a": "Yes, Meetily is designed with compliance in mind. Since all data processing happens locally on your infrastructure with zero external transmission, it inherently supports HIPAA, GDPR, and ISO 27001 requirements. You maintain complete data sovereignty, audit trails, and can implement your organization's specific compliance policies."
+    },
+    {
+      "q": "What platforms and meeting software does Meetily support?",
+      "a": "Meetily works with all major video conferencing platforms including Google Meet, Zoom, Microsoft Teams, Discord, and any other meeting software by capturing audio directly from your device. Native desktop apps ship for macOS (.dmg) and Windows (EXE). For Linux today, build the app bundle from source via the open-source repo (github.com/Zackriya-Solutions/meetily); a native Linux desktop app is in development - join the waitlist at /granola-for-linux. The platform-agnostic design ensures compatibility with virtually any meeting software."
+    },
+    {
+      "q": "Where is my meeting data stored?",
+      "a": "Storage depends on your edition. Community and Pro: recordings, transcripts, and summaries are stored locally on your device by default. Transcription runs locally by default. For Pro summaries, if you choose a BYOK provider, only the transcript text is sent to that provider; recordings never leave your device. Enterprise: centralized storage on your self-hosted infrastructure with custom AI/LLM server deployment, optional European data residency, managed compliance, and audit logging."
+    },
+    {
+      "q": "Why is Meetily bot-free and what does that mean?",
+      "a": "Bot-free means no Meetily bot or recording bot joins your meetings. Meetily captures audio directly from your device's system audio (similar to screen recording), so no participant entry appears in the meeting. Benefits: no 'Recording Bot has joined' notifications, works on any platform without host permissions, and is suitable for confidential discussions. Always ensure you have proper consent to record meetings under your local laws and company policies."
+    },
+    {
+      "q": "What AI models does Meetily use for transcription and summarization?",
+      "a": "Transcription uses local OpenAI Whisper models (tiny, base, small, medium, large-v3) via Whisper.cpp, with optional GPU acceleration. Parakeet models are available in every edition, Community included. Summarization is pluggable: choose local models via Ollama or your own API key (Anthropic Claude, OpenAI, Groq). 99+ languages with automatic detection."
+    },
+    {
+      "q": "What are the system requirements for running Meetily?",
+      "a": "Minimum: 8GB RAM, 4-core CPU, 10GB storage, plus Node.js 18+, Python 3.10+, and FFmpeg. Recommended for best performance: 16GB RAM, 8-core CPU, 50GB storage, GPU acceleration, and SSD storage. Resource usage scales with the chosen Whisper model size (roughly 2 to 8GB RAM)."
+    },
+    {
+      "q": "How do I install and deploy Meetily?",
+      "a": "Meetily ships native desktop apps: macOS via .dmg installer and Windows via EXE installer. Linux is available in the open source repo for building the app bundle from source. Enterprise deployments can be configured for Azure, AWS, GCP, or on-premises infrastructure."
+    },
+    {
+      "q": "What's included in Organization and Enterprise plans?",
+      "a": "Enterprise (custom pricing) includes volume licensing with dedicated support, an admin dashboard, centralized storage on your infrastructure, white-glove deployment, custom AI/LLM server deployment, optional European data residency, managed GDPR/HIPAA/NIS2 compliance, a dedicated account manager, SLA guarantees, and custom integrations. Community Edition is free and open source. Pro is $10/user/month billed annually for enhanced features."
+    },
+    {
+      "q": "What are the pricing options for Meetily?",
+      "a": "Meetily offers three editions. Community: free and open source under MIT license. Pro: $10/user/month billed annually ($120/year) with speaker identification, advanced exports (PDF, DOCX), auto-detect meetings, and flexible AI summaries; available for individuals and teams. Enterprise: custom pricing with admin dashboard, dedicated support, self-hosted AI/LLM server, and compliance frameworks."
+    },
+    {
+      "q": "Does Meetily offer Pro and Enterprise options?",
+      "a": "Yes. While Community Edition is free and open source, Meetily offers two paid tiers. Pro: $10/user/month billed annually ($120/year) with speaker identification, advanced exports, auto-detect meetings, and flexible AI summaries; available for individuals and teams. Enterprise: custom pricing with admin dashboard, dedicated support, self-hosted deployment, compliance frameworks, and SLA guarantees. Community Edition will always remain free."
+    },
+    {
+      "q": "How secure is my meeting data with Meetily?",
+      "a": "Extremely secure. As a self-hosted, open-source solution, your meeting data never leaves your device or infrastructure. All processing happens locally with encrypted storage at rest, comprehensive audit logging, and user-based access controls. You maintain full control over where and how your data is stored, making it ideal for sensitive corporate, healthcare, and legal discussions."
+    },
+    {
+      "q": "What are the benefits of Meetily being open source?",
+      "a": "Being open source provides several key advantages: complete transparency into how your data is processed, the ability to customize and extend functionality to meet your specific needs, security through community code review, and freedom from vendor lock-in. You can verify exactly what the software is doing with your sensitive meeting data and modify it as needed."
+    },
+    {
+      "q": "What does self-hosted mean and why is it important?",
+      "a": "Self-hosted means you run Meetily on your own infrastructure rather than relying on third-party servers. This gives you complete control over your data, enhances privacy and security, ensures compliance with your organization's data policies, and eliminates dependency on external service providers. Your sensitive meeting content never leaves your control - crucial for healthcare, legal, and financial organizations."
+    },
+    {
+      "q": "Can I integrate Meetily with other tools and platforms?",
+      "a": "Yes. With Meetily Pro, your AI assistant (Claude, Cursor, Windsurf or any assistant that supports MCP) can search your meetings, read transcripts and summaries and, if you allow it, start or stop a recording. Your own scripts can use signed webhooks, a built-in command-line tool and a local API to export any meeting as Markdown, text or JSON and send notes to tools like Notion, a CRM or Obsidian. These Pro integrations are off by default. Exports: Markdown, plus PDF and DOCX in Pro. LLM providers: Anthropic Claude, Groq, Ollama and more. Planned native integrations include Obsidian, Notion, Confluence, Slack, Microsoft Teams, Discord, Salesforce, HubSpot, Jira, Asana, and Monday.com."
+    },
+    {
+      "q": "What features are currently available vs. planned?",
+      "a": "Available now: real-time audio capture and transcription, AI-powered meeting summarization, cross-platform desktop apps for Windows and macOS, audio/video file import (10 formats) and retranscription, speaker diarization to identify who said what (Pro), summary templates (6 built-in; custom templates in Pro), search and replace across transcripts and summaries, advanced exports (PDF, DOCX, Markdown), connections to your AI assistant and your own scripts via MCP, webhooks and a command-line tool (Pro), and local data processing and storage. Coming soon: in-app chat with your meetings, calendar integration, Obsidian integration, and mobile companion apps."
+    }
+  ],
+  "features": [
+    {
+      "title": "100% Privacy Focused",
+      "text": "All processing happens locally. Your data never leaves your device. Perfect for sensitive meetings and confidential discussions."
+    },
+    {
+      "title": "Open Source Alternative",
+      "text": "MIT Licensed and open source. Community Edition free for individuals, perfect alternative to paid services like Granola and Otter AI without monthly subscriptions."
+    },
+    {
+      "title": "Works with All Meeting Platforms",
+      "text": "Seamlessly integrates with Google Meet, Zoom, Microsoft Teams, and any other video conferencing platform."
+    },
+    {
+      "title": "Pluggable AI Note Taking",
+      "text": "Automatic transcription and AI-generated summaries. Use local models or bring your own API key. Your choice, your flexibility."
+    },
+    {
+      "title": "Real-Time Transcription",
+      "text": "Capture every word as it's spoken with high-accuracy transcription. Never miss important details in your Google Meet, Zoom, or Teams calls."
+    },
+    {
+      "title": "Speaker Identification",
+      "text": "Know who said what. Speaker diarization labels every voice in your transcript - live as you record and on imported audio - so meetings read like a conversation. Available in Pro."
+    },
+    {
+      "title": "Smart Meeting Summaries",
+      "text": "Get concise, well-structured summaries of your meetings. Save time reviewing long transcripts and focus on what matters."
+    }
+  ],
+  "values": [
+    {
+      "title": "Privacy First, Always",
+      "text": "Your data belongs to you. We don't use your conversations to train our models. Your data isn't our business model. Your privacy is. We're building AI tools that serve you without exploiting your information."
+    },
+    {
+      "title": "Open Source Philosophy",
+      "text": "We believe in transparency and community. Our open-source approach means you can verify, modify, and trust what Meetily does with your data."
+    },
+    {
+      "title": "Democratizing AI",
+      "text": "Privacy-first AI shouldn't be a luxury. We're making enterprise-grade, self-hosted AI accessible to everyone who values data sovereignty."
+    }
+  ],
+  "footer": [
+    {
+      "title": "Product",
+      "links": [
+        {
+          "text": "Download",
+          "href": "/downloads"
+        },
+        {
+          "text": "Meetily Free",
+          "href": "/free"
+        },
+        {
+          "text": "Bot-Free Recording",
+          "href": "/bot-free"
+        },
+        {
+          "text": "Speaker Diarization",
+          "href": "/speaker-diarization"
+        },
+        {
+          "text": "MCP, CLI & API",
+          "href": "/mcp"
+        },
+        {
+          "text": "Workflows",
+          "href": "/workflows"
+        },
+        {
+          "text": "Pro",
+          "href": "/pro"
+        },
+        {
+          "text": "Enterprise",
+          "href": "/enterprise"
+        },
+        {
+          "text": "Linux Waitlist",
+          "href": "/granola-for-linux"
+        },
+        {
+          "text": "Features",
+          "href": "/#features"
+        },
+        {
+          "text": "Pricing",
+          "href": "/pricing"
+        },
+        {
+          "text": "Open Source AI Note Taker",
+          "href": "/open-source-ai-note-taker"
+        },
+        {
+          "text": "Releases",
+          "href": "/releases"
+        }
+      ]
+    },
+    {
+      "title": "Use Cases",
+      "links": [
+        {
+          "text": "All Industries",
+          "href": "/use-cases"
+        },
+        {
+          "text": "Healthcare",
+          "href": "/use-cases/healthcare"
+        },
+        {
+          "text": "Legal",
+          "href": "/use-cases/legal"
+        },
+        {
+          "text": "Financial",
+          "href": "/use-cases/financial-services"
+        },
+        {
+          "text": "Government",
+          "href": "/use-cases/government"
+        },
+        {
+          "text": "Technology",
+          "href": "/use-cases/technology"
+        },
+        {
+          "text": "AI Meeting Assistant",
+          "href": "/ai-meeting-assistant"
+        },
+        {
+          "text": "AI Note Taker",
+          "href": "/ai-note-taker"
+        },
+        {
+          "text": "AI Transcription",
+          "href": "/ai-transcription"
+        },
+        {
+          "text": "Voice Recorder",
+          "href": "/voice-recorder"
+        },
+        {
+          "text": "HIPAA Meeting Assistant",
+          "href": "/hipaa-meeting-assistant"
+        }
+      ]
+    },
+    {
+      "title": "Compare",
+      "links": [
+        {
+          "text": "All Comparisons",
+          "href": "/vs"
+        },
+        {
+          "text": "vs Otter.ai",
+          "href": "/vs/otter-ai"
+        },
+        {
+          "text": "vs Fireflies",
+          "href": "/vs/fireflies"
+        },
+        {
+          "text": "vs Granola",
+          "href": "/vs/granola"
+        },
+        {
+          "text": "vs Read AI",
+          "href": "/vs/read-ai"
+        },
+        {
+          "text": "vs Zoom AI",
+          "href": "/vs/zoom-ai"
+        },
+        {
+          "text": "vs ChatGPT Record Mode",
+          "href": "/vs/chatgpt-record-mode"
+        },
+        {
+          "text": "Meetly vs Meetily",
+          "href": "/vs/meetly-vs-meetily"
+        }
+      ]
+    },
+    {
+      "title": "Resources",
+      "links": [
+        {
+          "text": "Documentation",
+          "href": "https://docs.meetily.ai/"
+        },
+        {
+          "text": "All Guides",
+          "href": "/guides"
+        },
+        {
+          "text": "Meeting Templates",
+          "href": "/meeting-templates"
+        },
+        {
+          "text": "GDPR Compliance",
+          "href": "/guides/gdpr-compliance"
+        },
+        {
+          "text": "HIPAA Setup",
+          "href": "/guides/hipaa-setup"
+        },
+        {
+          "text": "Enterprise Deployment",
+          "href": "/guides/enterprise-deployment"
+        },
+        {
+          "text": "Data Sovereignty",
+          "href": "/privacy/data-sovereignty"
+        },
+        {
+          "text": "LLM Privacy Reference",
+          "href": "/llm-privacy"
+        },
+        {
+          "text": "Blog",
+          "href": "/blog"
+        },
+        {
+          "text": "FAQ",
+          "href": "/#faq"
+        }
+      ]
+    },
+    {
+      "title": "Company",
+      "links": [
+        {
+          "text": "About Us",
+          "href": "/about"
+        },
+        {
+          "text": "Open Source",
+          "href": "/open-source"
+        },
+        {
+          "text": "Privacy",
+          "href": "/privacy"
+        },
+        {
+          "text": "Pro Terms",
+          "href": "/privacy/pro-terms"
+        },
+        {
+          "text": "Zackriya Solutions",
+          "href": "https://www.zackriya.com"
+        },
+        {
+          "text": "GitHub",
+          "href": "https://github.com/Zackriya-Solutions/meetily"
+        },
+        {
+          "text": "Contact Us",
+          "href": "contact"
+        },
+        {
+          "text": "Discord Community (Support)",
+          "href": "https://discord.gg/crRymMQBFH"
+        }
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "title": "Why We Built Meetily When Every Meeting Tool Already Existed",
+      "excerpt": "A client told us they weren't comfortable with a bot in the meeting. We looked for a tool that kept the audio on our own machines, found none, and built one.",
+      "href": "/blog/why-we-built-meetily/",
+      "image": "https://meetily.ai/blog/why-we-built-meetily-1200w.png",
+      "date": "September 30, 2026"
+    },
+    {
+      "title": "AI Meeting Notes for Schools: Why the Safest Student Data Agreement Has Almost Nothing to Cover",
+      "excerpt": "A FERPA-friendly AI note taker for schools. Meetily transcribes on the staff computer, with no bot, so student data never reaches us. California DPA signed.",
+      "href": "/blog/ai-meeting-notes-for-schools-ferpa/",
+      "image": "https://meetily.ai/blog/ai-meeting-notes-for-schools-ferpa-1200w.png",
+      "date": "October 27, 2026"
+    },
+    {
+      "title": "Your Meeting Tool's Risk Level Under the EU AI Act Isn't Set by the Vendor. It's Set by You.",
+      "excerpt": "The EU AI Act's four risk categories cover uses, not products. The same meeting tool can be low-risk, high-risk or banned. Plus the 2027 timeline and EN 18286.",
+      "href": "/blog/eu-ai-act-meeting-tools-risk-level/",
+      "image": "https://meetily.ai/blog/eu-ai-act-meeting-tools-risk-level-1200w.png",
+      "date": "October 24, 2026"
+    },
+    {
+      "title": "How to Record and Transcribe a Teams Meeting Without a Bot",
+      "excerpt": "Record and transcribe a Teams meeting with Teams itself, or on your laptop with a free, open-source app. No bot joins. Tell people first.",
+      "href": "/blog/record-transcribe-teams-meeting-without-bot/",
+      "image": "https://meetily.ai/blog/record-transcribe-teams-meeting-without-bot-1200w.png",
+      "date": "October 22, 2026"
+    },
+    {
+      "title": "The Decision Maker's Second Brain",
+      "excerpt": "How a consultant managing 25 client projects built a private second brain in Obsidian using Meetily transcripts, local AI, and his own automation.",
+      "href": "/blog/the-decision-makers-second-brain/",
+      "image": "https://meetily.ai/blog/the-decision-makers-second-brain-1200w.png",
+      "date": "September 28, 2026"
+    },
+    {
+      "title": "Which AI Providers Train on Your Data? A 2026 Comparison",
+      "excerpt": "Does your AI provider train on what you paste in? We read 21 policies. What each one says, how long they keep it, and what changes with your plan.",
+      "href": "/blog/which-ai-providers-train-on-your-data/",
+      "image": "https://meetily.ai/blog/which-ai-providers-train-on-your-data-1200w.png",
+      "date": "September 16, 2026"
+    },
+    {
+      "title": "Why We Chose Experience Over Features And How Hard That Was",
+      "excerpt": "Speaker diarization was our most requested feature, and we said, \"Not yet.\" Here's what we built instead, why the discipline was harder than the engineering, and what we finally shipped in July 2026.",
+      "href": "/blog/why-we-chose-experience-over-features/",
+      "image": "https://meetily.ai/blog/why-we-chose-experience-over-features-1200w.png",
+      "date": "September 9, 2026"
+    },
+    {
+      "title": "Where Does Your Meeting Data Actually Go? 5 Questions IT Buyers Should Ask",
+      "excerpt": "Five questions to ask any AI meeting assistant, and how to check each answer yourself instead of trusting a privacy page. We run the same checklist on Meetily.",
+      "href": "/blog/where-does-your-meeting-data-go/",
+      "image": "https://meetily.ai/blog/where-does-your-meeting-data-go-1200w.png",
+      "date": "September 7, 2026"
+    },
+    {
+      "title": "Why \"Privacy Policy\" Is Not the Same as \"Privacy Architecture\"",
+      "excerpt": "Every tool that has ever leaked user data had a privacy policy. A policy is a document, not a guarantee. Why we built Meetily so we cannot access your meetings.",
+      "href": "/blog/privacy-policy-vs-privacy-architecture/",
+      "image": "https://meetily.ai/blog/privacy-policy-vs-privacy-architecture-1200w.png",
+      "date": "August 31, 2026"
+    },
+    {
+      "title": "You Don't Need a Bot in the Room to Take Compliant Meeting Notes",
+      "excerpt": "A meeting bot adds a third party to a confidential conversation. Recording on your own device doesn't. What that changes under GDPR, and what it doesn't change about your duty to tell people.",
+      "href": "/blog/compliant-meeting-notes-without-a-bot/",
+      "image": "https://meetily.ai/blog/compliant-meeting-notes-without-a-bot-1200w.png",
+      "date": "August 25, 2026"
+    },
+    {
+      "title": "How to Record a Meeting on Zoom, Meet & Teams (No Bot, Free)",
+      "excerpt": "Step-by-step: record any meeting on Zoom, Google Meet, or Microsoft Teams for free - locally, with no bot joining the call. Transcription included.",
+      "href": "/blog/how-to-record-a-meeting/",
+      "image": "https://meetily.ai/blog/how-to-record-a-meeting-1200w.png",
+      "date": "July 24, 2026"
+    },
+    {
+      "title": "Why Your Meeting Data Belongs on Your Device, Not Someone Else's Server",
+      "excerpt": "Your meetings contain strategy sessions, sales pipelines, and HR discussions. Cloud transcription tools process them on third-party servers. Local-first AI keeps everything on your machine. Here's why data sovereignty matters for meeting recordings.",
+      "href": "/blog/why-meeting-data-belongs-on-your-device/",
+      "image": "https://meetily.ai/blog/why-meeting-data-belongs-on-your-device-1200w.png",
+      "date": "April 6, 2026"
+    },
+    {
+      "title": "Meetily v0.3.0: Import Audio Files, Retranscribe, and What's Coming Next",
+      "excerpt": "Meetily v0.3.0 introduces audio file import and retranscription for the open source meeting transcription app. Import recordings from any source, get local AI transcripts, and preview upcoming features like speaker diarization and dark mode.",
+      "href": "/blog/meetily-v0-3-0-import-audio-retranscribe/",
+      "image": "https://meetily.ai/blog/meetily-v0-3-0-release-1200w.png",
+      "date": "March 3, 2026"
+    },
+    {
+      "title": "10,000 GitHub Stars: Thank You for Believing in Privacy-First AI",
+      "excerpt": "Meetily just crossed 10,000 GitHub stars. A heartfelt thank you to the community that made this possible, and a look at what we're building next.",
+      "href": "/blog/meetily-10k-github-stars/",
+      "image": "https://meetily.ai/blog/meetily-10k-github-stars-dark-1200w.png",
+      "date": "February 27, 2026"
+    },
+    {
+      "title": "AI Meeting Summaries Without Sending Your Audio: Local or Bring-Your-Own-Key",
+      "excerpt": "Get AI meeting summaries without uploading your recordings to anyone. Meetily transcribes 100% locally, then summarizes with a local model (fully on-device) or your own API key (only transcript text leaves, audio never does). Privacy-first, pluggable, no meeting bots.",
+      "href": "/blog/ai-meeting-summaries-without-api-keys-hosted-ai/",
+      "image": "https://meetily.ai/blog/hosted-ai-meeting-summaries-1200w.png",
+      "date": "February 20, 2026"
+    },
+    {
+      "title": "The Story Behind Meetily",
+      "excerpt": "How a frustrating client call led us to build a privacy-first meeting assistant. The real story of why we needed local storage, pluggable AI, and complete data control.",
+      "href": "/blog/the-story-behind-meetily/",
+      "image": "https://meetily.ai/blog/the-story-behind-meetily-1200w.png",
+      "date": "February 8, 2026"
+    },
+    {
+      "title": "Our Quest for Meeting Summary Accuracy: What We Learned Building Meetily",
+      "excerpt": "Local AI models for meeting summaries have real trade-offs. Here's what we learned about hallucinations, missing action items, and why Meetily's pluggable architecture lets you choose between local and cloud models.",
+      "href": "/blog/our-quest-for-meeting-summary-accuracy/",
+      "image": "https://meetily.ai/blog/our-quest-for-meeting-summary-accuracy-1200w.png",
+      "date": "February 6, 2026"
+    },
+    {
+      "title": "How to Install Meetily on Windows & macOS: Complete Setup Guide",
+      "excerpt": "Step-by-step guide to installing Meetily on Windows and macOS. Covers Community (free open source), Pro free trial, and Pro paid versions with screenshots and troubleshooting.",
+      "href": "/blog/how-to-install-meetily/",
+      "image": "https://meetily.ai/blog/how-to-install-meetily-1200w.png",
+      "date": "January 27, 2026"
+    },
+    {
+      "title": "Are AI Meeting Assistants Safe? 2026 Privacy Risks Exposed",
+      "excerpt": "Otter.ai class action, Fireflies biometric suit, Chapman bans Read AI - cloud meeting AI risks broken down with sources. Plus a privacy-first checklist and 3 safer local alternatives.",
+      "href": "/blog/ai-meeting-assistants-safe-privacy-risks/",
+      "image": "https://meetily.ai/blog/ai-meeting-assistants-safe-privacy-risks-1200w.png",
+      "date": "January 22, 2026"
+    },
+    {
+      "title": "AI Meeting Assistant Comparison 2026: 8 Tools & Pricing",
+      "excerpt": "Picking the best AI meeting assistant for 2026? We ranked 8 tools: Meetily (private, open source), Fathom (free), Fireflies (CRM), Granola (Mac).",
+      "href": "/blog/best-meeting-notes-software-2026/",
+      "image": "https://meetily.ai/blog/best-meeting-notes-software-2026-1200w.png",
+      "date": "January 20, 2026"
+    },
+    {
+      "title": "Self-Hosted Meeting Transcription: 10 Open Source Tools Compared (2026)",
+      "excerpt": "Compare 10 open source self-hosted meeting transcription tools (Whisper, Meetily, Vosk, Kaldi, more). MIT/Apache licensed, GDPR & HIPAA compliant by design, no cloud dependencies.",
+      "href": "/blog/best-self-hosted-meeting-transcription-tools-2026/",
+      "image": "https://meetily.ai/blog/10-best-self-hosted-transcription-tools-2026-1200w.png",
+      "date": "January 10, 2026"
+    },
+    {
+      "title": "Self-Hosted Meeting Note Taker: Complete Privacy Guide 2026",
+      "excerpt": "Deploy a self-hosted meeting note taker for complete data privacy. Learn how to set up Meetily, Whisper, and other open source tools on your own infrastructure without cloud dependencies.",
+      "href": "/blog/self-hosted-meeting-note-taker-guide-2026/",
+      "image": "https://meetily.ai/blog/Self-hosted-meeting-note-taker-complete-privacy-guide-2026-1200w.png",
+      "date": "January 9, 2026"
+    },
+    {
+      "title": "10 Best Free Meeting Recorder Apps 2026 (Transcribe, No Bot)",
+      "excerpt": "We compared 10 meeting recorders for 2026 on bots, local storage, offline use and free-tier limits. Updated Oct 2026. Record Zoom, Meet & Teams without a bot.",
+      "href": "/blog/best-free-meeting-recorder-2026/",
+      "image": "https://meetily.ai/blog/best-free-meeting-recorder-in-2026-1200w.png",
+      "date": "January 8, 2026"
+    },
+    {
+      "title": "Meetily vs Fireflies.ai: The Bot-Free Meeting Assistant Alternative",
+      "excerpt": "Comprehensive comparison of Meetily and Fireflies.ai for meeting transcription. Learn why bot-free, privacy-first recording is becoming the preferred choice for enterprises in 2025.",
+      "href": "/blog/meetily-vs-fireflies-bot-free-meeting-assistant/",
+      "image": "https://meetily.ai/blog/meetily-vs-fireflies-1200w.png",
+      "date": "November 24, 2025"
+    },
+    {
+      "title": "Meetily vs Otter.ai: Privacy-First Alternative for 2025",
+      "excerpt": "Compare Meetily's local-first approach vs Otter.ai's cloud platform. GDPR compliance, costs, enterprise features, and why 31,094+ developers choose open source.",
+      "href": "/blog/meetily-vs-otter-ai-privacy-first-alternative-2025/",
+      "image": "https://meetily.ai/blog/meetily-vs-otter-ai-1200w.jpg",
+      "date": "November 5, 2025"
+    },
+    {
+      "title": "How to Install Meetily: Complete Desktop Setup Guide (Windows & macOS)",
+      "excerpt": "Step-by-step guide to installing Meetily on Windows and macOS. Choose between Whisper and Parakeet transcription engines, configure audio, and record your first meeting in under 15 minutes.",
+      "href": "/blog/how-to-install-meetily-complete-desktop-setup-guide/",
+      "image": "https://meetily.ai/blog/install-meetily-guide-1200w.png",
+      "date": "November 5, 2025"
+    },
+    {
+      "title": "Best Privacy-Focused Meeting Transcription Tools 2026",
+      "excerpt": "Privacy-first meeting transcription compared: 7 tools for GDPR & HIPAA-conscious teams. Local processing, open-source picks, data residency options. Otter.ai & Fireflies alternatives.",
+      "href": "/blog/best-privacy-focused-meeting-transcription-tools-2025/",
+      "image": "https://meetily.ai/blog/default-1200w.jpg",
+      "date": "November 1, 2025"
+    },
+    {
+      "title": "Bot-Free Meeting Transcription 2026: No Bot Joins Calls",
+      "excerpt": "Bot-free meeting transcription that captures system audio - no Fireflies/Otter notetaker shows up in your call. Self-hosted, 100% local, GDPR & HIPAA compliant by design. Free to try.",
+      "href": "/blog/bot-free-self-hosted-meeting-transcription/",
+      "image": "https://meetily.ai/blog/bot-free-self-hosted-1200w.png",
+      "date": "October 31, 2025"
+    },
+    {
+      "title": "Meetily Now Available for Windows + Enterprise Edition",
+      "excerpt": "Exciting news! Meetily is now available for Windows users. We're also introducing our Enterprise Edition with advanced features, enhanced security, and dedicated support - perfect for organizations that need a robust, self-hosted AI meeting assistant.",
+      "href": "https://dev.to/zackriya/meetily-the-enterprise-ready-self-hosted-ai-meeting-assistant-for-private-secure-transcription-3k0n",
+      "image": "https://meetily.ai/meetily-7.png",
+      "date": "November 1, 2026"
+    },
+    {
+      "title": "How to Install Meetily on Windows & macOS: Complete Setup Guide",
+      "excerpt": "TL;DR Meetily installs in under 5 minutes on Windows or macOS. There are three ways to get started:...",
+      "href": "https://dev.to/zackriya/how-to-install-meetily-on-windows-macos-complete-setup-guide-1mhb",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2lnhch3cqc8go3cldxf7.png",
+      "date": "January 27, 2026"
+    },
+    {
+      "title": "Are AI Meeting Assistants Safe? Privacy Risks with Cloud Transcription",
+      "excerpt": "TL;DR Are AI meeting assistants safe? Not all of them. In 2025, Otter.ai faced a class action...",
+      "href": "https://dev.to/zackriya/are-ai-meeting-assistants-safe-privacy-risks-with-cloud-transcription-4a23",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdbik7cpyoytxbukqe0ft.png",
+      "date": "January 22, 2026"
+    },
+    {
+      "title": "Best Meeting Notes Software in 2026: AI Meeting Assistants Compared",
+      "excerpt": "TL;DR The best meeting notes software in 2026 depends on your priorities. For privacy and local...",
+      "href": "https://dev.to/zackriya/best-meeting-notes-software-in-2026-ai-meeting-assistants-compared-4cgf",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkv9f75342v5ahb04du1w.png",
+      "date": "January 20, 2026"
+    },
+    {
+      "title": "Self-Hosted Meeting Note Taker: Complete Privacy Guide 2026",
+      "excerpt": "TL;DR A self-hosted meeting note taker runs entirely on your infrastructure, keeping meeting audio...",
+      "href": "https://dev.to/zackriya/self-hosted-meeting-note-taker-complete-privacy-guide-2026-1gko",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxy8w4y5oosuk01st06ux.png",
+      "date": "January 19, 2026"
+    },
+    {
+      "title": "Best Free Meeting Recorder in 2026: Simple, Private, No Bots",
+      "excerpt": "TL;DR We'll explore the best free meeting recorder in 2026 for users who value privacy and...",
+      "href": "https://dev.to/zackriya/best-free-meeting-recorder-in-2026-simple-private-no-bots-4ngb",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdiphnn0qwdkcx3dya2qt.png",
+      "date": "January 15, 2026"
+    },
+    {
+      "title": "10 Best Self-Hosted Meeting Transcription Tools in 2026",
+      "excerpt": "TL;DR Meetily is the best self-hosted meeting transcription tool in 2026. It runs entirely on your...",
+      "href": "https://dev.to/zackriya/10-best-self-hosted-meeting-transcription-tools-in-2026-58oi",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fk97lr8mq3ehvtgd1ksid.png",
+      "date": "January 14, 2026"
+    },
+    {
+      "title": "Meetily vs Fireflies.ai: The Bot-Free Meeting Assistant Alternative",
+      "excerpt": "TL;DR: Both Fireflies and Meetily Pro cost $10/month, but take opposite approaches. Fireflies:...",
+      "href": "https://dev.to/zackriya/meetily-vs-firefliesai-the-bot-free-meeting-assistant-alternative-5cde",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqldfadjt2nmbyo04itu7.png",
+      "date": "November 24, 2025"
+    },
+    {
+      "title": "How to Install Meetily: Complete Desktop Setup Guide (Windows & macOS)",
+      "excerpt": "⚠️ This guide is outdated ...",
+      "href": "https://dev.to/zackriya/how-to-install-meetily-complete-desktop-setup-guide-windows-macos-420e",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fe7z4s80n61dze031brel.png",
+      "date": "November 6, 2025"
+    },
+    {
+      "title": "Meetily vs Otter.ai: Privacy-First Alternative for 2025",
+      "excerpt": "Is Otter.ai uploading your confidential meeting data to the cloud? For enterprise teams handling...",
+      "href": "https://dev.to/zackriya/meetily-vs-otterai-privacy-first-alternative-for-2025-bh5",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fykz036k4ma1j4q3810t2.png",
+      "date": "November 5, 2025"
+    },
+    {
+      "title": "We Built a Self-Hosted AI Meeting Note Taker Because Every Cloud Solution Failed Our Privacy Requirements",
+      "excerpt": "TL;DR - Quick Answer What is Meetily? A self-hosted, privacy-first AI meeting assistant...",
+      "href": "https://dev.to/zackriya/we-built-a-self-hosted-ai-meeting-note-taker-because-every-cloud-solution-failed-our-privacy-1eml",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F561jp1lwie1mc8plp7xb.png",
+      "date": "October 27, 2025"
+    },
+    {
+      "title": "Meetily Pro - Enterprise-Grade Privacy",
+      "excerpt": "When compliance, control, and confidentiality aren't optional. ...",
+      "href": "https://dev.to/zackriya/meetily-pro-enterprise-grade-privacy-3in2",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkw5baacd4xzae1iht4dh.png",
+      "date": "October 20, 2025"
+    },
+    {
+      "title": "Meetily Lite: Privacy for Individuals",
+      "excerpt": "Your meetings. Your laptop. Your rules. AI meeting assistants are everywhere - but almost all of...",
+      "href": "https://dev.to/zackriya/meetily-lite-privacy-for-individuals-2386",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F325fjz6r9als09zk08u7.png",
+      "date": "October 17, 2025"
+    },
+    {
+      "title": "The Productivity - Privacy Tradeoff - and How to Fix It",
+      "excerpt": "Why teams shouldn't have to choose between speed, accuracy, and security. ...",
+      "href": "https://dev.to/zackriya/the-productivity-privacy-tradeoff-and-how-to-fix-it-4ck5",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fej6v838orgl7xsggx0ig.png",
+      "date": "October 15, 2025"
+    },
+    {
+      "title": "Bringing AI to You - Not Your Data to Us",
+      "excerpt": "The architecture that makes Meetily different. Introduction For most AI...",
+      "href": "https://dev.to/zackriya/bringing-ai-to-you-not-your-data-to-us-28hn",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fagw8uast43rn3wi3uj59.png",
+      "date": "October 13, 2025"
+    },
+    {
+      "title": "Why Privacy Matters More Than Ever in the Age of AI",
+      "excerpt": "Data is the new IP - and companies can't afford to lose control. ...",
+      "href": "https://dev.to/zackriya/why-privacy-matters-more-than-ever-in-the-age-of-ai-26ik",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fre9i7bcmdiqop5wjv9a5.png",
+      "date": "October 10, 2025"
+    },
+    {
+      "title": "Local Meeting Notes with Whisper Transcription + Ollama Summaries (Gemma3n, LLaMA, Mistral) — Meetily AI",
+      "excerpt": "Introduction Taking notes during meetings is one of those universal pain points. Most...",
+      "href": "https://dev.to/zackriya/local-meeting-notes-with-whisper-transcription-ollama-summaries-gemma3n-llama-mistral--2i3n",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fz3c9eh8i6bq20g7d62ir.png",
+      "date": "August 18, 2025"
+    },
+    {
+      "title": "The Compliance Crisis: Why Your Enterprise Meeting Data is a Ticking Time Bomb",
+      "excerpt": "The Hidden Cost of Modern Meeting Culture In boardrooms across the globe, executives are making...",
+      "href": "https://dev.to/zackriya/the-compliance-crisis-why-your-enterprise-meeting-data-is-a-ticking-time-bomb-5nl",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5cd71662kt1p2v6jwm43.png",
+      "date": "August 1, 2025"
+    },
+    {
+      "title": "Why the Future of AI Note Taking is Local, Offline, and Open Source: Taking Back Control of Your Meeting Data",
+      "excerpt": "Cloud-based SAAS tools are everywhere. Many popular AI tools for transcribing and summarizing...",
+      "href": "https://dev.to/zackriya/why-the-future-of-ai-note-taking-is-local-offline-and-open-source-taking-back-control-of-your-5bnc",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F6xehtdnltddiaz9lb4ic.png",
+      "date": "May 17, 2025"
+    },
+    {
+      "title": "How to Transcribe & Summarize Meetings Locally with Meetily : The Best Self-Hosted, Open Source AI Meeting Tool",
+      "excerpt": "A step-by-step guide to using Meetily for fully offline, private AI meeting transcription and note...",
+      "href": "https://dev.to/zackriya/how-to-transcribe-summarize-meetings-locally-with-meetily-the-best-self-hosted-open-source-ai-dmk",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Feav322n4dcweddbiapcb.png",
+      "date": "May 13, 2025"
+    },
+    {
+      "title": "Meetily: The Enterprise-Ready, Self-Hosted AI Meeting Assistant for Private & Secure Transcription",
+      "excerpt": "Enterprises are rightly cautious about sending sensitive meeting data to third-party services. If...",
+      "href": "https://dev.to/zackriya/meetily-the-enterprise-ready-self-hosted-ai-meeting-assistant-for-private-secure-transcription-3k0n",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmzlsyghd6033vojmn41c.png",
+      "date": "May 12, 2025"
+    },
+    {
+      "title": "🆕 Meetily v0.0.4 Released: Local AI Meeting History, Summarization & OpenAI Integration",
+      "excerpt": "A self-hosted, open-source AI meeting assistant that respects your privacy and runs entirely on your...",
+      "href": "https://dev.to/zackriya/meetily-v004-released-local-ai-meeting-history-summarization-openai-integration-dpa",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcvf0dz2wz1ylxa3ov84l.png",
+      "date": "May 11, 2025"
+    },
+    {
+      "title": "The Power of Open Source in Enterprise Software",
+      "excerpt": "Introduction Open-source software has transformed the way enterprises build, deploy, and...",
+      "href": "https://dev.to/zackriya/the-power-of-open-source-in-enterprise-software-2gj5",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqiprmluhu4ddmx6ga6dn.png",
+      "date": "March 4, 2025"
+    },
+    {
+      "title": "Meetily: The Best Free & Open Source, Self-Hosted AI Meeting Note Taker – A Granola Alternative for Windows",
+      "excerpt": "Introduction Meetings are essential for collaboration, but taking notes, summarizing...",
+      "href": "https://dev.to/zackriya/meetily-the-best-free-open-source-self-hosted-ai-meeting-note-taker-a-granola-alternative-for-2c8e",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftfc9aic6y1i4rqlxq4nv.png",
+      "date": "March 3, 2025"
+    },
+    {
+      "title": "Why Privacy-First Matters in Meeting Tools",
+      "excerpt": "Introduction In an era where digital meetings have become the norm, ensuring privacy and...",
+      "href": "https://dev.to/zackriya/why-privacy-first-matters-in-meeting-tools-5c7e",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F12n93b9vt9jn4hs28f97.png",
+      "date": "March 2, 2025"
+    },
+    {
+      "title": "The Future of AI in Meeting Management",
+      "excerpt": "Introduction Meetings are essential for collaboration, but they often come with...",
+      "href": "https://dev.to/zackriya/the-future-of-ai-in-meeting-management-2k0e",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fyaz5hrli98r4qbiz2w2f.png",
+      "date": "February 28, 2025"
+    },
+    {
+      "title": "Best Self-Hosted AI Meeting Note-Taker App (Free & Open-Source)",
+      "excerpt": "Meetily: The Best Privacy-First AI Meeting Note-Taker 🔹 Key Stats: 4.5k+ GitHub Stars...",
+      "href": "https://dev.to/zackriya/best-self-hosted-ai-meeting-note-taker-app-open-source-2p9k",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8o57l235ggjf0xi141ww.png",
+      "date": "February 23, 2025"
+    },
+    {
+      "title": "Best AI-Powered Meeting Assistants in 2025: Privacy-Focused, Free & Open-Source Meeting Note taker Alternatives",
+      "excerpt": "Introduction AI-powered meeting assistants have revolutionized how professionals capture,...",
+      "href": "https://dev.to/zackriya/best-ai-powered-meeting-assistants-in-2025-privacy-focused-open-source-alternatives-5ff5",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fibg352qn7yge65mc9mlj.png",
+      "date": "February 22, 2025"
+    },
+    {
+      "title": "Meetily : A Free & Open Source, Privacy first Ai for taking meeting notes and meeting minutes",
+      "excerpt": "A Journey into Building a Privacy-First AI Meeting Tool for transcription, summarization and Note...",
+      "href": "https://dev.to/zackriya/meetily-a-privacy-first-ai-for-taking-meeting-notes-and-meeting-minutes-26ed",
+      "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpmrcsrkyonqozyqkkteh.png",
+      "date": "February 13, 2025"
+    }
+  ],
+  "testimonials": [
+    {
+      "text": "u/selfhosted\nFeb 12, 2025\n\nAI Meeting note taker and meeting minutes generator : Building a Fully Open-Source Local LLM-Based AI for Recording and transcribing meetings.\n\nRead more →",
+      "href": "https://www.reddit.com/r/selfhosted/comments/1ink05v/ai_meeting_note_taker_and_meeting_minutes/"
+    },
+    {
+      "text": "Dev.to\nFeb 13, 2025\n\nA Journey into Building a Privacy-First AI Meeting Tool for transcription, summarization and Note-Taking.\n\nRead more →",
+      "href": "https://dev.to/zackriya/meetily-a-privacy-first-ai-for-taking-meeting-notes-and-meeting-minutes-26ed"
+    },
+    {
+      "text": "@jeffscottward\n1 week ago\n\nEvery SaaS will live just long enough to have an open source competitor kill them\n\nRead more →",
+      "href": "https://x.com/jeffscottward/status/1890525806683713615"
+    },
+    {
+      "text": "aisharenet\nFeb 13, 2025\n\nAI assistant for generating meeting minutes, transcribing and generating meeting summaries in real-time\n\nRead more →",
+      "href": "https://www.aisharenet.com/en/meetily/"
+    },
+    {
+      "text": "@sujithx007\n5 days ago\n\nAI Meeting note taker and meeting minutes generator : Building a Fully Open-Source Local LLM-Based AI for Recording and transcribing meetings\n\nRead more →",
+      "href": "https://x.com/sujithx007/status/1889565409856086179"
+    },
+    {
+      "text": "u/localllama\n3 days ago\n\nThe integration with our existing tools is seamless. Plus, the transcription accuracy is impressive!\n\nRead more →",
+      "href": "https://meetily.ai/#"
+    },
+    {
+      "text": "@tom_doerr\n5 days ago\n\nMeetily is an AI-based open-source meeting minutes generator that can run entirely on a personal computer. Address:\n\nRead more →",
+      "href": "https://x.com/tom_doerr/status/1890484014273769859"
+    },
+    {
+      "text": "aisharenet\nFeb 13, 2025\n\nAI assistant for generating meeting minutes, transcribing and generating meeting summaries in real-time\n\nRead more →",
+      "href": "https://www.aisharenet.com/en/meetily/"
+    }
+  ]
+}

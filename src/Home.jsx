@@ -50,13 +50,13 @@ export function Hero() {
       </div>
       <h1>The Privacy-First AI Meeting Assistant &amp; Note Taker</h1>
       <p className="hero-description">
-        Meetily records, transcribes, and summarizes meetings, 100% on your
+        MeetScribe records, transcribes, and summarizes meetings, 100% on your
         device. Audio and data never leave. Private, secure, in your control.
       </p>
       <div className="hero-actions">
         <a className="button green" href="#download">
           <Download size={18} />
-          Download Meetily
+          Download MeetScribe
         </a>
         <a className="button light" href={config.github}>
           <Github size={17} />
@@ -127,7 +127,7 @@ function Community() {
 }
 const privacyCards = [
   {
-    title: "Why Choose Meetily?",
+    title: "Why Choose MeetScribe?",
     icon: Sparkles,
     items: [
       "31,094+ GitHub Stars. 599,000+ Downloads",
@@ -196,7 +196,7 @@ export function Features() {
   return (
     <section className="features-section" id="features">
       <div className="section-title">
-        <h2>Why Choose Meetily?</h2>
+        <h2>Why Choose MeetScribe?</h2>
         <p>Open source, privacy-focused, and built for developers</p>
       </div>
       <div className="feature-grid">
@@ -219,7 +219,7 @@ export function DownloadSection() {
     <section className="deployment-section" id="download">
       <div className="deployment-panel">
         <Download size={30} />
-        <h2>Download Meetily</h2>
+        <h2>Download MeetScribe</h2>
         <p>
           Get the latest version for your computer. Your meetings stay on your
           device.
@@ -235,7 +235,7 @@ export function DownloadSection() {
           </a>
         </div>
         <span className="download-version">
-          Meetily Pro installers · Version {config.currentVersion}
+          MeetScribe installers · Version {config.currentVersion}
         </span>
       </div>
     </section>
@@ -265,7 +265,7 @@ export function Values() {
           Explore features
         </a>
         <a className="button light" href="#download">
-          Download Meetily
+          Download MeetScribe
         </a>
       </div>
     </section>

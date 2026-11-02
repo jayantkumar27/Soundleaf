@@ -63,6 +63,7 @@ export default function Demo({ openDialog }) {
   return (
     <section
       className="showcase"
+      id="workflow"
       aria-label="Interactive product demonstration"
     >
       <div className="scene">

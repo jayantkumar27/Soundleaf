@@ -1,10 +1,5 @@
-import React, { useRef } from "react";
 import {
-  ArrowRight,
-  ArrowUpRight,
-  Calendar,
   Check,
-  ChevronLeft,
   ChevronRight,
   Download,
   GitFork,
@@ -19,7 +14,7 @@ import {
   FileText,
   Code,
 } from "lucide-react";
-import { Accordion, Button, SmartLink, Stars, RollingStat } from "./components";
+import { Accordion, Stars, RollingStat } from "./components";
 import Demo from "./Demo";
 import data from "./data/home.json";
 import { config } from "./data/config";
@@ -34,7 +29,7 @@ function Laurel({ flip = false }) {
     />
   );
 }
-export function Hero({ openDialog }) {
+export function Hero() {
   return (
     <section className="hero">
       <div className="hero-proof">
@@ -59,93 +54,20 @@ export function Hero({ openDialog }) {
         device. Audio and data never leave. Private, secure, in your control.
       </p>
       <div className="hero-actions">
-        <Button to="/buy-now" variant="green">
-          Buy Now
-        </Button>
-        <Button variant="light" onClick={() => openDialog("trial")}>
-          Start free trial
-        </Button>
-        <Button variant="light" onClick={() => openDialog("contact")}>
-          <Calendar size={16} />
-          Talk to Us
-        </Button>
+        <a className="button green" href="#download">
+          <Download size={18} />
+          Download Meetily
+        </a>
+        <a className="button light" href={config.github}>
+          <Github size={17} />
+          View on GitHub
+        </a>
       </div>
       <div className="benefits" aria-label="Benefits">
         <span>Open-Source Core</span>
         <span>Works with Zoom, Teams, Meet</span>
         <span>GDPR &amp; HIPAA Ready</span>
         <span>Offline ready</span>
-      </div>
-    </section>
-  );
-}
-export function Articles({ all = false }) {
-  const ref = useRef();
-  return (
-    <section className={`articles-section ${all ? "all-articles" : ""}`}>
-      <div className="section-title">
-        <h2>{all ? "The Meetily Blog" : "Latest from Our Blog"}</h2>
-        <p>Stay updated with our latest insights and announcements</p>
-      </div>
-      <div className="article-carousel">
-        <div className="article-track" ref={ref}>
-          {data.articles.map((article, i) => (
-            <article className="article-card" key={`${article.href}-${i}`}>
-              <SmartLink to={article.href}>
-                <img
-                  src={
-                    article.image?.startsWith("https://meetily.ai")
-                      ? `/assets/${article.image.split("/").pop()}`
-                      : article.image
-                  }
-                  alt={article.title}
-                  loading="lazy"
-                />
-              </SmartLink>
-              <div className="article-content">
-                <time>{article.date}</time>
-                <h3>
-                  <SmartLink to={article.href}>{article.title}</SmartLink>
-                </h3>
-                <p>{article.excerpt}</p>
-                <SmartLink className="article-link" to={article.href}>
-                  {article.href?.startsWith("https://dev.to")
-                    ? "Read on Dev.to"
-                    : "Read Article"}
-                  <ChevronRight size={16} />
-                </SmartLink>
-              </div>
-            </article>
-          ))}
-        </div>
-        {!all && (
-          <>
-            <button
-              className="carousel-arrow prev"
-              aria-label="Previous articles"
-              onClick={() =>
-                ref.current.scrollBy({
-                  left: -ref.current.clientWidth,
-                  behavior: "smooth",
-                })
-              }
-            >
-              <ChevronLeft size={18} />
-            </button>
-            <button
-              className="carousel-arrow next"
-              aria-label="Next articles"
-              onClick={() =>
-                ref.current.scrollBy({
-                  left: ref.current.clientWidth,
-                  behavior: "smooth",
-                })
-              }
-            >
-              <ChevronRight size={18} />
-            </button>
-          </>
-        )}
       </div>
     </section>
   );
@@ -292,31 +214,34 @@ export function Features() {
     </section>
   );
 }
-export function Deployment() {
+export function DownloadSection() {
   return (
-    <section className="deployment-section" id="pricing">
+    <section className="deployment-section" id="download">
       <div className="deployment-panel">
-        <Sparkles size={30} />
-        <h2>Choose Your Deployment Option</h2>
-        <p>Free with Community. Pro from $10/user/month.</p>
-        <Button to="/pricing">
-          View Pricing &amp; Start Free Trial <ArrowRight size={17} />
-        </Button>
-        <div className="reassurance">
-          <span>
-            <Check />
-            14-day free trial
-          </span>
-          <span>
-            <Check />
-            No credit card required
-          </span>
+        <Download size={30} />
+        <h2>Download Meetily</h2>
+        <p>
+          Get the latest version for your computer. Your meetings stay on your
+          device.
+        </p>
+        <div className="download-options">
+          <a className="button dark" href={config.downloads.windows} download>
+            <Download size={17} />
+            Windows x64 (.exe)
+          </a>
+          <a className="button light" href={config.downloads.macOS} download>
+            <Download size={17} />
+            macOS Apple Silicon (.dmg)
+          </a>
         </div>
+        <span className="download-version">
+          Meetily Pro installers · Version {config.currentVersion}
+        </span>
       </div>
     </section>
   );
 }
-export function Values({ openDialog }) {
+export function Values() {
   return (
     <section className="values-section" id="about">
       <div className="section-title">
@@ -336,15 +261,13 @@ export function Values({ openDialog }) {
         })}
       </div>
       <div className="values-actions">
-        <Button to="/about">Know more about us</Button>
-        <Button variant="light" onClick={() => openDialog("contact")}>
-          Contact Us
-        </Button>
+        <a className="button" href="#features">
+          Explore features
+        </a>
+        <a className="button light" href="#download">
+          Download Meetily
+        </a>
       </div>
-      <p className="small-muted">
-        Learn more about our services at{" "}
-        <a href="https://www.zackriya.com">zackriya.com</a>
-      </p>
     </section>
   );
 }
@@ -352,19 +275,18 @@ export default function Home({ openDialog }) {
   return (
     <>
       <div className="hero-atmosphere">
-        <Hero openDialog={openDialog} />
+        <Hero />
         <Demo openDialog={openDialog} />
       </div>
       <Community />
       <Privacy />
       <Features />
-      <Deployment />
-      <Articles />
+      <DownloadSection />
       <section className="faq-section" id="faq">
         <h2>Frequently Asked Questions</h2>
         <Accordion />
       </section>
-      <Values openDialog={openDialog} />
+      <Values />
     </>
   );
 }

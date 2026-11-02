@@ -4,22 +4,14 @@ export const config = {
   discord: "https://discord.gg/crRymMQBFH",
   docs: "https://docs.meetily.ai/",
   reviews: "https://www.g2.com/products/meetily/reviews",
-  checkout: "https://meetily.ai/buy-now",
-  download: "https://meetily.ai/downloads",
+  downloads: {
+    macOS:
+      "https://meetily-updates.s3-accelerate.amazonaws.com/v1.11.2/Meetily.Pro_1.11.2_aarch64.dmg",
+    windows:
+      "https://meetily-updates.s3-accelerate.amazonaws.com/v1.11.2/Meetily.Pro_1.11.2_x64-setup.exe",
+  },
   formEndpoint: null,
   currentVersion: "1.11.2",
-  pricing: {
-    monthly: 10,
-    regularMonthly: 25,
-    annual: 120,
-    regularAnnual: 300,
-    discount: 60,
-    trialDays: 14,
-  },
-  externalRoutes: {
-    "/docs/integrations/custom-apis":
-      "https://docs.meetily.ai/integrations/custom-apis-and-local-llms",
-  },
 };
 export const stages = ["Recording", "Transcription", "People", "Summary"];
 export const participants = [

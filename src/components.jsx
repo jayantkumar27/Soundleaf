@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState, useId } from "react";
-import { Link, useLocation } from "react-router-dom";
 import {
-  ArrowUpRight,
   Calendar,
   Check,
   ChevronDown,
@@ -16,74 +14,15 @@ import {
 import home from "./data/home.json";
 import { config } from "./data/config";
 
-export function SmartLink({ to, href, children, ...props }) {
-  const requested = to || href || "/";
-  const url =
-    config.externalRoutes[requested] ||
-    (/^\/docs\//.test(requested)
-      ? `https://docs.meetily.ai${requested.replace(/^\/docs/, "")}`
-      : /^\/(features|developers|integrations)(\/|$)/.test(requested)
-        ? `https://docs.meetily.ai${requested}`
-        : requested);
-  return url.startsWith("/") || url.startsWith("#") ? (
-    <Link to={url} {...props}>
-      {children}
-    </Link>
-  ) : (
-    <a href={url} {...props}>
-      {children}
-    </a>
-  );
-}
-export function Button({
-  to,
-  children,
-  variant = "dark",
-  className = "",
-  ...props
-}) {
-  return to ? (
-    <SmartLink to={to} className={`button ${variant} ${className}`} {...props}>
-      {children}
-    </SmartLink>
-  ) : (
-    <button className={`button ${variant} ${className}`} {...props}>
-      {children}
-    </button>
-  );
-}
-export const useCases = [
-  ["Project Management", "technology"],
-  ["Mental Health", "psychology"],
-  ["Legal", "legal"],
-  ["Financial Services", "financial-services"],
-  ["Healthcare", "healthcare"],
-  ["Government", "government"],
-];
-export function Header({ showAnnouncement = true }) {
+export function Header() {
   const [announcement, setAnnouncement] = useState(true),
     [menu, setMenu] = useState(false),
-    [dropdown, setDropdown] = useState(false),
     [scrolled, setScrolled] = useState(false);
-  const ref = useRef(),
-    toggle = useRef(),
-    mobileToggle = useRef();
-  const location = useLocation();
-  useEffect(() => {
-    setMenu(false);
-    setDropdown(false);
-  }, [location]);
+  const mobileToggle = useRef();
   useEffect(() => {
     const scroll = () => setScrolled(window.scrollY > 30);
-    const close = (e) => {
-      if (!ref.current?.contains(e.target)) setDropdown(false);
-    };
     const key = (e) => {
       if (e.key === "Escape") {
-        if (dropdown) {
-          setDropdown(false);
-          toggle.current?.focus();
-        }
         if (menu) {
           setMenu(false);
           mobileToggle.current?.focus();
@@ -91,26 +30,25 @@ export function Header({ showAnnouncement = true }) {
       }
     };
     window.addEventListener("scroll", scroll, { passive: true });
-    document.addEventListener("pointerdown", close);
     document.addEventListener("keydown", key);
     return () => {
       window.removeEventListener("scroll", scroll);
-      document.removeEventListener("pointerdown", close);
       document.removeEventListener("keydown", key);
     };
-  }, [dropdown, menu]);
+  }, [menu]);
+  const closeMenu = () => setMenu(false);
   return (
     <>
       <a className="skip-link" href="#main">
         Skip to main content
       </a>
-      {announcement && showAnnouncement && (
+      {announcement && (
         <div className="announcement" role="region" aria-label="Announcement">
           <span className="new-badge">New</span>
-          <span>Why your meeting data belongs on your device</span>
-          <SmartLink to="/blog/why-meeting-data-belongs-on-your-device">
-            Read the post
-          </SmartLink>
+          <span>
+            Meetily {config.currentVersion} is ready. Your meeting data stays
+            on your device.
+          </span>
           <button
             aria-label="Dismiss announcement"
             onClick={() => setAnnouncement(false)}
@@ -122,49 +60,27 @@ export function Header({ showAnnouncement = true }) {
       <header
         className={`site-header ${scrolled ? "is-scrolled" : ""}`}
         style={{
-          top: announcement && showAnnouncement && !scrolled ? "44px" : "0",
+          top: announcement && !scrolled ? "44px" : "0",
         }}
-        ref={ref}
       >
         <nav className="nav-capsule" aria-label="Main navigation">
           <div className="brand-group">
-            <SmartLink to="/" className="wordmark">
+            <a href="/" className="wordmark">
               meetily
-            </SmartLink>
+            </a>
             <a className="github-badge" href={config.github}>
               <Github size={14} />
               <span>{home.stats.stars}</span>
             </a>
           </div>
           <div className="desktop-links">
-            <SmartLink to="/pricing">Pricing</SmartLink>
-            <div className="dropdown-wrap">
-              <button
-                ref={toggle}
-                aria-expanded={dropdown}
-                aria-controls="use-cases-menu"
-                onClick={() => setDropdown(!dropdown)}
-              >
-                Use Cases <ChevronDown size={14} />
-              </button>
-              {dropdown && (
-                <div id="use-cases-menu" className="dropdown">
-                  {useCases.map(([label, slug]) => (
-                    <SmartLink key={slug} to={`/use-cases/${slug}`}>
-                      {label}
-                      <ArrowUpRight size={14} />
-                    </SmartLink>
-                  ))}
-                </div>
-              )}
-            </div>
-            <SmartLink to="/pro">Meetily Pro</SmartLink>
-            <SmartLink to="/blog">Blog</SmartLink>
-            <a href={config.docs}>Docs</a>
+            <a href="#workflow">How it works</a>
+            <a href="#features">Features</a>
+            <a href="#faq">FAQ</a>
           </div>
-          <Button to="/downloads" className="nav-download">
+          <a className="button dark nav-download" href="#download">
             Download
-          </Button>
+          </a>
           <button
             className="mobile-toggle"
             ref={mobileToggle}
@@ -178,47 +94,39 @@ export function Header({ showAnnouncement = true }) {
         {menu && (
           <div className="mobile-menu">
             <div className="mobile-menu-title">
-              <SmartLink to="/" className="wordmark">
+              <a href="/" className="wordmark" onClick={closeMenu}>
                 meetily
-              </SmartLink>
+              </a>
               <button aria-label="Close menu" onClick={() => setMenu(false)}>
                 <X />
               </button>
             </div>
-            <SmartLink to="/pricing">Pricing</SmartLink>
-            <button
-              aria-expanded={dropdown}
-              onClick={() => setDropdown(!dropdown)}
-            >
-              Use Cases <ChevronDown size={18} />
-            </button>
-            {dropdown && (
-              <div className="mobile-submenu">
-                {useCases.map(([label, slug]) => (
-                  <SmartLink to={`/use-cases/${slug}`} key={slug}>
-                    {label}
-                  </SmartLink>
-                ))}
-              </div>
-            )}
-            <SmartLink to="/pro">Meetily Pro</SmartLink>
-            <SmartLink to="/blog">Blog</SmartLink>
-            <a href={config.docs}>Docs</a>
-            <Button to="/downloads">Download</Button>
+            <a href="#workflow" onClick={closeMenu}>
+              How it works
+            </a>
+            <a href="#features" onClick={closeMenu}>
+              Features
+            </a>
+            <a href="#faq" onClick={closeMenu}>
+              FAQ
+            </a>
+            <a className="button dark" href="#download" onClick={closeMenu}>
+              Download
+            </a>
           </div>
         )}
       </header>
     </>
   );
 }
-export function Footer({ openDialog }) {
+export function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-grid">
         <div className="footer-brand">
-          <SmartLink className="footer-wordmark" to="/">
+          <a className="footer-wordmark" href="/">
             Meetily.
-          </SmartLink>
+          </a>
           <a href={config.reviews} className="footer-rating">
             <Stars /> <span>on G2</span>
           </a>
@@ -244,32 +152,28 @@ export function Footer({ openDialog }) {
             ))}
           </div>
         </div>
-        {home.footer.map((group) => (
-          <div key={group.title} className="footer-column">
-            <h3>{group.title}</h3>
-            {group.links.map((link) =>
-              link.href === "contact" ? (
-                <button key={link.text} onClick={() => openDialog("contact")}>
-                  {link.text}
-                </button>
-              ) : (
-                <SmartLink key={link.text} to={link.href}>
-                  {link.text}
-                </SmartLink>
-              ),
-            )}
-          </div>
-        ))}
+        <div className="footer-column">
+          <h3>On this page</h3>
+          <a href="#workflow">How it works</a>
+          <a href="#features">Features</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div className="footer-column">
+          <h3>Downloads</h3>
+          <a href={config.downloads.windows} download>
+            Windows x64 (.exe)
+          </a>
+          <a href={config.downloads.macOS} download>
+            macOS Apple Silicon (.dmg)
+          </a>
+          <a href={config.github}>Source code</a>
+        </div>
       </div>
       <div className="footer-legal">
         <p>©2026 Zackriya Solutions</p>
         <p>
           The open sourced code is under MIT License - This software is provided
           "as is", without warranty of any kind.
-        </p>
-        <p>
-          An advanced version of the tool is available under custom license.{" "}
-          <button onClick={() => openDialog("contact")}>Contact us</button>
         </p>
       </div>
     </footer>

@@ -1229,6 +1229,18 @@ ul {
   width: 13px;
   color: #55996a;
 }
+.download-options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.download-version {
+  display: block;
+  margin-top: 20px;
+  color: #666;
+  font-size: 13px;
+}
 .articles-section {
   padding: 64px 24px;
 }
@@ -1413,7 +1425,7 @@ ul {
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr repeat(5, 1fr);
+  grid-template-columns: 1.5fr repeat(2, 1fr);
   gap: 30px;
   max-width: 1232px;
   margin: auto;
@@ -1660,7 +1672,7 @@ h2 {
   }
   .footer-grid {
     gap: 20px;
-    grid-template-columns: 1.3fr repeat(5, 1fr);
+    grid-template-columns: 1.3fr repeat(2, 1fr);
   }
 }
 @media (max-width: 900px) {
@@ -1715,11 +1727,8 @@ h2 {
     gap: 24px;
   }
   .footer-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1.5fr 1fr 1fr;
     gap: 40px;
-  }
-  .footer-brand {
-    grid-row: span 2;
   }
   .privacy-section h2 {
     font-size: 52px;

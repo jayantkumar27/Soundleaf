@@ -14,7 +14,7 @@ import {
   FileText,
   Code,
 } from "lucide-react";
-import { Accordion, Stars, RollingStat } from "./components";
+import { Stars, RollingStat } from "./components";
 import Demo from "./Demo";
 import data from "./data/home.json";
 import { config } from "./data/config";
@@ -31,8 +31,8 @@ function Laurel({ flip = false }) {
 }
 export function Hero() {
   return (
-    <section className="hero bg-">
-      <div className="hero-proof"> 
+    <section className="hero">
+      <div className="hero-proof">
         <Laurel />
         <div>
           <strong className="number-one">#1</strong>
@@ -282,10 +282,6 @@ export default function Home({ openDialog }) {
       <Privacy />
       <Features />
       <DownloadSection />
-      <section className="faq-section" id="faq">
-        <h2>Frequently Asked Questions</h2>
-        <Accordion />
-      </section>
       <Values />
     </>
   );

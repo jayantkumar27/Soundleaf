@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState, useId } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Calendar,
   Check,
-  ChevronDown,
   Github,
   Menu,
   X,
@@ -73,14 +72,15 @@ export function Header() {
               <span>{home.stats.stars}</span>
             </a>
           </div>
-          <div className="desktop-links">
-            <a href="#workflow">How it works</a>
-            <a href="#features">Features</a>
-            <a href="#faq">FAQ</a>
+          <div className="nav-actions">
+            <div className="desktop-links">
+              <a href="#workflow">How it works</a>
+              <a href="#features">Features</a>
+            </div>
+            <a className="button dark nav-download" href="#download">
+              Download
+            </a>
           </div>
-          <a className="button dark nav-download" href="#download">
-            Download
-          </a>
           <button
             className="mobile-toggle"
             ref={mobileToggle}
@@ -106,9 +106,6 @@ export function Header() {
             </a>
             <a href="#features" onClick={closeMenu}>
               Features
-            </a>
-            <a href="#faq" onClick={closeMenu}>
-              FAQ
             </a>
             <a className="button dark" href="#download" onClick={closeMenu}>
               Download
@@ -156,7 +153,6 @@ export function Footer() {
           <h3>On this page</h3>
           <a href="#workflow">How it works</a>
           <a href="#features">Features</a>
-          <a href="#faq">FAQ</a>
         </div>
         <div className="footer-column">
           <h3>Downloads</h3>
@@ -225,38 +221,6 @@ export function RollingStat({ value }) {
     <strong ref={ref} aria-label={value}>
       <span aria-hidden="true">{display}</span>
     </strong>
-  );
-}
-export function Accordion({ items = home.faq }) {
-  const [open, setOpen] = useState(null);
-  const id = useId();
-  return (
-    <div className="accordion">
-      {items.map((item, i) => (
-        <div
-          key={item.q}
-          className={`faq-item ${open === i ? "expanded" : ""}`}
-        >
-          <button
-            id={`${id}-button-${i}`}
-            aria-expanded={open === i}
-            aria-controls={`${id}-panel-${i}`}
-            onClick={() => setOpen(open === i ? null : i)}
-          >
-            <span>{item.q}</span>
-            <ChevronDown size={20} />
-          </button>
-          <div
-            id={`${id}-panel-${i}`}
-            role="region"
-            aria-labelledby={`${id}-button-${i}`}
-            hidden={open !== i}
-          >
-            <p>{item.a}</p>
-          </div>
-        </div>
-      ))}
-    </div>
   );
 }
 export function Dialog({ type, onClose }) {

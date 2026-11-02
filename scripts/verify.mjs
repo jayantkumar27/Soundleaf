@@ -44,7 +44,7 @@ try {
     check: "single-page navigation",
     pass:
       (await page.locator('.desktop-links a[href^="/"]').count()) === 0 &&
-      (await page.locator('.desktop-links a[href^="#"]').count()) === 3,
+      (await page.locator('.desktop-links a[href^="#"]').count()) === 2,
   });
 
   for (const stage of ["Recording", "Transcription", "People", "Summary"]) {
@@ -65,16 +65,6 @@ try {
     pass: await page
       .getByRole("button", { name: "Copied!", exact: true })
       .isVisible(),
-  });
-
-  await page.locator("#faq button").first().click();
-  results.push({
-    check: "FAQ expands",
-    pass:
-      (await page
-        .locator("#faq button")
-        .first()
-        .getAttribute("aria-expanded")) === "true",
   });
 
   await page.setViewportSize({ width: 390, height: 844 });

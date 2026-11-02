@@ -25,6 +25,13 @@ try {
     pass: (await page.locator("h1").count()) === 1,
   });
   results.push({
+    check: "MeetScribe branding",
+    pass:
+      (await page.title()).startsWith("MeetScribe") &&
+      (await page.locator(".wordmark").first().innerText()) === "MeetScribe" &&
+      !/meetily/i.test(await page.locator("body").innerText()),
+  });
+  results.push({
     check: "Windows installer link",
     pass: await page
       .locator("#download")

@@ -45,7 +45,7 @@ export function Header() {
         <div className="announcement" role="region" aria-label="Announcement">
           <span className="new-badge">New</span>
           <span>
-            Meetily {config.currentVersion} is ready. Your meeting data stays
+            MeetScribe {config.currentVersion} is ready. Your meeting data stays
             on your device.
           </span>
           <button
@@ -65,7 +65,7 @@ export function Header() {
         <nav className="nav-capsule" aria-label="Main navigation">
           <div className="brand-group">
             <a href="/" className="wordmark">
-              meetily
+              MeetScribe
             </a>
             <a className="github-badge" href={config.github}>
               <Github size={14} />
@@ -95,7 +95,7 @@ export function Header() {
           <div className="mobile-menu">
             <div className="mobile-menu-title">
               <a href="/" className="wordmark" onClick={closeMenu}>
-                meetily
+                MeetScribe
               </a>
               <button aria-label="Close menu" onClick={() => setMenu(false)}>
                 <X />
@@ -122,7 +122,7 @@ export function Footer() {
       <div className="footer-grid">
         <div className="footer-brand">
           <a className="footer-wordmark" href="/">
-            Meetily.
+            MeetScribe.
           </a>
           <a href={config.reviews} className="footer-rating">
             <Stars /> <span>on G2</span>
@@ -279,7 +279,7 @@ export function Dialog({ type, onClose }) {
             ))}
           </div>
           <p>
-            Meetily captures audio directly from your device. No bot needs to
+            MeetScribe captures audio directly from your device. No bot needs to
             join your meeting.
           </p>
         </>
@@ -291,12 +291,12 @@ export function Dialog({ type, onClose }) {
             onSubmit={(e) => {
               e.preventDefault();
               setResult(
-                "License delivery is not configured in this recreation. No information was sent. Start a trial on meetily.ai to receive a real license.",
+                "License delivery is not configured in this recreation. No information was sent.",
               );
             }}
           >
             <label>
-              I am evaluating Meetily for *
+              I am evaluating MeetScribe for *
               <select required defaultValue="">
                 <option value="" disabled>
                   Select one...
@@ -333,13 +333,14 @@ export function Dialog({ type, onClose }) {
               <input placeholder="e.g. CEO, CTO, IT Admin, Product Manager" />
             </label>
             <label>
-              How did you hear about Meetily? (Optional)
-              <input placeholder="I found Meetily through..." />
+              How did you hear about MeetScribe? (Optional)
+              <input placeholder="I found MeetScribe through..." />
             </label>
             <Button type="submit">Get My License Key</Button>
             {result && (
               <p className="form-result" role="status">
-                {result} <a href="https://meetily.ai/">Visit Meetily</a>
+                {result}{" "}
+                <a href="https://meetily.ai/">Visit the official product site</a>
               </p>
             )}
             <div className="form-reassurance">
@@ -361,8 +362,8 @@ export function Dialog({ type, onClose }) {
       ) : (
         <>
           <Calendar size={30} />
-          <h2 id="dialog-title">Talk to Meetily</h2>
-          <p>Book a 30-minute call with the Meetily team.</p>
+          <h2 id="dialog-title">Talk to MeetScribe</h2>
+          <p>Book a 30-minute call with the MeetScribe team.</p>
           <Button
             to="https://cal.com/meetily/30min"
             target="_blank"
@@ -370,7 +371,7 @@ export function Dialog({ type, onClose }) {
           >
             Choose a time <ArrowUpRight size={17} />
           </Button>
-          <p className="small-muted">Scheduling opens on Meetily’s calendar.</p>
+          <p className="small-muted">Scheduling opens on our calendar.</p>
         </>
       )}
     </dialog>

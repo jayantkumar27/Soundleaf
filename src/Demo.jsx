@@ -115,7 +115,7 @@ export default function Demo({ openDialog }) {
                 <i />
                 <i />
               </div>
-              <span>Meetily Pro</span>
+              <span>MeetScribe</span>
             </div>
             <div className="app-inner">
               <aside className="app-sidebar" aria-hidden="true">
@@ -158,7 +158,7 @@ export default function Demo({ openDialog }) {
                 {stage === 0 && (
                   <div className="recording-view">
                     <div>
-                      <h3>Welcome to Meetily Pro!</h3>
+                      <h3>Welcome to MeetScribe!</h3>
                       <p>Click the mic to start live transcription</p>
                     </div>
                     {tick > 3 && (

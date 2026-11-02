@@ -72,13 +72,15 @@ export function Header() {
               <span>{home.stats.stars}</span>
             </a>
           </div>
-          <div className="desktop-links">
-            <a href="#workflow">How it works</a>
-            <a href="#features">Features</a>
+          <div className="nav-actions">
+            <div className="desktop-links">
+              <a href="#workflow">How it works</a>
+              <a href="#features">Features</a>
+            </div>
+            <a className="button dark nav-download" href="#download">
+              Download
+            </a>
           </div>
-          <a className="button dark nav-download" href="#download">
-            Download
-          </a>
           <button
             className="mobile-toggle"
             ref={mobileToggle}

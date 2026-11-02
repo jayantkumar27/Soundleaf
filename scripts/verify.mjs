@@ -44,7 +44,14 @@ try {
     check: "single-page navigation",
     pass:
       (await page.locator('.desktop-links a[href^="/"]').count()) === 0 &&
-      (await page.locator('.desktop-links a[href^="#"]').count()) === 2,
+      (await page.locator('.desktop-links a[href="#workflow"]').innerText()) ===
+        "How it works" &&
+      (await page.locator('.desktop-links a[href="#features"]').innerText()) ===
+        "Features",
+  });
+  results.push({
+    check: "FAQ space removed",
+    pass: (await page.locator("#faq, .faq-section").count()) === 0,
   });
 
   for (const stage of ["Recording", "Transcription", "People", "Summary"]) {
@@ -72,6 +79,18 @@ try {
   results.push({
     check: "mobile menu opens",
     pass: await page.locator(".mobile-menu").isVisible(),
+  });
+  results.push({
+    check: "mobile menu has section links",
+    pass:
+      (await page
+        .locator(".mobile-menu")
+        .getByRole("link", { name: "How it works", exact: true })
+        .count()) === 1 &&
+      (await page
+        .locator(".mobile-menu")
+        .getByRole("link", { name: "Features", exact: true })
+        .count()) === 1,
   });
   await page
     .locator(".mobile-menu")

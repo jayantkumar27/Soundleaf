@@ -31,8 +31,8 @@ function Laurel({ flip = false }) {
 }
 export function Hero() {
   return (
-    <section className="hero bg-">
-      <div className="hero-proof"> 
+    <section className="hero">
+      <div className="hero-proof">
         <Laurel />
         <div>
           <strong className="number-one">#1</strong>

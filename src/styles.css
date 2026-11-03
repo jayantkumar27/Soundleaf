@@ -931,13 +931,6 @@ ul {
   text-align: center;
   margin-top: 34px;
 }
-.community {
-  text-align: center;
-  padding: 70px 0 100px;
-  overflow: hidden;
-}
-.discord-pill,
-.rating-pill,
 .eyebrow-pill {
   display: inline-flex;
   align-items: center;
@@ -948,120 +941,6 @@ ul {
   padding: 8px 16px;
   font-size: 14px;
   box-shadow: 0 1px 2px #0001;
-}
-.discord-pill i {
-  height: 7px;
-  width: 7px;
-  background: #cd898a;
-  border-radius: 50%;
-}
-.discord-pill > svg {
-  color: var(--muted);
-}
-.community-eyebrow {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 28px;
-  margin: 22px 0;
-}
-.community h2 {
-  font-size: 46px;
-}
-.community-subtitle {
-  font-size: 18px;
-  color: var(--text-secondary);
-  margin: 20px 20px 18px;
-}
-.stats {
-  display: flex;
-  justify-content: center;
-  gap: 28px;
-}
-.stats > div > div {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.stats strong {
-  font-family: var(--serif);
-  font-size: 34px;
-  font-weight: 400;
-}
-.stats > div:first-child svg {
-  color: #bd3838;
-}
-.stats > div:last-child svg {
-  color: #299b54;
-}
-.stats span {
-  font-size: 14px;
-  color: var(--muted);
-}
-.rating-pill {
-  margin-top: 20px;
-  padding: 6px 14px;
-}
-.testimonial-viewport {
-  margin: 70px auto 0;
-  overflow: hidden;
-  max-width: 1440px;
-  mask-image: linear-gradient(
-    90deg,
-    transparent,
-    #000 12%,
-    #000 88%,
-    transparent
-  );
-}
-.testimonial-track {
-  display: flex;
-  width: max-content;
-  gap: 24px;
-  animation: marquee 100s linear infinite;
-}
-.testimonial-viewport:hover .testimonial-track {
-  animation-play-state: paused;
-}
-.testimonial {
-  width: 300px;
-  min-height: 270px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 24px;
-  text-align: left;
-  font-size: 14px;
-  color: var(--text-secondary);
-}
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  font-size: 12px;
-  margin-bottom: 17px;
-}
-.testimonial-author strong {
-  color: var(--text-secondary);
-}
-.testimonial-author span {
-  font-size: 10px;
-  color: var(--muted);
-  margin-left: auto;
-}
-.testimonial p {
-  line-height: 1.6;
-}
-.testimonial a {
-  font-size: 12px;
-  color: #c77272;
-  display: block;
-  margin-top: 15px;
-}
-@keyframes marquee {
-  to {
-    transform: translateX(-50%);
-  }
 }
 .privacy-section {
   padding: 112px 24px;
@@ -2083,50 +1962,6 @@ h2 {
     font-size: 10px;
     margin: 20px 0 0;
   }
-  .community {
-    padding: 65px 0;
-  }
-  .discord-pill {
-    font-size: 12px;
-  }
-  .community-eyebrow {
-    font-size: 23px;
-    margin: 24px 0;
-  }
-  .community h2 {
-    font-size: 36px;
-  }
-  .community-subtitle {
-    font-size: 14px;
-    margin: 18px 24px;
-  }
-  .stats {
-    gap: 20px;
-  }
-  .stats strong {
-    font-size: 28px;
-  }
-  .stats svg {
-    width: 20px;
-  }
-  .stats > div > div {
-    gap: 5px;
-  }
-  .stats span {
-    font-size: 12px;
-  }
-  .rating-pill {
-    font-size: 12px;
-  }
-  .testimonial-viewport {
-    margin-top: 42px;
-    mask-image: none;
-  }
-  .testimonial {
-    width: 270px;
-    padding: 20px;
-    min-height: 240px;
-  }
   .privacy-section {
     padding: 70px 16px;
   }
@@ -2296,16 +2131,6 @@ h2 {
     animation: none !important;
     transition: none !important;
   }
-  .testimonial-track {
-    width: auto;
-    overflow: auto;
-  }
-  .testimonial-viewport {
-    mask-image: none;
-  }
-  .testimonial {
-    flex-shrink: 0;
-  }
 }
 h1,
 h2 {
@@ -2321,13 +2146,5 @@ h2 {
   .hero-description {
     letter-spacing: -0.45px;
     line-height: 29.25px;
-  }
-}
-.stats strong {
-  min-width: 75px;
-}
-@media (max-width: 767px) {
-  .stats strong {
-    min-width: 62px;
   }
 }

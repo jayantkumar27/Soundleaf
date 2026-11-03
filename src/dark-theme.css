@@ -101,12 +101,10 @@ html {
   background: #17221ff2;
   border-color: var(--border);
 }
-.eyebrow-pill,
-.discord-pill {
+.eyebrow-pill {
   border-color: #d5bd9433;
   color: var(--gold);
 }
-.testimonial a,
 .article-card a,
 .content-page a:not(.button):not(.content-button),
 .footer-bottom a {

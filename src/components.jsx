@@ -158,45 +158,6 @@ export function Stars() {
     </span>
   );
 }
-export function RollingStat({ value }) {
-  const ref = useRef(),
-    [display, setDisplay] = useState(value);
-  useEffect(() => {
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    let frame;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (!entries[0].isIntersecting) return;
-        observer.disconnect();
-        const number = parseFloat(value),
-          suffix = value.replace(/^[\d.]+/, "");
-        const precision = value.includes(".") ? 1 : 0;
-        const start = performance.now();
-        const update = (now) => {
-          const progress = Math.min(1, (now - start) / 1000);
-          setDisplay(
-            (number * (1 - Math.pow(1 - progress, 3))).toFixed(precision) +
-              suffix,
-          );
-          if (progress < 1) frame = requestAnimationFrame(update);
-          else setDisplay(value);
-        };
-        frame = requestAnimationFrame(update);
-      },
-      { threshold: 0.5 },
-    );
-    observer.observe(ref.current);
-    return () => {
-      observer.disconnect();
-      cancelAnimationFrame(frame);
-    };
-  }, [value]);
-  return (
-    <strong ref={ref} aria-label={value}>
-      <span aria-hidden="true">{display}</span>
-    </strong>
-  );
-}
 export function Dialog({ type, onClose }) {
   const ref = useRef();
   const [result, setResult] = useState("");

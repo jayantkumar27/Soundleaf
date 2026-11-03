@@ -771,39 +771,5 @@
       "image": "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpmrcsrkyonqozyqkkteh.png",
       "date": "February 13, 2025"
     }
-  ],
-  "testimonials": [
-    {
-      "text": "u/selfhosted\nFeb 12, 2025\n\nAI Meeting note taker and meeting minutes generator : Building a Fully Open-Source Local LLM-Based AI for Recording and transcribing meetings.\n\nRead more →",
-      "href": "https://www.reddit.com/r/selfhosted/comments/1ink05v/ai_meeting_note_taker_and_meeting_minutes/"
-    },
-    {
-      "text": "Dev.to\nFeb 13, 2025\n\nA Journey into Building a Privacy-First AI Meeting Tool for transcription, summarization and Note-Taking.\n\nRead more →",
-      "href": "https://dev.to/zackriya/meetily-a-privacy-first-ai-for-taking-meeting-notes-and-meeting-minutes-26ed"
-    },
-    {
-      "text": "@jeffscottward\n1 week ago\n\nEvery SaaS will live just long enough to have an open source competitor kill them\n\nRead more →",
-      "href": "https://x.com/jeffscottward/status/1890525806683713615"
-    },
-    {
-      "text": "aisharenet\nFeb 13, 2025\n\nAI assistant for generating meeting minutes, transcribing and generating meeting summaries in real-time\n\nRead more →",
-      "href": "https://www.aisharenet.com/en/meetily/"
-    },
-    {
-      "text": "@sujithx007\n5 days ago\n\nAI Meeting note taker and meeting minutes generator : Building a Fully Open-Source Local LLM-Based AI for Recording and transcribing meetings\n\nRead more →",
-      "href": "https://x.com/sujithx007/status/1889565409856086179"
-    },
-    {
-      "text": "u/localllama\n3 days ago\n\nThe integration with our existing tools is seamless. Plus, the transcription accuracy is impressive!\n\nRead more →",
-      "href": "https://meetily.ai/#"
-    },
-    {
-      "text": "@tom_doerr\n5 days ago\n\nMeetScribe is an AI-based open-source meeting minutes generator that can run entirely on a personal computer. Address:\n\nRead more →",
-      "href": "https://x.com/tom_doerr/status/1890484014273769859"
-    },
-    {
-      "text": "aisharenet\nFeb 13, 2025\n\nAI assistant for generating meeting minutes, transcribing and generating meeting summaries in real-time\n\nRead more →",
-      "href": "https://www.aisharenet.com/en/meetily/"
-    }
   ]
 }

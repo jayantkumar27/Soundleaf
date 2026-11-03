@@ -1,20 +1,15 @@
 import {
   Check,
-  ChevronRight,
   Download,
-  GitFork,
-  Github,
   Globe,
   Lock,
   Mic,
   Shield,
   Sparkles,
-  Star,
   Users,
   FileText,
   Code,
 } from "lucide-react";
-import { Stars, RollingStat } from "./components";
 import Demo from "./Demo";
 import data from "./data/home.json";
 import { config } from "./data/config";
@@ -42,59 +37,6 @@ export function Hero() {
         <span>Works with Zoom, Teams, Meet</span>
         <span>GDPR &amp; HIPAA Ready</span>
         <span>Offline ready</span>
-      </div>
-    </section>
-  );
-}
-function Community() {
-  return (
-    <section className="community">
-      <a className="discord-pill" href={config.discord}>
-        <i />
-        Join our discord channel 🎊
-        <ChevronRight size={14} />
-      </a>
-      <p className="community-eyebrow">Privacy-First AI Copilot for meetings</p>
-      <h2>Loved by teams worldwide</h2>
-      <p className="community-subtitle">
-        #1 Trending Repository on GitHub - Loved by the open source community
-      </p>
-      <div className="stats">
-        {[
-          [Star, data.stats.stars, "Stars"],
-          [Download, data.stats.downloads, "Downloads"],
-          [GitFork, data.stats.forks, "Forks"],
-        ].map(([Icon, value, label]) => (
-          <div key={label}>
-            <div>
-              <Icon size={24} />
-              <RollingStat value={value} />
-            </div>
-            <span>{label}</span>
-          </div>
-        ))}
-      </div>
-      <a className="rating-pill" href={config.reviews}>
-        <Stars />
-        Rated 5/5 on G2
-      </a>
-      <div className="testimonial-viewport">
-        <div className="testimonial-track">
-          {[...data.testimonials, ...data.testimonials].map((item, i) => {
-            const lines = item.text.split("\n").filter(Boolean);
-            return (
-              <article className="testimonial" key={i}>
-                <div className="testimonial-author">
-                  <Github size={14} />
-                  <strong>{lines[0]}</strong>
-                  <span>{lines[1]}</span>
-                </div>
-                <p>{lines.slice(2).join(" ").replace("Read more →", "")}</p>
-                {item.href !== "#" && <a href={item.href}>Read more →</a>}
-              </article>
-            );
-          })}
-        </div>
       </div>
     </section>
   );
@@ -252,7 +194,6 @@ export default function Home({ openDialog }) {
         <Hero />
         <Demo openDialog={openDialog} />
       </div>
-      <Community />
       <Privacy />
       <Features />
       <DownloadSection />

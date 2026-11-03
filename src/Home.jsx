@@ -6,6 +6,9 @@ import {
   Mic,
   Shield,
   Sparkles,
+  AudioLines,
+  Cpu,
+  Database,
   Users,
   FileText,
   Code,
@@ -43,33 +46,81 @@ export function Hero() {
 }
 const privacyCards = [
   {
-    title: "Why Choose MeetScribe?",
-    icon: Sparkles,
+    title: "Native Audio & Desktop Controls",
+    icon: AudioLines,
     items: [
-      "31,094+ GitHub Stars. 599,000+ Downloads",
-      "Trusted by developers, founders, and privacy-first companies",
-      "Fully Open Source & MIT Licensed",
-      "Active community and regular updates",
+      {
+        lead: "WASAPI & Core Audio Loopback:",
+        description:
+          "Dual-channel capture for system output and microphone with zero virtual drivers required on Windows and macOS.",
+      },
+      {
+        lead: "Windows Meeting Detection:",
+        description:
+          "Automatic call detection paired with a floating recording overlay bar and system tray controls.",
+      },
+      {
+        lead: "Live Audio Meters & Waveforms:",
+        description:
+          "Web Audio visualizers for live input monitoring and post-recording playback analysis.",
+      },
+      {
+        lead: "Chromium Companion Extension:",
+        description:
+          "Lightweight browser bridge adding meeting context and controls to Google Meet and Zoom.",
+      },
     ],
   },
   {
-    title: "Privacy by Default",
-    icon: Shield,
+    title: "Pluggable AI & Smart Fallback",
+    icon: Cpu,
     items: [
-      "Transcription and recordings processed locally on your device",
-      "Pluggable AI for summaries: local models or your own API keys",
-      "GDPR/HIPAA/NIS2 compliant by design",
-      "You choose how your data is handled. Always in control.",
+      {
+        lead: "Multi-Provider STT Registry:",
+        description:
+          "Modular speech recognition supporting Google Cloud STT, Sarvam AI, AssemblyAI, and Groq Whisper.",
+      },
+      {
+        lead: "Flexible Note Generation:",
+        description:
+          "Summarize calls with Google Gemini, Anthropic Claude, or Groq using customized prompts.",
+      },
+      {
+        lead: "Automated LLM Fallback:",
+        description:
+          "Configure secondary models to take over seamlessly if primary API requests fail or hit quota limits.",
+      },
+      {
+        lead: "Bring Your Own Keys & Schemas:",
+        description:
+          "Full credential control with support for structured JSON fields or formatted Markdown minutes.",
+      },
     ],
   },
   {
-    title: "Works with Any Platform",
-    icon: Globe,
+    title: "Local Library & Workspace Sync",
+    icon: Database,
     items: [
-      "Google Meet, Zoom, Microsoft Teams",
-      "Any video conferencing software",
-      "Any desktop microphone. Meetings & more",
-      "Zero external accounts or cloud services required",
+      {
+        lead: "Local SQLite Database:",
+        description:
+          "Fast disk-backed session library storing timestamped transcripts, decision logs, and action items.",
+      },
+      {
+        lead: "One-Click Notion Publishing:",
+        description:
+          "Direct integration to push formatted meeting minutes and full transcripts into your Notion database.",
+      },
+      {
+        lead: "Google Calendar Sync:",
+        description:
+          "Fetch upcoming call schedules and connect meeting notes straight from your desktop dashboard.",
+      },
+      {
+        lead: "Multi-Format Exports:",
+        description:
+          "Export meeting summaries and timestamped transcripts directly to Markdown files or styled PDFs.",
+      },
     ],
   },
 ];
@@ -80,10 +131,10 @@ function Privacy() {
         <Lock size={12} />
         Open Source &amp; Privacy-First
       </span>
-      <h2>Take Back Control of Your Meeting Data</h2>
+      <h2>Seamless Audio Capture, Custom AI Pipelines &amp; Automated Notes</h2>
       <p className="privacy-subtitle">
-        AI-Powered Meeting Transcriptions - 100% Private, 100% Local, Open
-        Source
+        Record system audio and mic inputs, transcribe with your preferred
+        providers, and publish structured notes to your workspace.
       </p>
       <div className="privacy-grid">
         {privacyCards.map(({ title, icon: Icon, items }) => (
@@ -95,10 +146,13 @@ function Privacy() {
               {title}
             </h3>
             <ul>
-              {items.map((item) => (
-                <li key={item}>
+              {items.map(({ lead, description }) => (
+                <li key={lead}>
                   <Check size={13} />
-                  <span>{item}</span>
+                  <span>
+                    <strong>{lead}</strong>{" "}
+                    <span>{description}</span>
+                  </span>
                 </li>
               ))}
             </ul>
@@ -112,7 +166,7 @@ export function Features() {
   return (
     <section className="features-section" id="features">
       <div className="section-title">
-        <h2>Why Choose MeetScribe?</h2>
+        <h2>Built for Local Control, Speed &amp; Zero Lock-In</h2>
         <p>Open source, privacy-focused, and built for developers</p>
       </div>
       <div className="feature-grid">

@@ -927,15 +927,17 @@ ul {
   box-shadow: none;
 }
 .privacy-section h2 {
-  max-width: 768px;
+  max-width: 1000px;
   margin: 30px auto 24px;
-  font-size: 60px;
-  line-height: 66px;
+  font-size: clamp(42px, 4.2vw, 56px);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
 }
 .privacy-subtitle {
   font-size: 17px;
   color: var(--text-secondary);
   margin-bottom: 80px;
+  line-height: 1.6;
 }
 .privacy-grid {
   max-width: 1232px;
@@ -943,6 +945,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  align-items: stretch;
 }
 .privacy-card {
   border: 1px solid #303642;
@@ -954,6 +957,9 @@ ul {
   position: relative;
   overflow: hidden;
   min-height: 300px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .privacy-card:after {
   content: "";
@@ -968,17 +974,27 @@ ul {
 .privacy-card h3 {
   font-size: 17px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   margin-bottom: 20px;
 }
 .privacy-card h3 > span {
   display: grid;
   place-items: center;
+  flex-shrink: 0;
   width: 32px;
   height: 32px;
   border: 1px solid #374153;
   border-radius: 7px;
+}
+.privacy-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 .privacy-card li {
   display: flex;
@@ -986,16 +1002,26 @@ ul {
   align-items: flex-start;
   font-size: 14px;
   line-height: 1.6;
-  margin: 12px 0;
-  color: var(--muted);
+  color: var(--text-secondary);
 }
 .privacy-card li svg {
   flex-shrink: 0;
   margin-top: 5px;
   color: #6c8fbe;
 }
+.privacy-card li strong {
+  color: var(--ink);
+  font-weight: 600;
+}
 .features-section {
   padding: 80px 24px;
+}
+@media (max-width: 1120px) {
+  .privacy-grid {
+    grid-template-columns: 1fr;
+    max-width: 760px;
+    margin-inline: auto;
+  }
 }
 .section-title {
   text-align: center;
@@ -1610,6 +1636,8 @@ h2 {
     min-height: 665px;
   }
   .privacy-grid {
+    grid-template-columns: 1fr;
+    max-width: 760px;
     gap: 18px;
   }
   .privacy-card {
@@ -1623,8 +1651,7 @@ h2 {
     gap: 40px;
   }
   .privacy-section h2 {
-    font-size: 52px;
-    line-height: 1.1;
+    font-size: clamp(38px, 6vw, 52px);
   }
   .article-card {
     flex-basis: calc((100% - 24px) / 2);

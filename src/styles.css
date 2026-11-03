@@ -195,7 +195,9 @@ ul {
     inset 0 1px 0 #ffffff14;
   pointer-events: auto;
 }
-@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+@supports (
+  (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))
+) {
   .nav-capsule,
   .site-header .mobile-menu {
     background: linear-gradient(135deg, #253b32b8, #0b1413d9);
@@ -1043,6 +1045,11 @@ ul {
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
+@media (min-width: 768px) {
+  .feature-card:last-child:nth-child(3n + 1) {
+    grid-column: 2;
+  }
+}
 .feature-card {
   background: var(--panel);
   border-radius: 12px;
@@ -1079,9 +1086,13 @@ ul {
     radial-gradient(ellipse at 0% 0%, #308d8540, transparent 55%),
     radial-gradient(ellipse at 100% 100%, #345c8133, transparent 55%),
     linear-gradient(#b3d8d408 1px, transparent 1px),
-    linear-gradient(90deg, #b3d8d408 1px, transparent 1px),
-    #101519;
-  background-size: auto, auto, 40px 40px, 40px 40px, auto;
+    linear-gradient(90deg, #b3d8d408 1px, transparent 1px), #101519;
+  background-size:
+    auto,
+    auto,
+    40px 40px,
+    40px 40px,
+    auto;
   box-shadow:
     0 20px 60px #00000033,
     inset 0 1px 0 #ffffff0a;
@@ -1644,7 +1655,13 @@ h2 {
     padding: 20px;
   }
   .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+  }
+  .feature-card:last-child:nth-child(3n + 1) {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 9px);
+    justify-self: center;
   }
   .footer-grid {
     grid-template-columns: 1.5fr 1fr 1fr;
@@ -1988,6 +2005,11 @@ h2 {
     grid-template-columns: 1fr;
     gap: 20px;
     max-width: 420px;
+  }
+  .feature-card:last-child:nth-child(3n + 1) {
+    grid-column: auto;
+    max-width: none;
+    justify-self: stretch;
   }
   .feature-card {
     min-height: 0;

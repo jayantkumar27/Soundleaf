@@ -23,51 +23,51 @@
     },
     {
       "tag": "H2",
-      "text": "Take Back Control of Your Meeting Data"
+      "text": "Seamless Audio Capture, Custom AI Pipelines & Automated Notes"
     },
     {
       "tag": "H3",
-      "text": "Why Choose Meetily?"
+      "text": "Native Audio & Desktop Controls"
     },
     {
       "tag": "H3",
-      "text": "Privacy by Default"
+      "text": "Pluggable AI & Smart Fallback"
     },
     {
       "tag": "H3",
-      "text": "Works with Any Platform"
+      "text": "Local Library & Workspace Sync"
     },
     {
       "tag": "H2",
-      "text": "Why Choose Meetily?"
+      "text": "Why Choose MeetScribe?"
     },
     {
       "tag": "H3",
-      "text": "100% Privacy Focused"
+      "text": "100% Local Privacy"
     },
     {
       "tag": "H3",
-      "text": "Open Source Alternative"
+      "text": "Truly Open Source"
     },
     {
       "tag": "H3",
-      "text": "Works with All Meeting Platforms"
+      "text": "Universal Call Capture"
     },
     {
       "tag": "H3",
-      "text": "Pluggable AI Note Taking"
+      "text": "Pluggable AI & Fallback"
     },
     {
       "tag": "H3",
-      "text": "Real-Time Transcription"
+      "text": "Precision Transcription"
     },
     {
       "tag": "H3",
-      "text": "Speaker Identification"
+      "text": "Speaker Diarization"
     },
     {
       "tag": "H3",
-      "text": "Smart Meeting Summaries"
+      "text": "Structured Notes & Workspace Sync"
     },
     {
       "tag": "H2",
@@ -371,13 +371,13 @@
     },
     {
       "id": "privacy-highlights",
-      "text": "Open Source & Privacy-First\nTake Back Control of Your Meeting Data\n\nAI-Powered Meeting Transcriptions - 100% Private, 100% Local, Open Source\n\nWhy Choose Meetily?\n31,094+ GitHub Stars. 599,000+ Downloads\nTrusted by developers, founders, and privacy-first companies\nFully Open Source & MIT Licensed\nActive community and regular updates\nPrivacy by Default\nTranscription and recordings processed locally on your device\nPluggable AI for summaries: local models or your own API key\nGDPR/HIPAA/SOC2 compliant by design\nYou choose how your data is handled. Always in control\nWorks with Any Platform\nGoogle Meet, Zoom, Microsoft Teams\nAny video conferencing software\nEasy desktop installation (Windows & macOS)\nNo browser extensions or external tools required",
+      "text": "Open Source & Privacy-First\nSeamless Audio Capture, Custom AI Pipelines & Automated Notes\n\nRecord system audio and mic inputs, transcribe with your preferred providers, and publish structured notes to your workspace.\n\nNative Audio & Desktop Controls\nWASAPI & Core Audio Loopback: Dual-channel capture for system output and microphone with zero virtual drivers required on Windows and macOS.\nWindows Meeting Detection: Automatic call detection paired with a floating recording overlay bar and system tray controls.\nLive Audio Meters & Waveforms: Web Audio visualizers for live input monitoring and post-recording playback analysis.\nChromium Companion Extension: Lightweight browser bridge adding meeting context and controls to Google Meet and Zoom.\nPluggable AI & Smart Fallback\nMulti-Provider STT Registry: Modular speech recognition supporting Google Cloud STT, Sarvam AI, AssemblyAI, and Groq Whisper.\nFlexible Note Generation: Summarize calls with Google Gemini, Anthropic Claude, or Groq using customized prompts.\nAutomated LLM Fallback: Configure secondary models to take over seamlessly if primary API requests fail or hit quota limits.\nBring Your Own Keys & Schemas: Full credential control with support for structured JSON fields or formatted Markdown minutes.\nLocal Library & Workspace Sync\nLocal SQLite Database: Fast disk-backed session library storing timestamped transcripts, decision logs, and action items.\nOne-Click Notion Publishing: Direct integration to push formatted meeting minutes and full transcripts into your Notion database.\nGoogle Calendar Sync: Fetch upcoming call schedules and connect meeting notes straight from your desktop dashboard.\nMulti-Format Exports: Export meeting summaries and timestamped transcripts directly to Markdown files or styled PDFs.",
       "height": 849,
       "y": 2355.921875
     },
     {
       "id": "features",
-      "text": "Why Choose Meetily?\n\nOpen source, privacy-focused, and built for developers\n\n100% Privacy Focused\n\nAll processing happens locally. Your data never leaves your device. Perfect for sensitive meetings and confidential discussions.\n\nOpen Source Alternative\n\nMIT Licensed and open source. Community Edition free for individuals, perfect alternative to paid services like Granola and Otter AI without monthly subscriptions.\n\nWorks with All Meeting Platforms\n\nSeamlessly integrates with Google Meet, Zoom, Microsoft Teams, and any other video conferencing platform.\n\nPluggable AI Note Taking\n\nAutomatic transcription and AI-generated summaries. Use local models or bring your own API key. Your choice, your flexibility.\n\nReal-Time Transcription\n\nCapture every word as it's spoken with high-accuracy transcription. Never miss important details in your Google Meet, Zoom, or Teams calls.\n\nSpeaker Identification\n\nKnow who said what. Speaker diarization labels every voice in your transcript - live as you record and on imported audio - so meetings read like a conversation. Available in Pro.\n\nSmart Meeting Summaries\n\nGet concise, well-structured summaries of your meetings. Save time reviewing long transcripts and focus on what matters.",
+      "text": "Why Choose MeetScribe?\n\nOpen-source, desktop-native meeting intelligence powered by your choice of AI providers.\n\n100% Local Privacy\n\nYour recordings, transcripts, and SQLite session database stay on your machine. Direct provider requests mean no middleman servers storing or tracking your call data.\n\nTruly Open Source\n\nMIT-licensed Electron and React desktop engine built for total control. Customize prompts, inspect the architecture, and run without vendor lock-in.\n\nUniversal Call Capture\n\nSystem audio loopback records remote participants natively on Windows and macOS. Works seamlessly across Google Meet, Zoom, Teams, and any desktop app.\n\nPluggable AI & Fallback\n\nBring your own keys for Gemini, Claude, or Groq. Automated fallback switches models seamlessly if a primary API request ever fails or hits rate limits.\n\nPrecision Transcription\n\nHigh-accuracy speech-to-text with timestamped segments using Google Cloud, Sarvam AI, AssemblyAI, or Groq Whisper. Record live or process existing media.\n\nSpeaker Diarization\n\nAutomatic speaker labeling cleanly maps every voice across your transcripts, making long meetings read like structured, multi-party conversations.\n\nStructured Notes & Workspace Sync\n\nTurn hours of audio into concise summaries, key decisions, and action items. Export to PDF and Markdown or publish directly to Notion.",
       "height": 1037,
       "y": 3205.171875
     },
@@ -1727,11 +1727,11 @@
       "y": 1692.640625
     },
     {
-      "text": "Take Back Control of Your Meeting Data",
+      "text": "Seamless Audio Capture, Custom AI Pipelines & Automated Notes",
       "font": "__Instrument_Serif_ae301a, __Instrument_Serif_Fallback_ae301a, \"EB Garamond\", \"Cormorant Garamond\", ui-serif, Georgia, serif",
-      "size": "60px",
-      "lineHeight": "66px",
-      "width": 768,
+      "size": "56px",
+      "lineHeight": "61.6px",
+      "width": 1000,
       "y": 2525.921875
     }
   ]

@@ -9,6 +9,7 @@ import {
   AudioLines,
   Cpu,
   Database,
+  Code2,
   Users,
   FileText,
   Code,
@@ -17,7 +18,7 @@ import Demo from "./Demo";
 import data from "./data/home.json";
 import { config } from "./data/config";
 import JellyfishCanvas from "./jellyfish/JellyfishCanvas";
-const featureIcons = [Lock, Sparkles, Globe, Sparkles, Mic, Users, FileText];
+const featureIcons = [Lock, Code2, Globe, Sparkles, Mic, Users, FileText];
 export function Hero() {
   return (
     <section className="hero">
@@ -150,8 +151,7 @@ function Privacy() {
                 <li key={lead}>
                   <Check size={13} />
                   <span>
-                    <strong>{lead}</strong>{" "}
-                    <span>{description}</span>
+                    <strong>{lead}</strong> <span>{description}</span>
                   </span>
                 </li>
               ))}
@@ -166,8 +166,11 @@ export function Features() {
   return (
     <section className="features-section" id="features">
       <div className="section-title">
-        <h2>Built for Local Control, Speed &amp; Zero Lock-In</h2>
-        <p>Open source, privacy-focused, and built for developers</p>
+        <h2>Why Choose MeetScribe?</h2>
+        <p>
+          Open-source, desktop-native meeting intelligence powered by your
+          choice of AI providers.
+        </p>
       </div>
       <div className="feature-grid">
         {data.features.map((feature, i) => {

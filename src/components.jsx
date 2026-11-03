@@ -2,24 +2,16 @@ import React, { useEffect, useRef, useState } from "react";
 import {
   Calendar,
   Check,
-  Github,
   Menu,
   X,
   Star,
-  Youtube,
-  Linkedin,
-  MessageCircle,
 } from "lucide-react";
-import home from "./data/home.json";
 import { config } from "./data/config";
 
 export function Header() {
-  const [announcement, setAnnouncement] = useState(true),
-    [menu, setMenu] = useState(false),
-    [scrolled, setScrolled] = useState(false);
+  const [menu, setMenu] = useState(false);
   const mobileToggle = useRef();
   useEffect(() => {
-    const scroll = () => setScrolled(window.scrollY > 30);
     const key = (e) => {
       if (e.key === "Escape") {
         if (menu) {
@@ -28,10 +20,8 @@ export function Header() {
         }
       }
     };
-    window.addEventListener("scroll", scroll, { passive: true });
     document.addEventListener("keydown", key);
     return () => {
-      window.removeEventListener("scroll", scroll);
       document.removeEventListener("keydown", key);
     };
   }, [menu]);
@@ -41,35 +31,11 @@ export function Header() {
       <a className="skip-link" href="#main">
         Skip to main content
       </a>
-      {announcement && (
-        <div className="announcement" role="region" aria-label="Announcement">
-          <span className="new-badge">New</span>
-          <span>
-            MeetScribe {config.currentVersion} is ready. Your meeting data stays
-            on your device.
-          </span>
-          <button
-            aria-label="Dismiss announcement"
-            onClick={() => setAnnouncement(false)}
-          >
-            <X size={16} />
-          </button>
-        </div>
-      )}
-      <header
-        className={`site-header ${scrolled ? "is-scrolled" : ""}`}
-        style={{
-          top: announcement && !scrolled ? "44px" : "0",
-        }}
-      >
+      <header className="site-header">
         <nav className="nav-capsule" aria-label="Main navigation">
           <div className="brand-group">
             <a href="/" className="wordmark">
               MeetScribe
-            </a>
-            <a className="github-badge" href={config.github}>
-              <Github size={14} />
-              <span>{home.stats.stars}</span>
             </a>
           </div>
           <div className="nav-actions">
@@ -132,22 +98,6 @@ export function Footer() {
             meetings. Your meetings stay on your device. Always private, always
             yours.
           </p>
-          <div className="socials">
-            {[
-              [Github, config.github, "GitHub"],
-              [MessageCircle, config.discord, "Discord"],
-              [Youtube, "https://www.youtube.com/@meetily", "YouTube"],
-              [
-                Linkedin,
-                "https://www.linkedin.com/company/106363062/",
-                "LinkedIn",
-              ],
-            ].map(([Icon, url, label]) => (
-              <a key={label} href={url} aria-label={label}>
-                <Icon size={19} />
-              </a>
-            ))}
-          </div>
         </div>
         <div className="footer-column">
           <h3>On this page</h3>
@@ -162,7 +112,6 @@ export function Footer() {
           <a href={config.downloads.macOS} download>
             macOS Apple Silicon (.dmg)
           </a>
-          <a href={config.github}>Source code</a>
         </div>
       </div>
       <div className="footer-legal">
@@ -182,45 +131,6 @@ export function Stars() {
         <Star key={n} size={15} fill="currentColor" strokeWidth={0} />
       ))}
     </span>
-  );
-}
-export function RollingStat({ value }) {
-  const ref = useRef(),
-    [display, setDisplay] = useState(value);
-  useEffect(() => {
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    let frame;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (!entries[0].isIntersecting) return;
-        observer.disconnect();
-        const number = parseFloat(value),
-          suffix = value.replace(/^[\d.]+/, "");
-        const precision = value.includes(".") ? 1 : 0;
-        const start = performance.now();
-        const update = (now) => {
-          const progress = Math.min(1, (now - start) / 1000);
-          setDisplay(
-            (number * (1 - Math.pow(1 - progress, 3))).toFixed(precision) +
-              suffix,
-          );
-          if (progress < 1) frame = requestAnimationFrame(update);
-          else setDisplay(value);
-        };
-        frame = requestAnimationFrame(update);
-      },
-      { threshold: 0.5 },
-    );
-    observer.observe(ref.current);
-    return () => {
-      observer.disconnect();
-      cancelAnimationFrame(frame);
-    };
-  }, [value]);
-  return (
-    <strong ref={ref} aria-label={value}>
-      <span aria-hidden="true">{display}</span>
-    </strong>
   );
 }
 export function Dialog({ type, onClose }) {

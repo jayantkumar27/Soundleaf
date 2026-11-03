@@ -1,126 +1,42 @@
 import {
   Check,
-  ChevronRight,
   Download,
-  GitFork,
-  Github,
   Globe,
   Lock,
   Mic,
   Shield,
   Sparkles,
-  Star,
   Users,
   FileText,
   Code,
 } from "lucide-react";
-import { Stars, RollingStat } from "./components";
 import Demo from "./Demo";
 import data from "./data/home.json";
 import { config } from "./data/config";
+import JellyfishCanvas from "./jellyfish/JellyfishCanvas";
 const featureIcons = [Lock, Sparkles, Globe, Sparkles, Mic, Users, FileText];
-function Laurel({ flip = false }) {
-  return (
-    <img
-      className={`laurel ${flip ? "flipped" : ""}`}
-      src="/assets/laurel.svg"
-      alt=""
-      aria-hidden="true"
-    />
-  );
-}
 export function Hero() {
   return (
     <section className="hero">
-      <div className="hero-proof">
-        <Laurel />
-        <div>
-          <strong className="number-one">#1</strong>
-          <span>Privacy first</span>
-          <span>Ai Meeting Assistant</span>
-          <a href={config.reviews}>
-            <Stars />
-          </a>
-          <a href={config.github} className="users-proof">
-            <strong>{data.stats.users} users</strong>
-            <span>32.3K+ Github Stars</span>
+      <JellyfishCanvas />
+      <div className="hero-content">
+        <h1>The Privacy-First AI Meeting Assistant &amp; Note Taker</h1>
+        <p className="hero-description">
+          MeetScribe records, transcribes, and summarizes meetings, 100% on your
+          device. Audio and data never leave. Private, secure, in your control.
+        </p>
+        <div className="hero-actions">
+          <a className="button green" href="#download">
+            <Download size={18} />
+            Download MeetScribe
           </a>
         </div>
-        <Laurel flip />
-      </div>
-      <h1>The Privacy-First AI Meeting Assistant &amp; Note Taker</h1>
-      <p className="hero-description">
-        MeetScribe records, transcribes, and summarizes meetings, 100% on your
-        device. Audio and data never leave. Private, secure, in your control.
-      </p>
-      <div className="hero-actions">
-        <a className="button green" href="#download">
-          <Download size={18} />
-          Download MeetScribe
-        </a>
-        <a className="button light" href={config.github}>
-          <Github size={17} />
-          View on GitHub
-        </a>
       </div>
       <div className="benefits" aria-label="Benefits">
         <span>Open-Source Core</span>
         <span>Works with Zoom, Teams, Meet</span>
         <span>GDPR &amp; HIPAA Ready</span>
         <span>Offline ready</span>
-      </div>
-    </section>
-  );
-}
-function Community() {
-  return (
-    <section className="community">
-      <a className="discord-pill" href={config.discord}>
-        <i />
-        Join our discord channel 🎊
-        <ChevronRight size={14} />
-      </a>
-      <p className="community-eyebrow">Privacy-First AI Copilot for meetings</p>
-      <h2>Loved by teams worldwide</h2>
-      <p className="community-subtitle">
-        #1 Trending Repository on GitHub - Loved by the open source community
-      </p>
-      <div className="stats">
-        {[
-          [Star, data.stats.stars, "Stars"],
-          [Download, data.stats.downloads, "Downloads"],
-          [GitFork, data.stats.forks, "Forks"],
-        ].map(([Icon, value, label]) => (
-          <div key={label}>
-            <div>
-              <Icon size={24} />
-              <RollingStat value={value} />
-            </div>
-            <span>{label}</span>
-          </div>
-        ))}
-      </div>
-      <a className="rating-pill" href={config.reviews}>
-        <Stars />
-        Rated 5/5 on G2
-      </a>
-      <div className="testimonial-viewport">
-        <div className="testimonial-track">
-          {[...data.testimonials, ...data.testimonials].map((item, i) => {
-            const lines = item.text.split("\n").filter(Boolean);
-            return (
-              <article className="testimonial" key={i}>
-                <div className="testimonial-author">
-                  <Github size={14} />
-                  <strong>{lines[0]}</strong>
-                  <span>{lines[1]}</span>
-                </div>
-                <p>{lines.slice(2).join(" ").replace("Read more →", "")}</p>
-                {item.href !== "#" && <a href={item.href}>Read more →</a>}
-              </article>
-            );
-          })}
-        </div>
       </div>
     </section>
   );
@@ -278,7 +194,6 @@ export default function Home({ openDialog }) {
         <Hero />
         <Demo openDialog={openDialog} />
       </div>
-      <Community />
       <Privacy />
       <Features />
       <DownloadSection />

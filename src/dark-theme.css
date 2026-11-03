@@ -1,0 +1,175 @@
+/* Shared dark surfaces, with restrained emerald light and champagne accents. */
+html {
+  scrollbar-color: #3a4c44 var(--bg);
+}
+::selection {
+  background: #d5bd9438;
+  color: var(--ink);
+}
+:is(a, button, input, select, textarea):focus-visible {
+  outline-color: var(--gold);
+}
+.plan-badge {
+  background: var(--gold);
+  color: #17201b;
+}
+.nav-capsule {
+  background: #101716f5;
+  border-color: #d5bd942a;
+  backdrop-filter: blur(12px);
+}
+.button.dark,
+.content-page .content-button {
+  background: var(--gold);
+  color: #17201b;
+  box-shadow: 0 3px 16px #d5bd9414;
+}
+.button.dark:hover,
+.content-page .content-button:hover {
+  background: #e5cfaa;
+  color: #17201b;
+}
+.button.green,
+.industry-page .observed-section:has(h1) a[href="/buy-now"] {
+  background: #28775d;
+  color: #f5fff9;
+  border-color: #469576;
+  box-shadow: 0 6px 24px #183c2e55;
+}
+.button.green:hover {
+  background: #32876a;
+}
+.button.light:hover {
+  background: var(--panel);
+  border-color: #677267;
+}
+.hero-atmosphere {
+  background: radial-gradient(ellipse 900px 600px at 50% 0, #2b594426, transparent 75%), var(--bg);
+}
+.hero {
+  background:
+    radial-gradient(ellipse 650px 450px at 50% 20%, #2a5d4624, transparent 75%),
+    radial-gradient(ellipse 400px 500px at 95% 30%, #9c805610, transparent 80%),
+    var(--bg);
+}
+.hero:before {
+  opacity: 0.24;
+  background-image: radial-gradient(circle, #c2b397 1px, transparent 1px);
+}
+.hero h1 {
+  color: var(--ink);
+}
+.scene {
+  background:
+    radial-gradient(ellipse at 50% 0, #2c57413b, transparent 68%),
+    linear-gradient(#121b19, var(--bg));
+  box-shadow: inset 0 1px #d5bd9424;
+}
+.workflow-tabs button[aria-selected="true"],
+.app-tabs button.active {
+  background: #26352e;
+  color: var(--gold);
+}
+.app-window {
+  background: #101718;
+  border-color: #415046;
+  box-shadow: 0 24px 64px #0006, 0 0 50px #2c674314;
+}
+.window-top,
+.app-bottom {
+  background: #192321;
+}
+.speaker-dot {
+  background: #233b32;
+  color: #a9d7bf;
+}
+.audio-track {
+  background: var(--border);
+}
+.done-button {
+  background: #28775d;
+  color: #f5fff9;
+}
+.video-call,
+.platform-panel {
+  background: #17221ff2;
+  border-color: var(--border);
+}
+.eyebrow-pill {
+  border-color: #d5bd9433;
+  color: var(--gold);
+}
+.article-card a,
+.content-page a:not(.button):not(.content-button),
+.footer-bottom a {
+  color: var(--gold);
+}
+.privacy-card {
+  color: var(--ink);
+  background: #0d1617;
+  border-color: #34463f;
+}
+.feature-card,
+.value-card {
+  border: 1px solid var(--border);
+}
+.deployment-panel {
+  background:
+    radial-gradient(ellipse at 50% 0, #355e4045, transparent 80%),
+    linear-gradient(135deg, #1a231d, #111918);
+  border-color: #d5bd9433;
+  box-shadow: var(--shadow);
+}
+.deployment-panel > svg {
+  color: var(--gold);
+}
+.values-section {
+  background: #0f1616;
+}
+.site-footer {
+  background: #090e0f;
+  border-top: 1px solid var(--border);
+}
+.site-dialog input,
+.site-dialog textarea,
+.buyer-form input,
+.buyer-form select {
+  background: #0d1414;
+  color: var(--ink);
+}
+input::placeholder,
+textarea::placeholder {
+  color: var(--muted);
+}
+.form-result {
+  background: #d5bd9410;
+  border-color: #d5bd943d;
+  color: var(--gold);
+}
+.page-hero {
+  background: radial-gradient(ellipse at top center, #285b412e, transparent 65%);
+}
+.price-card.featured {
+  border-color: var(--gold);
+  box-shadow: 0 12px 48px #0004;
+}
+.price-card .check-list svg {
+  background: #204535;
+  color: #a6dfbd;
+}
+.content-table th:last-child,
+.content-table td:last-child {
+  background: #172b22;
+}
+.buyer-form {
+  border-color: #d5bd9445;
+}
+.blog-masthead {
+  background-image:
+    linear-gradient(#ffffff05 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff05 1px, transparent 1px);
+}
+.editorial-label i {
+  background: var(--gold);
+  box-shadow: 0 0 0 4px #d5bd9414;
+}

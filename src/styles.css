@@ -1095,16 +1095,12 @@ ul {
   padding: 56px 40px;
   color: var(--ink);
   background:
+    linear-gradient(#0b101166, #0b101166),
     radial-gradient(ellipse at 0% 0%, #308d8540, transparent 55%),
     radial-gradient(ellipse at 100% 100%, #345c8133, transparent 55%),
     linear-gradient(#b3d8d408 1px, transparent 1px),
-    linear-gradient(90deg, #b3d8d408 1px, transparent 1px), #101519;
-  background-size:
-    auto,
-    auto,
-    40px 40px,
-    40px 40px,
-    auto;
+    linear-gradient(90deg, #b3d8d408 1px, transparent 1px),
+    url("/assets/download-mountains.png") center 55% / cover no-repeat;
   box-shadow:
     0 20px 60px #00000033,
     inset 0 1px 0 #ffffff0a;

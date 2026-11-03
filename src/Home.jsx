@@ -24,16 +24,18 @@ export function Hero() {
   return (
     <section className="hero">
       <JellyfishCanvas />
-      <h1>The Privacy-First AI Meeting Assistant &amp; Note Taker</h1>
-      <p className="hero-description">
-        MeetScribe records, transcribes, and summarizes meetings, 100% on your
-        device. Audio and data never leave. Private, secure, in your control.
-      </p>
-      <div className="hero-actions">
-        <a className="button green" href="#download">
-          <Download size={18} />
-          Download MeetScribe
-        </a>
+      <div className="hero-content">
+        <h1>The Privacy-First AI Meeting Assistant &amp; Note Taker</h1>
+        <p className="hero-description">
+          MeetScribe records, transcribes, and summarizes meetings, 100% on your
+          device. Audio and data never leave. Private, secure, in your control.
+        </p>
+        <div className="hero-actions">
+          <a className="button green" href="#download">
+            <Download size={18} />
+            Download MeetScribe
+          </a>
+        </div>
       </div>
       <div className="benefits" aria-label="Benefits">
         <span>Open-Source Core</span>

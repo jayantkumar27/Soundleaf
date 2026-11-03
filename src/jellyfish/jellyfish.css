@@ -6,8 +6,3 @@
   height: 100%;
   pointer-events: none;
 }
-@media (max-width: 600px) {
-  .jellyfish-canvas {
-    max-height: 600px;
-  }
-}

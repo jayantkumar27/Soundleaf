@@ -168,41 +168,15 @@ ul {
 .skip-link:focus {
   top: 16px;
 }
-.announcement {
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  border-bottom: 1px solid var(--border);
-  background: var(--surface);
-  font-size: 16px;
-}
-.announcement a {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-.new-badge {
-  background: #efb52d;
-  font-size: 14px;
-  border-radius: 4px;
-  padding: 0 8px;
-  font-weight: 500;
-}
-.announcement > button {
-  position: absolute;
-  right: 12px;
-  padding: 8px;
-}
 .site-header {
   position: fixed;
   z-index: 100;
+  top: 0;
   left: 0;
   right: 0;
   padding: 16px 24px;
   color: #f1eee6;
   pointer-events: none;
-  transition: top 0.15s;
 }
 .nav-capsule {
   max-width: 896px;
@@ -1717,25 +1691,6 @@ h2 {
     gap: 20px;
     padding: 0 20px;
     font-size: 17px;
-  }
-  .announcement {
-    font-size: 12px;
-    gap: 6px;
-    padding-right: 25px;
-  }
-  .announcement > span:nth-child(2) {
-    font-size: 0;
-  }
-  .announcement > span:nth-child(2):after {
-    content: "Data on your device";
-    font-size: 12px;
-  }
-  .new-badge {
-    font-size: 10px;
-    padding: 1px 6px;
-  }
-  .announcement > button {
-    right: 8px;
   }
   .hero {
     min-height: max(720px, 100svh);

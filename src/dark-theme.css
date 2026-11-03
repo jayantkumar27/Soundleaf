@@ -9,12 +9,6 @@ html {
 :is(a, button, input, select, textarea):focus-visible {
   outline-color: var(--gold);
 }
-.announcement {
-  background: #171d19;
-  color: var(--gold);
-  border-color: #d5bd9424;
-}
-.new-badge,
 .plan-badge {
   background: var(--gold);
   color: #17201b;

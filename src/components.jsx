@@ -9,12 +9,9 @@ import {
 import { config } from "./data/config";
 
 export function Header() {
-  const [announcement, setAnnouncement] = useState(true),
-    [menu, setMenu] = useState(false),
-    [scrolled, setScrolled] = useState(false);
+  const [menu, setMenu] = useState(false);
   const mobileToggle = useRef();
   useEffect(() => {
-    const scroll = () => setScrolled(window.scrollY > 30);
     const key = (e) => {
       if (e.key === "Escape") {
         if (menu) {
@@ -23,10 +20,8 @@ export function Header() {
         }
       }
     };
-    window.addEventListener("scroll", scroll, { passive: true });
     document.addEventListener("keydown", key);
     return () => {
-      window.removeEventListener("scroll", scroll);
       document.removeEventListener("keydown", key);
     };
   }, [menu]);
@@ -36,27 +31,7 @@ export function Header() {
       <a className="skip-link" href="#main">
         Skip to main content
       </a>
-      {announcement && (
-        <div className="announcement" role="region" aria-label="Announcement">
-          <span className="new-badge">New</span>
-          <span>
-            MeetScribe {config.currentVersion} is ready. Your meeting data stays
-            on your device.
-          </span>
-          <button
-            aria-label="Dismiss announcement"
-            onClick={() => setAnnouncement(false)}
-          >
-            <X size={16} />
-          </button>
-        </div>
-      )}
-      <header
-        className={`site-header ${scrolled ? "is-scrolled" : ""}`}
-        style={{
-          top: announcement && !scrolled ? "44px" : "0",
-        }}
-      >
+      <header className="site-header">
         <nav className="nav-capsule" aria-label="Main navigation">
           <div className="brand-group">
             <a href="/" className="wordmark">

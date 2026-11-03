@@ -1,0 +1,221 @@
+/* Gradient and transition values from Serafim Cloud's Gradient Button:
+   https://21st.dev/@serafimcloud/components/gradient-button
+   Registered properties allow the radial gradient to interpolate on hover. */
+@property --download-pos-x {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 11.14%;
+}
+
+@property --download-pos-y {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 140%;
+}
+
+@property --download-spread-x {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 150%;
+}
+
+@property --download-spread-y {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 180.06%;
+}
+
+@property --download-color-1 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #000;
+}
+
+@property --download-color-2 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #08012c;
+}
+
+@property --download-color-3 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #4e1e40;
+}
+
+@property --download-color-4 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #70464e;
+}
+
+@property --download-color-5 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #88394c;
+}
+
+@property --download-border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 20deg;
+}
+
+@property --download-border-color-1 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: hsla(340, 75%, 60%, .2);
+}
+
+@property --download-border-color-2 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: hsla(340, 75%, 40%, .75);
+}
+
+@property --download-stop-1 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 37.35%;
+}
+
+@property --download-stop-2 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 61.36%;
+}
+
+@property --download-stop-3 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 78.42%;
+}
+
+@property --download-stop-4 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 89.52%;
+}
+
+@property --download-stop-5 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+
+.button.gradient-button {
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  border: 0;
+  border-radius: 11px;
+  box-shadow: none;
+  background: radial-gradient(
+    var(--download-spread-x) var(--download-spread-y) at var(--download-pos-x) var(--download-pos-y),
+    var(--download-color-1) var(--download-stop-1),
+    var(--download-color-2) var(--download-stop-2),
+    var(--download-color-3) var(--download-stop-3),
+    var(--download-color-4) var(--download-stop-4),
+    var(--download-color-5) var(--download-stop-5)
+  );
+  transition:
+    --download-pos-x .5s ease,
+    --download-pos-y .5s ease,
+    --download-spread-x .5s ease,
+    --download-spread-y .5s ease,
+    --download-color-1 .5s ease,
+    --download-color-2 .5s ease,
+    --download-color-3 .5s ease,
+    --download-color-4 .5s ease,
+    --download-color-5 .5s ease,
+    --download-border-angle .5s ease,
+    --download-border-color-1 .5s ease,
+    --download-border-color-2 .5s ease,
+    --download-stop-1 .5s ease,
+    --download-stop-2 .5s ease,
+    --download-stop-3 .5s ease,
+    --download-stop-4 .5s ease,
+    --download-stop-5 .5s ease;
+}
+
+.button.gradient-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    var(--download-border-angle),
+    var(--download-border-color-1),
+    var(--download-border-color-2)
+  );
+  mask: linear-gradient(#fff 0 0) content-box exclude, linear-gradient(#fff 0 0);
+  pointer-events: none;
+}
+
+.button.gradient-button:is(:hover, :focus-visible) {
+  transform: none;
+  --download-pos-x: 0%;
+  --download-pos-y: 91.51%;
+  --download-spread-x: 120.24%;
+  --download-spread-y: 103.18%;
+  --download-color-1: #c96287;
+  --download-color-2: #c66c64;
+  --download-color-3: #cc7d23;
+  --download-color-4: #37140a;
+  --download-color-5: #000;
+  --download-border-angle: 190deg;
+  --download-border-color-1: hsla(340, 78%, 90%, .1);
+  --download-border-color-2: hsla(340, 75%, 90%, .6);
+  --download-stop-1: 0%;
+  --download-stop-2: 8.8%;
+  --download-stop-3: 21.44%;
+  --download-stop-4: 71.34%;
+  --download-stop-5: 85.76%;
+}
+
+.button.gradient-button-variant {
+  --download-color-1: #000022;
+  --download-color-2: #1f3f6d;
+  --download-color-3: #469396;
+  --download-color-4: #f1ffa5;
+  --download-border-angle: 200deg;
+  --download-border-color-1: hsla(320, 75%, 90%, .6);
+  --download-border-color-2: hsla(320, 50%, 90%, .15);
+}
+
+.button.gradient-button-variant:is(:hover, :focus-visible) {
+  --download-pos-x: 0%;
+  --download-pos-y: 95.51%;
+  --download-spread-x: 110.24%;
+  --download-spread-y: 110.2%;
+  --download-color-1: #000020;
+  --download-color-2: #f1ffa5;
+  --download-color-3: #469396;
+  --download-color-4: #1f3f6d;
+  --download-color-5: #000;
+  --download-stop-1: 0%;
+  --download-stop-2: 10%;
+  --download-stop-3: 35.44%;
+  --download-stop-4: 71.34%;
+  --download-stop-5: 90.76%;
+  --download-border-angle: 210deg;
+  --download-border-color-1: hsla(320, 75%, 90%, .2);
+  --download-border-color-2: hsla(320, 50%, 90%, .75);
+}
+
+.button.gradient-button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
+.button.gradient-button svg {
+  flex-shrink: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button.gradient-button {
+    transition: none;
+  }
+}
+

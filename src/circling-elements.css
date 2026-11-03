@@ -1,0 +1,52 @@
+.circling-elements {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+}
+
+.circling-element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: circling;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  will-change: transform;
+}
+
+.circling-elements.pause-on-hover:hover .circling-element {
+  animation-play-state: paused;
+}
+
+@keyframes circling {
+  from {
+    transform: rotate(var(--circling-offset)) translateX(var(--circling-radius))
+      rotate(calc(0deg - var(--circling-offset)));
+  }
+  to {
+    transform: rotate(calc(360deg + var(--circling-offset)))
+      translateX(var(--circling-radius))
+      rotate(calc(-360deg - var(--circling-offset)));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .circling-elements {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .circling-element {
+    position: static;
+    animation: none;
+    will-change: auto;
+  }
+}

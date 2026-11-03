@@ -18,6 +18,9 @@ import Demo from "./Demo";
 import data from "./data/home.json";
 import { config } from "./data/config";
 import JellyfishCanvas from "./jellyfish/JellyfishCanvas";
+import CirclingElements from "./CirclingElements";
+import BreathingText from "./BreathingText";
+import "./gradient-button.css";
 const featureIcons = [Lock, Code2, Globe, Sparkles, Mic, Users, FileText];
 export function Hero() {
   return (
@@ -30,7 +33,7 @@ export function Hero() {
           device. Audio and data never leave. Private, secure, in your control.
         </p>
         <div className="hero-actions">
-          <a className="button green" href="#download">
+          <a className="button gradient-button" href="#download">
             <Download size={18} />
             Download MeetScribe
           </a>
@@ -132,7 +135,15 @@ function Privacy() {
         <Lock size={12} />
         Open Source &amp; Privacy-First
       </span>
-      <h2>Seamless Audio Capture, Custom AI Pipelines &amp; Automated Notes</h2>
+      <BreathingText
+        as="h2"
+        fromFontVariationSettings='"wght" 250'
+        toFontVariationSettings='"wght" 800'
+        duration={1.5}
+        staggerDuration={0.018}
+      >
+        Seamless Audio Capture, Custom AI Pipelines &amp; Automated Notes
+      </BreathingText>
       <p className="privacy-subtitle">
         Record system audio and mic inputs, transcribe with your preferred
         providers, and publish structured notes to your workspace.
@@ -172,17 +183,57 @@ export function Features() {
           choice of AI providers.
         </p>
       </div>
-      <div className="feature-grid">
-        {data.features.map((feature, i) => {
-          const Icon = featureIcons[i];
-          return (
-            <article className="feature-card" key={feature.title}>
-              <Icon size={24} />
-              <h3>{feature.title}</h3>
-              <p>{feature.text}</p>
-            </article>
-          );
-        })}
+      <div className="feature-slider" role="region" aria-label="MeetScribe features" tabIndex={0}>
+        <div className="feature-slider-track">
+          {[0, 1].map((copy) => (
+            <div className="feature-slider-group" key={copy} aria-hidden={copy === 1 ? true : undefined} inert={copy === 1 ? true : undefined}>
+              {data.features.map((feature, i) => {
+                const Icon = featureIcons[i];
+                return (
+                  <article className="feature-card" key={feature.title}>
+                    <Icon size={24} />
+                    <h3>{feature.title}</h3>
+                    <p>{feature.text}</p>
+                  </article>
+                );
+              })}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+const integrationLogos = [
+  { name: "Zoom", image: "/assets/zoom.png" },
+  { name: "Google Meet", image: "/assets/meet.png" },
+  { name: "Microsoft Teams", image: "/assets/teams.png" },
+  { name: "Webex", image: "/assets/webex.png" },
+  { name: "Discord", image: "/assets/discord.svg" },
+  { name: "Slack", image: "/assets/slack.webp" },
+];
+
+function Integrations() {
+  return (
+    <section className="integrations-section" aria-labelledby="integrations-title">
+      <div className="integrations-layout">
+        <div className="section-title">
+          <span className="integrations-eyebrow">WORKS ALONGSIDE YOUR TOOLS</span>
+          <h2 id="integrations-title">Your meetings, in your flow</h2>
+          <p>Capture meeting audio locally, wherever your conversations happen.</p>
+        </div>
+        <div className="orbit-stage">
+          <CirclingElements radius="var(--orbit-radius)" duration={10} easing="linear" pauseOnHover>
+            {integrationLogos.map(({ name, image }) => (
+              <div className="integration-card" key={name}>
+                <span className="integration-logo">
+                  <img src={image} alt="" width="52" height="52" />
+                </span>
+                <strong>{name}</strong>
+              </div>
+            ))}
+          </CirclingElements>
+        </div>
       </div>
     </section>
   );
@@ -198,11 +249,11 @@ export function DownloadSection() {
           device.
         </p>
         <div className="download-options">
-          <a className="button dark" href={config.downloads.windows} download>
+          <a className="button gradient-button" href={config.downloads.windows} download>
             <Download size={17} />
             Windows x64 (.exe)
           </a>
-          <a className="button light" href={config.downloads.macOS} download>
+          <a className="button gradient-button gradient-button-variant" href={config.downloads.macOS} download>
             <Download size={17} />
             macOS Apple Silicon (.dmg)
           </a>
@@ -253,6 +304,7 @@ export default function Home({ openDialog }) {
       </div>
       <Privacy />
       <Features />
+      <Integrations />
       <DownloadSection />
       <Values />
     </>

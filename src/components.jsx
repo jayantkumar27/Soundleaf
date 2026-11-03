@@ -2,15 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import {
   Calendar,
   Check,
-  Github,
   Menu,
   X,
   Star,
-  Youtube,
-  Linkedin,
-  MessageCircle,
 } from "lucide-react";
-import home from "./data/home.json";
 import { config } from "./data/config";
 
 export function Header() {
@@ -66,10 +61,6 @@ export function Header() {
           <div className="brand-group">
             <a href="/" className="wordmark">
               MeetScribe
-            </a>
-            <a className="github-badge" href={config.github}>
-              <Github size={14} />
-              <span>{home.stats.stars}</span>
             </a>
           </div>
           <div className="nav-actions">
@@ -132,22 +123,6 @@ export function Footer() {
             meetings. Your meetings stay on your device. Always private, always
             yours.
           </p>
-          <div className="socials">
-            {[
-              [Github, config.github, "GitHub"],
-              [MessageCircle, config.discord, "Discord"],
-              [Youtube, "https://www.youtube.com/@meetily", "YouTube"],
-              [
-                Linkedin,
-                "https://www.linkedin.com/company/106363062/",
-                "LinkedIn",
-              ],
-            ].map(([Icon, url, label]) => (
-              <a key={label} href={url} aria-label={label}>
-                <Icon size={19} />
-              </a>
-            ))}
-          </div>
         </div>
         <div className="footer-column">
           <h3>On this page</h3>
@@ -162,7 +137,6 @@ export function Footer() {
           <a href={config.downloads.macOS} download>
             macOS Apple Silicon (.dmg)
           </a>
-          <a href={config.github}>Source code</a>
         </div>
       </div>
       <div className="footer-legal">

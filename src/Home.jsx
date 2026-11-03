@@ -18,36 +18,12 @@ import { Stars, RollingStat } from "./components";
 import Demo from "./Demo";
 import data from "./data/home.json";
 import { config } from "./data/config";
+import JellyfishCanvas from "./jellyfish/JellyfishCanvas";
 const featureIcons = [Lock, Sparkles, Globe, Sparkles, Mic, Users, FileText];
-function Laurel({ flip = false }) {
-  return (
-    <img
-      className={`laurel ${flip ? "flipped" : ""}`}
-      src="/assets/laurel.svg"
-      alt=""
-      aria-hidden="true"
-    />
-  );
-}
 export function Hero() {
   return (
     <section className="hero">
-      <div className="hero-proof">
-        <Laurel />
-        <div>
-          <strong className="number-one">#1</strong>
-          <span>Privacy first</span>
-          <span>Ai Meeting Assistant</span>
-          <a href={config.reviews}>
-            <Stars />
-          </a>
-          <a href={config.github} className="users-proof">
-            <strong>{data.stats.users} users</strong>
-            <span>32.3K+ Github Stars</span>
-          </a>
-        </div>
-        <Laurel flip />
-      </div>
+      <JellyfishCanvas />
       <h1>The Privacy-First AI Meeting Assistant &amp; Note Taker</h1>
       <p className="hero-description">
         MeetScribe records, transcribes, and summarizes meetings, 100% on your
@@ -57,10 +33,6 @@ export function Hero() {
         <a className="button green" href="#download">
           <Download size={18} />
           Download MeetScribe
-        </a>
-        <a className="button light" href={config.github}>
-          <Github size={17} />
-          View on GitHub
         </a>
       </div>
       <div className="benefits" aria-label="Benefits">

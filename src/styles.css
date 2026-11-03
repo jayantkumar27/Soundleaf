@@ -216,10 +216,22 @@ ul {
   flex-shrink: 0;
 }
 .wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
   font-size: 26px;
   font-weight: 750;
   letter-spacing: -0.6px;
   line-height: 1;
+}
+.wordmark img {
+  display: block;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  border-radius: 6px;
 }
 .desktop-links {
   display: flex;

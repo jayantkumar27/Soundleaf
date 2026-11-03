@@ -1,11 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import {
-  Calendar,
-  Check,
-  Menu,
-  X,
-  Star,
-} from "lucide-react";
+import { Calendar, Check, Menu, X, Star } from "lucide-react";
 import { config } from "./data/config";
 
 export function Header() {
@@ -35,6 +29,13 @@ export function Header() {
         <nav className="nav-capsule" aria-label="Main navigation">
           <div className="brand-group">
             <a href="/" className="wordmark">
+              <img
+                src="/assets/meetscribe.png"
+                alt=""
+                aria-hidden="true"
+                width="26"
+                height="26"
+              />
               MeetScribe
             </a>
           </div>
@@ -61,6 +62,13 @@ export function Header() {
           <div className="mobile-menu">
             <div className="mobile-menu-title">
               <a href="/" className="wordmark" onClick={closeMenu}>
+                <img
+                  src="/assets/meetscribe.png"
+                  alt=""
+                  aria-hidden="true"
+                  width="26"
+                  height="26"
+                />
                 MeetScribe
               </a>
               <button aria-label="Close menu" onClick={() => setMenu(false)}>
@@ -250,7 +258,9 @@ export function Dialog({ type, onClose }) {
             {result && (
               <p className="form-result" role="status">
                 {result}{" "}
-                <a href="https://meetily.ai/">Visit the official product site</a>
+                <a href="https://meetily.ai/">
+                  Visit the official product site
+                </a>
               </p>
             )}
             <div className="form-reassurance">

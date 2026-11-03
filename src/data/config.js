@@ -6,9 +6,9 @@ export const config = {
   reviews: "https://www.g2.com/products/meetily/reviews",
   downloads: {
     macOS:
-      "https://meetily-updates.s3-accelerate.amazonaws.com/v1.11.2/Meetily.Pro_1.11.2_aarch64.dmg",
+      "https://github.com/shresthgoel77-png/Novameet/releases/download/v0.1.0/MeetScribe-0.1.0-arm64.dmg",
     windows:
-      "https://meetily-updates.s3-accelerate.amazonaws.com/v1.11.2/Meetily.Pro_1.11.2_x64-setup.exe",
+      "https://github.com/shresthgoel77-png/Novameet/releases/download/v0.1.0/MeetScribe-Setup-0.1.0.exe"
   },
   formEndpoint: null,
   currentVersion: "1.11.2",

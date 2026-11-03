@@ -102,32 +102,32 @@
   ],
   "features": [
     {
-      "title": "100% Privacy Focused",
-      "text": "All processing happens locally. Your data never leaves your device. Perfect for sensitive meetings and confidential discussions."
+      "title": "100% Local Privacy",
+      "text": "Your recordings, transcripts, and SQLite session database stay on your machine. Direct provider requests mean no middleman servers storing or tracking your call data."
     },
     {
-      "title": "Open Source Alternative",
-      "text": "MIT Licensed and open source. Community Edition free for individuals, perfect alternative to paid services like Granola and Otter AI without monthly subscriptions."
+      "title": "Truly Open Source",
+      "text": "MIT-licensed Electron and React desktop engine built for total control. Customize prompts, inspect the architecture, and run without vendor lock-in."
     },
     {
-      "title": "Works with All Meeting Platforms",
-      "text": "Seamlessly integrates with Google Meet, Zoom, Microsoft Teams, and any other video conferencing platform."
+      "title": "Universal Call Capture",
+      "text": "System audio loopback records remote participants natively on Windows and macOS. Works seamlessly across Google Meet, Zoom, Teams, and any desktop app."
     },
     {
-      "title": "Pluggable AI Note Taking",
-      "text": "Automatic transcription and AI-generated summaries. Use local models or bring your own API key. Your choice, your flexibility."
+      "title": "Pluggable AI & Fallback",
+      "text": "Bring your own keys for Gemini, Claude, or Groq. Automated fallback switches models seamlessly if a primary API request ever fails or hits rate limits."
     },
     {
-      "title": "Real-Time Transcription",
-      "text": "Capture every word as it's spoken with high-accuracy transcription. Never miss important details in your Google Meet, Zoom, or Teams calls."
+      "title": "Precision Transcription",
+      "text": "High-accuracy speech-to-text with timestamped segments using Google Cloud, Sarvam AI, AssemblyAI, or Groq Whisper. Record live or process existing media."
     },
     {
-      "title": "Speaker Identification",
-      "text": "Know who said what. Speaker diarization labels every voice in your transcript - live as you record and on imported audio - so meetings read like a conversation. Available in Pro."
+      "title": "Speaker Diarization",
+      "text": "Automatic speaker labeling cleanly maps every voice across your transcripts, making long meetings read like structured, multi-party conversations."
     },
     {
-      "title": "Smart Meeting Summaries",
-      "text": "Get concise, well-structured summaries of your meetings. Save time reviewing long transcripts and focus on what matters."
+      "title": "Structured Notes & Workspace Sync",
+      "text": "Turn hours of audio into concise summaries, key decisions, and action items. Export to PDF and Markdown or publish directly to Notion."
     }
   ],
   "values": [

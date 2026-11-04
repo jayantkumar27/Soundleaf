@@ -122,13 +122,6 @@ export function Footer() {
           </a>
         </div>
       </div>
-      <div className="footer-legal">
-        <p>©2026 Zackriya Solutions</p>
-        <p>
-          The open sourced code is under MIT License - This software is provided
-          "as is", without warranty of any kind.
-        </p>
-      </div>
     </footer>
   );
 }

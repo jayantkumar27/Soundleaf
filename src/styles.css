@@ -1592,23 +1592,6 @@ ul {
   color: var(--ink);
   text-decoration: underline;
 }
-.footer-legal {
-  text-align: center;
-  border-top: 1px solid var(--border);
-  padding: 30px 0 0;
-  max-width: 1232px;
-  margin: 50px auto 0;
-  color: var(--muted);
-  font-size: 11px;
-  line-height: 2;
-}
-.footer-legal p:first-child {
-  font-size: 13px;
-  margin-bottom: 8px;
-}
-.footer-legal button {
-  color: #b06965;
-}
 .site-dialog {
   position: fixed;
   inset: 0;
@@ -2250,10 +2233,6 @@ h2 {
   .footer-column button {
     font-size: 13px;
     margin-bottom: 14px;
-  }
-  .footer-legal {
-    font-size: 11px;
-    line-height: 1.7;
   }
   .site-dialog {
     padding: 28px 22px;

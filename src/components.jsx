@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Calendar, Check, Menu, X, Star } from "lucide-react";
 import { config } from "./data/config";
+import HalftoneWordmark from "./HalftoneWordmark";
 
 export function Header() {
   const [menu, setMenu] = useState(false);
@@ -122,6 +123,14 @@ export function Footer() {
           </a>
         </div>
       </div>
+      <div className="footer-legal">
+        <p>©2026 Zackriya Solutions</p>
+        <p>
+          The open sourced code is under MIT License - This software is provided
+          "as is", without warranty of any kind.
+        </p>
+      </div>
+      <HalftoneWordmark wordmark="Scribe" />
     </footer>
   );
 }

@@ -1,0 +1,17 @@
+.halftone-wordmark {
+  position: relative;
+  height: clamp(160px, 29vw, 440px);
+  margin: 12px -24px -30px;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--bg);
+  font-family: var(--sans);
+  touch-action: pan-y;
+}
+
+.halftone-wordmark canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}

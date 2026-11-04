@@ -1,10 +1,10 @@
 import { type Scene, type Jellyfish, clamp } from "./types";
 
 const palettes = [
-  ["#7EB7C5", "rgba(111, 196, 218, 0.8)"], // Silver teal
-  ["#8CC5AA", "rgba(120, 218, 173, 0.8)"], // Emerald
-  ["#B09CBE", "rgba(191, 157, 220, 0.8)"], // Royal plum
-  ["#CFB384", "rgba(235, 196, 132, 0.8)"], // Champagne gold
+  ["#6366F1", "rgba(165, 180, 252, 0.8)"], // Deep Indigo + Periwinkle Ice
+  ["#3B82F6", "rgba(147, 197, 253, 0.8)"], // Royal Sapphire + Luminous Sky
+  ["#0EA5E9", "rgba(186, 230, 253, 0.8)"], // Electric Cyan + Arctic Ice
+  ["#22D3EE", "rgba(224, 242, 254, 0.8)"], // Glacial Aqua + Diamond White-Blue
 ];
 const sizeFactors = [1.1, 0.72, 0.6, 0.9];
 
@@ -117,7 +117,60 @@ export function resizeScene(scene: Scene, width: number, height: number) {
   scene.height = height;
 }
 
-// Stable glyphs on a hemisphere. Perspective exposes the elliptical underside.
+// One local-space profile for both the membrane and its permanent markings.
+// The apex/base envelope and the attachment skirt stay at their original heights.
+const bellProfile = [
+  [
+    [0, -43],
+    [18, -43],
+    [39, -35],
+    [44, -23],
+  ],
+  [
+    [44, -23],
+    [49, -11],
+    [51, -3],
+    [53, 4],
+  ],
+  [
+    [53, 4],
+    [54.333, 8.667],
+    [58, 9.5],
+    [58, 12],
+  ],
+  [
+    [58, 12],
+    [58, 14.5],
+    [56, 16],
+    [55, 16],
+  ],
+];
+export function bellSurfacePoint(polar: number, angle: number) {
+  const t = clamp(polar / (Math.PI / 2), 0, 1);
+  const section = Math.min(3, Math.floor(t * 4));
+  const u = t * 4 - section,
+    v = 1 - u;
+  const [a, b, c, d] = bellProfile[section];
+  const radius =
+    (a[0] * v ** 3 +
+      3 * b[0] * v * v * u +
+      3 * c[0] * v * u * u +
+      d[0] * u ** 3) *
+    (1 + 0.011 * Math.cos(angle) + 0.005 * Math.sin(angle * 2)) *
+    (1 - 0.016 * t ** 10 * (1 - Math.cos(angle * 7)));
+  return {
+    x: Math.cos(angle) * radius,
+    y:
+      a[1] * v ** 3 +
+      3 * b[1] * v * v * u +
+      3 * c[1] * v * u * u +
+      d[1] * u ** 3 -
+      1.3 * Math.sin(angle * 3) * Math.sin(Math.PI * t) ** 2 * t,
+    z: Math.sin(angle) * radius,
+  };
+}
+
+// Stable identities, now on the same gently shouldered surface as the tissue.
 export const bellGlyphs = (() => {
   const points: {
     x: number;
@@ -136,16 +189,18 @@ export const bellGlyphs = (() => {
       row === 0 ? 1 : Math.max(10, Math.round((Math.PI * 2 * half) / 7));
     for (let column = 0; column < columns; column++) {
       const angle = (column / columns) * Math.PI * 2;
-      const x = Math.cos(angle) * half;
-      const z = Math.sin(angle) * half;
+      const surface = bellSurfacePoint(
+        Math.acos((BELL_BASE_Y - y) / BELL_RADIUS),
+        angle,
+      );
       // Each surface point keeps its shape while the creature moves.
       const texture = (column * 7 + row * 3) % 5;
       const shapes = ["dot", "tile", "square", "dot", "tile"];
       const char = shapes[texture];
       points.push({
-        x,
-        y,
-        z,
+        x: surface.x,
+        y: surface.y,
+        z: surface.z,
         char,
         alpha: row === lastRow ? 0.94 : 0.84,
       });

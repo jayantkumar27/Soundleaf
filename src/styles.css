@@ -1101,7 +1101,7 @@ ul {
   font-weight: 600;
 }
 .features-section {
-  padding: 80px 24px;
+  padding: 80px 24px 40px;
 }
 @media (max-width: 1120px) {
   .privacy-grid {
@@ -1199,7 +1199,7 @@ ul {
   color: var(--text-secondary);
 }
 .integrations-section {
-  padding: 40px 24px 32px;
+  padding: 20px 24px 32px;
   overflow: hidden;
   background:
     radial-gradient(ellipse at 80% 50%, #26324518, transparent 45%),
@@ -1285,7 +1285,7 @@ ul {
 }
 @media (max-width: 767px) {
   .integrations-section {
-    padding: 36px 16px 24px;
+    padding: 18px 16px 24px;
   }
   .integrations-layout {
     grid-template-columns: minmax(0, 1fr);
@@ -2227,7 +2227,7 @@ h2 {
     font-size: 14px;
   }
   .features-section {
-    padding: 55px 16px;
+    padding: 55px 16px 28px;
   }
   .section-title {
     margin-bottom: 32px;

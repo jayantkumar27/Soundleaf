@@ -28,31 +28,31 @@
 @property --download-color-1 {
   syntax: "<color>";
   inherits: false;
-  initial-value: #000;
+  initial-value: #203858;
 }
 
 @property --download-color-2 {
   syntax: "<color>";
   inherits: false;
-  initial-value: #0b1640;
+  initial-value: #2b4974;
 }
 
 @property --download-color-3 {
   syntax: "<color>";
   inherits: false;
-  initial-value: #263c7c;
+  initial-value: #355a91;
 }
 
 @property --download-color-4 {
   syntax: "<color>";
   inherits: false;
-  initial-value: #465fa0;
+  initial-value: #3e659b;
 }
 
 @property --download-color-5 {
   syntax: "<color>";
   inherits: false;
-  initial-value: #6956a0;
+  initial-value: #456da3;
 }
 
 @property --download-border-angle {
@@ -64,13 +64,13 @@
 @property --download-border-color-1 {
   syntax: "<color>";
   inherits: true;
-  initial-value: hsla(225, 75%, 60%, .2);
+  initial-value: hsla(218, 53%, 65%, .3);
 }
 
 @property --download-border-color-2 {
   syntax: "<color>";
   inherits: true;
-  initial-value: hsla(225, 75%, 40%, .75);
+  initial-value: hsla(218, 53%, 65%, .55);
 }
 
 @property --download-stop-1 {
@@ -105,7 +105,7 @@
 
 .button.gradient-button {
   position: relative;
-  color: #fff;
+  color: #eceff4;
   font-weight: 700;
   border: 0;
   border-radius: 11px;
@@ -159,14 +159,14 @@
   --download-pos-y: 91.51%;
   --download-spread-x: 120.24%;
   --download-spread-y: 103.18%;
-  --download-color-1: #83a7f6;
-  --download-color-2: #697cda;
-  --download-color-3: #8c71d6;
-  --download-color-4: #181e47;
-  --download-color-5: #000;
+  --download-color-1: #456da3;
+  --download-color-2: #41699f;
+  --download-color-3: #3a6095;
+  --download-color-4: #2b4974;
+  --download-color-5: #203858;
   --download-border-angle: 190deg;
-  --download-border-color-1: hsla(225, 78%, 90%, .1);
-  --download-border-color-2: hsla(225, 75%, 90%, .6);
+  --download-border-color-1: hsla(218, 53%, 65%, .35);
+  --download-border-color-2: hsla(218, 53%, 65%, .8);
   --download-stop-1: 0%;
   --download-stop-2: 8.8%;
   --download-stop-3: 21.44%;
@@ -175,13 +175,13 @@
 }
 
 .button.gradient-button-variant {
-  --download-color-1: #080f25;
-  --download-color-2: #203c75;
-  --download-color-3: #647dd2;
-  --download-color-4: #c8d8ff;
+  --download-color-1: #1a304d;
+  --download-color-2: #2b4974;
+  --download-color-3: #355a91;
+  --download-color-4: #456da3;
   --download-border-angle: 200deg;
-  --download-border-color-1: hsla(235, 75%, 90%, .6);
-  --download-border-color-2: hsla(235, 50%, 90%, .15);
+  --download-border-color-1: hsla(218, 53%, 65%, .6);
+  --download-border-color-2: hsla(218, 53%, 65%, .3);
 }
 
 .button.gradient-button-variant:is(:hover, :focus-visible) {
@@ -189,19 +189,19 @@
   --download-pos-y: 95.51%;
   --download-spread-x: 110.24%;
   --download-spread-y: 110.2%;
-  --download-color-1: #080f25;
-  --download-color-2: #c8d8ff;
-  --download-color-3: #647dd2;
-  --download-color-4: #203c75;
-  --download-color-5: #000;
+  --download-color-1: #1a304d;
+  --download-color-2: #456da3;
+  --download-color-3: #355a91;
+  --download-color-4: #2b4974;
+  --download-color-5: #203858;
   --download-stop-1: 0%;
   --download-stop-2: 10%;
   --download-stop-3: 35.44%;
   --download-stop-4: 71.34%;
   --download-stop-5: 90.76%;
   --download-border-angle: 210deg;
-  --download-border-color-1: hsla(235, 75%, 90%, .2);
-  --download-border-color-2: hsla(235, 50%, 90%, .75);
+  --download-border-color-1: hsla(218, 53%, 65%, .4);
+  --download-border-color-2: hsla(218, 53%, 65%, .75);
 }
 
 .button.gradient-button:focus-visible {

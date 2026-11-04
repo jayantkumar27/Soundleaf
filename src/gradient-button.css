@@ -1,4 +1,4 @@
-/* Gradient and transition values from Serafim Cloud's Gradient Button:
+/* Blue theme adaptation of the gradient and transition values from Serafim Cloud's Gradient Button:
    https://21st.dev/@serafimcloud/components/gradient-button
    Registered properties allow the radial gradient to interpolate on hover. */
 @property --download-pos-x {
@@ -34,25 +34,25 @@
 @property --download-color-2 {
   syntax: "<color>";
   inherits: false;
-  initial-value: #08012c;
+  initial-value: #0b1640;
 }
 
 @property --download-color-3 {
   syntax: "<color>";
   inherits: false;
-  initial-value: #4e1e40;
+  initial-value: #263c7c;
 }
 
 @property --download-color-4 {
   syntax: "<color>";
   inherits: false;
-  initial-value: #70464e;
+  initial-value: #465fa0;
 }
 
 @property --download-color-5 {
   syntax: "<color>";
   inherits: false;
-  initial-value: #88394c;
+  initial-value: #6956a0;
 }
 
 @property --download-border-angle {
@@ -64,13 +64,13 @@
 @property --download-border-color-1 {
   syntax: "<color>";
   inherits: true;
-  initial-value: hsla(340, 75%, 60%, .2);
+  initial-value: hsla(225, 75%, 60%, .2);
 }
 
 @property --download-border-color-2 {
   syntax: "<color>";
   inherits: true;
-  initial-value: hsla(340, 75%, 40%, .75);
+  initial-value: hsla(225, 75%, 40%, .75);
 }
 
 @property --download-stop-1 {
@@ -159,14 +159,14 @@
   --download-pos-y: 91.51%;
   --download-spread-x: 120.24%;
   --download-spread-y: 103.18%;
-  --download-color-1: #c96287;
-  --download-color-2: #c66c64;
-  --download-color-3: #cc7d23;
-  --download-color-4: #37140a;
+  --download-color-1: #83a7f6;
+  --download-color-2: #697cda;
+  --download-color-3: #8c71d6;
+  --download-color-4: #181e47;
   --download-color-5: #000;
   --download-border-angle: 190deg;
-  --download-border-color-1: hsla(340, 78%, 90%, .1);
-  --download-border-color-2: hsla(340, 75%, 90%, .6);
+  --download-border-color-1: hsla(225, 78%, 90%, .1);
+  --download-border-color-2: hsla(225, 75%, 90%, .6);
   --download-stop-1: 0%;
   --download-stop-2: 8.8%;
   --download-stop-3: 21.44%;
@@ -175,13 +175,13 @@
 }
 
 .button.gradient-button-variant {
-  --download-color-1: #000022;
-  --download-color-2: #1f3f6d;
-  --download-color-3: #469396;
-  --download-color-4: #f1ffa5;
+  --download-color-1: #080f25;
+  --download-color-2: #203c75;
+  --download-color-3: #647dd2;
+  --download-color-4: #c8d8ff;
   --download-border-angle: 200deg;
-  --download-border-color-1: hsla(320, 75%, 90%, .6);
-  --download-border-color-2: hsla(320, 50%, 90%, .15);
+  --download-border-color-1: hsla(235, 75%, 90%, .6);
+  --download-border-color-2: hsla(235, 50%, 90%, .15);
 }
 
 .button.gradient-button-variant:is(:hover, :focus-visible) {
@@ -189,10 +189,10 @@
   --download-pos-y: 95.51%;
   --download-spread-x: 110.24%;
   --download-spread-y: 110.2%;
-  --download-color-1: #000020;
-  --download-color-2: #f1ffa5;
-  --download-color-3: #469396;
-  --download-color-4: #1f3f6d;
+  --download-color-1: #080f25;
+  --download-color-2: #c8d8ff;
+  --download-color-3: #647dd2;
+  --download-color-4: #203c75;
   --download-color-5: #000;
   --download-stop-1: 0%;
   --download-stop-2: 10%;
@@ -200,8 +200,8 @@
   --download-stop-4: 71.34%;
   --download-stop-5: 90.76%;
   --download-border-angle: 210deg;
-  --download-border-color-1: hsla(320, 75%, 90%, .2);
-  --download-border-color-2: hsla(320, 50%, 90%, .75);
+  --download-border-color-1: hsla(235, 75%, 90%, .2);
+  --download-border-color-2: hsla(235, 50%, 90%, .75);
 }
 
 .button.gradient-button:focus-visible {

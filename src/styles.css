@@ -5,16 +5,16 @@
 }
 :root {
   color-scheme: dark;
-  --bg: #0b1011;
-  --surface: #121a1b;
-  --panel: #172120;
-  --ink: #f1eee6;
-  --text-secondary: #bdc7c2;
-  --muted: #99a69f;
-  --green: #8ac9aa;
-  --orange: #d5bd94;
-  --gold: #d5bd94;
-  --border: #2b3935;
+  --bg: #080d1b;
+  --surface: #0d1529;
+  --panel: #131e36;
+  --ink: #f2f5fc;
+  --text-secondary: #b7c4dd;
+  --muted: #8798b8;
+  --green: #8eacff;
+  --orange: #b7c9ff;
+  --gold: #b7c9ff;
+  --border: #283855;
   --serif: "__Instrument_Serif_ae301a", Georgia, serif;
   --sans: "__Inter_d8ebd1", Arial, sans-serif;
   --radius: 16px;
@@ -69,7 +69,7 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 3px solid #458653;
+  outline: 3px solid #86aaff;
   outline-offset: 4px;
 }
 img {
@@ -128,17 +128,17 @@ ul {
 }
 .button.green {
   background: var(--green);
-  color: #10251b;
-  border: 1px solid #a6ddc166;
+  color: #0b1634;
+  border: 1px solid #b4c9ff66;
   font-weight: 600;
-  box-shadow: 0 6px 20px #8ac9aa26;
+  box-shadow: 0 6px 20px #8eacff26;
 }
 .button.green:hover {
-  background: #a6ddc1;
-  box-shadow: 0 8px 24px #8ac9aa38;
+  background: #b4c9ff;
+  box-shadow: 0 8px 24px #8eacff38;
 }
 .button.green:active {
-  background: #75b996;
+  background: #6b90e6;
   transform: translateY(0);
 }
 .button.green:focus-visible {
@@ -175,7 +175,7 @@ ul {
   left: 0;
   right: 0;
   padding: 16px 24px;
-  color: #f1eee6;
+  color: #f2f5fc;
   pointer-events: none;
 }
 .nav-capsule {
@@ -187,8 +187,8 @@ ul {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  background: #121c1b;
-  border: 1px solid #d5e9df33;
+  background: #101a32;
+  border: 1px solid #b5cbff33;
   border-radius: 99px;
   box-shadow:
     0 12px 36px #00000040,
@@ -200,13 +200,13 @@ ul {
 ) {
   .nav-capsule,
   .site-header .mobile-menu {
-    background: linear-gradient(135deg, #253b32b8, #0b1413d9);
+    background: linear-gradient(135deg, #223963b8, #0a1227d9);
     -webkit-backdrop-filter: blur(24px) saturate(150%);
     backdrop-filter: blur(24px) saturate(150%);
   }
 }
 .site-header :is(a, button):focus-visible {
-  outline: 3px solid #d5bd94;
+  outline: 3px solid #b7c9ff;
   outline-offset: 4px;
 }
 .brand-group {
@@ -238,7 +238,7 @@ ul {
   gap: 26px;
   align-items: center;
   font-size: 17px;
-  color: #e3ece6;
+  color: #e4ebfc;
 }
 .nav-actions {
   display: flex;
@@ -249,7 +249,7 @@ ul {
 .desktop-links button:hover,
 .mobile-toggle:hover,
 .mobile-menu > a:not(.button):hover {
-  color: #b8ebd0;
+  color: #b7ceff;
 }
 .desktop-links button {
   display: flex;
@@ -265,12 +265,12 @@ ul {
   line-height: 22px;
 }
 .site-header .button.dark {
-  background: #d5bd94;
-  color: #142019;
-  box-shadow: 0 3px 16px #d5bd941a;
+  background: #b7c9ff;
+  color: #0d1732;
+  box-shadow: 0 3px 16px #b7c9ff1a;
 }
 .site-header .button.dark:hover {
-  background: #ead3ac;
+  background: #d0ddff;
 }
 .dropdown-wrap {
   position: relative;
@@ -303,8 +303,8 @@ ul {
 }
 .hero-atmosphere {
   background:
-    radial-gradient(ellipse 900px 460px at 15% 0, #fff0ed88, transparent 70%),
-    radial-gradient(ellipse 400px 400px at 100% 10%, #fcece975, transparent 80%);
+    radial-gradient(ellipse 900px 460px at 15% 0, #26478630, transparent 70%),
+    radial-gradient(ellipse 400px 400px at 100% 10%, #4c4b9b20, transparent 80%);
 }
 .hero {
   min-height: clamp(760px, 95svh, 980px);
@@ -1133,8 +1133,8 @@ ul {
   padding: 40px 24px 32px;
   overflow: hidden;
   background:
-    radial-gradient(ellipse at 80% 50%, #245d4940, transparent 45%),
-    linear-gradient(180deg, var(--bg), #101a1a 48%, var(--bg));
+    radial-gradient(ellipse at 80% 50%, #284d9640, transparent 45%),
+    linear-gradient(180deg, var(--bg), #0d1730 48%, var(--bg));
 }
 .integrations-layout {
   display: grid;
@@ -1186,9 +1186,9 @@ ul {
   justify-content: center;
   gap: 10px;
   padding: 12px;
-  border: 1px solid #b8d5c848;
+  border: 1px solid #a9c5ff48;
   border-radius: 20px;
-  background: #1b2826f2;
+  background: #14213cf2;
   box-shadow: 0 14px 32px #0007, inset 0 1px 0 #ffffff18;
   text-align: center;
   transition: transform 200ms ease-out;
@@ -1202,7 +1202,7 @@ ul {
   width: 56px;
   height: 56px;
   border-radius: 15px;
-  background: #f8faf9;
+  background: #f4f7ff;
 }
 .integration-logo img {
   width: 46px;
@@ -1273,17 +1273,17 @@ ul {
 .deployment-panel {
   max-width: 848px;
   margin: auto;
-  border: 1px solid #d5bd9433;
+  border: 1px solid #b7c9ff33;
   border-radius: 24px;
   text-align: center;
   padding: 56px 40px;
   color: var(--ink);
   background:
-    linear-gradient(#0b101166, #0b101166),
-    radial-gradient(ellipse at 0% 0%, #308d8540, transparent 55%),
-    radial-gradient(ellipse at 100% 100%, #345c8133, transparent 55%),
-    linear-gradient(#b3d8d408 1px, transparent 1px),
-    linear-gradient(90deg, #b3d8d408 1px, transparent 1px),
+    linear-gradient(#080d1b66, #080d1b66),
+    radial-gradient(ellipse at 0% 0%, #386bce40, transparent 55%),
+    radial-gradient(ellipse at 100% 100%, #6553ad33, transparent 55%),
+    linear-gradient(#b5caff08 1px, transparent 1px),
+    linear-gradient(90deg, #b5caff08 1px, transparent 1px),
     url("/assets/download-mountains.png") center 55% / cover no-repeat;
   box-shadow:
     0 20px 60px #00000033,
@@ -1294,9 +1294,9 @@ ul {
   box-sizing: content-box;
   margin: 0 auto 24px;
   padding: 16px;
-  border: 1px solid #d5bd9433;
+  border: 1px solid #b7c9ff33;
   border-radius: 18px;
-  background: #d5bd940d;
+  background: #b7c9ff0d;
   color: var(--gold);
 }
 .deployment-panel h2 {
@@ -1309,7 +1309,7 @@ ul {
   font-size: 18px;
   line-height: 1.6;
   margin: 16px auto 32px;
-  color: #c5d0c8;
+  color: #c0cce3;
 }
 .deployment-panel .button {
   min-width: 0;
@@ -1339,7 +1339,7 @@ ul {
 }
 .reassurance svg {
   width: 13px;
-  color: #55996a;
+  color: #85aaff;
 }
 .download-options {
   display: grid;
@@ -1351,7 +1351,7 @@ ul {
 .download-version {
   display: block;
   margin-top: 20px;
-  color: #a8b7af;
+  color: #98abc9;
   font-size: 13px;
 }
 .articles-section {
@@ -1871,8 +1871,8 @@ h2 {
     position: fixed;
     inset: 0;
     z-index: 105;
-    background: #121c1b;
-    color: #f1eee6;
+    background: #101a32;
+    color: #f2f5fc;
     pointer-events: auto;
     flex-direction: column;
     padding: 24px;

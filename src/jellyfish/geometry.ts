@@ -1,8 +1,8 @@
 import { type Scene, type Jellyfish, clamp } from "./types";
 
 const palettes = [
-  ["#7EB7C5", "rgba(111, 196, 218, 0.8)"], // Silver teal
-  ["#8CC5AA", "rgba(120, 218, 173, 0.8)"], // Emerald
+  ["#9BBFFF", "rgba(133, 174, 255, 0.8)"], // Ice blue
+  ["#809DE8", "rgba(120, 155, 240, 0.8)"], // Sapphire
   ["#B09CBE", "rgba(191, 157, 220, 0.8)"], // Royal plum
   ["#CFB384", "rgba(235, 196, 132, 0.8)"], // Champagne gold
 ];

@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import {
   Check,
   Download,
@@ -128,6 +129,163 @@ const privacyCards = [
     ],
   },
 ];
+
+function PrivacyCard({ title, icon: Icon, items }) {
+  const [isHovered, setIsHovered] = useState(false);
+  const pointer = useRef({ x: 0, y: 0 });
+
+  const updatePointer = (event) => {
+    const bounds = event.currentTarget.getBoundingClientRect();
+    pointer.current = {
+      x: event.clientX - bounds.left,
+      y: event.clientY - bounds.top,
+    };
+    event.currentTarget.style.setProperty(
+      "--spotlight-x",
+      `${pointer.current.x}px`,
+    );
+    event.currentTarget.style.setProperty(
+      "--spotlight-y",
+      `${pointer.current.y}px`,
+    );
+  };
+
+  return (
+    <article
+      className="privacy-card"
+      onMouseEnter={(event) => {
+        updatePointer(event);
+        setIsHovered(true);
+      }}
+      onMouseMove={updatePointer}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <CanvasRevealEffect isHovered={isHovered} pointer={pointer} />
+      <h3>
+        <span>
+          <Icon size={18} />
+        </span>
+        {title}
+      </h3>
+      <ul>
+        {items.map(({ lead, description }) => (
+          <li key={lead}>
+            <Check size={13} />
+            <span>
+              <strong>{lead}</strong> <span>{description}</span>
+            </span>
+          </li>
+        ))}
+      </ul>
+    </article>
+  );
+}
+
+function CanvasRevealEffect({ isHovered, pointer }) {
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    if (!isHovered) return undefined;
+
+    const canvas = canvasRef.current;
+    if (!canvas) return undefined;
+
+    let context;
+    try {
+      context = canvas.getContext("2d");
+    } catch {
+      return undefined;
+    }
+    if (!context) return undefined;
+
+    const colors = ["rgb(59, 130, 246)", "rgb(139, 92, 246)"];
+    const pitch = 6;
+    const dotSize = 2.5;
+    let width = 0;
+    let height = 0;
+    let frame = 0;
+    let dots = [];
+    let startedAt = performance.now();
+
+    const resize = () => {
+      const bounds = canvas.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      width = bounds.width;
+      height = bounds.height;
+      canvas.width = Math.round(width * dpr);
+      canvas.height = Math.round(height * dpr);
+      context.setTransform(dpr, 0, 0, dpr, 0, 0);
+      dots = [];
+
+      for (let y = pitch / 2; y < height; y += pitch) {
+        for (let x = pitch / 2; x < width; x += pitch) {
+          dots.push({
+            x,
+            y,
+            color: colors[Math.random() < 0.5 ? 0 : 1],
+            phase: Math.random() * Math.PI * 2,
+            initialOpacity: 0.15 + Math.random() * 0.8,
+          });
+        }
+      }
+    };
+
+    const draw = (now) => {
+      const elapsed = now - startedAt;
+      const waveRadius = elapsed * 1.2;
+      context.clearRect(0, 0, width, height);
+
+      for (const dot of dots) {
+        const distance = Math.hypot(
+          dot.x - pointer.current.x,
+          dot.y - pointer.current.y,
+        );
+        const reveal = Math.min(
+          1,
+          Math.max(0, (waveRadius - distance + 36) / 72),
+        );
+        const shimmer = 0.55 + Math.sin(now * 0.002 + dot.phase) * 0.4;
+        const opacity = (dot.initialOpacity * 0.35 + shimmer * 0.65) * reveal;
+        if (opacity <= 0) continue;
+
+        context.globalAlpha = opacity;
+        context.fillStyle = dot.color;
+        context.fillRect(
+          dot.x - dotSize / 2,
+          dot.y - dotSize / 2,
+          dotSize,
+          dotSize,
+        );
+      }
+
+      context.globalAlpha = 1;
+      frame = requestAnimationFrame(draw);
+    };
+
+    resize();
+    frame = requestAnimationFrame(draw);
+    window.addEventListener("resize", resize);
+
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("resize", resize);
+      context.clearRect(0, 0, width, height);
+      canvas.width = 0;
+      canvas.height = 0;
+    };
+  }, [isHovered, pointer]);
+
+  return (
+    <div
+      className="privacy-card-spotlight"
+      aria-hidden="true"
+      style={{ opacity: isHovered ? 1 : 0 }}
+    >
+      <canvas ref={canvasRef} width="0" height="0" />
+    </div>
+  );
+}
+
 function Privacy() {
   return (
     <section className="privacy-section" id="privacy-highlights">
@@ -149,25 +307,8 @@ function Privacy() {
         providers, and publish structured notes to your workspace.
       </p>
       <div className="privacy-grid">
-        {privacyCards.map(({ title, icon: Icon, items }) => (
-          <article className="privacy-card" key={title}>
-            <h3>
-              <span>
-                <Icon size={18} />
-              </span>
-              {title}
-            </h3>
-            <ul>
-              {items.map(({ lead, description }) => (
-                <li key={lead}>
-                  <Check size={13} />
-                  <span>
-                    <strong>{lead}</strong> <span>{description}</span>
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </article>
+        {privacyCards.map((card) => (
+          <PrivacyCard key={card.title} {...card} />
         ))}
       </div>
     </section>

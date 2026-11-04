@@ -14,14 +14,20 @@
     "check:jellyfish": "npm run lint:jellyfish && npm run typecheck:jellyfish && npm run test:jellyfish"
   },
   "dependencies": {
+    "@react-three/fiber": "^9.8.2",
+    "clsx": "^2.1.1",
     "lucide-react": "^0.468.0",
+    "motion": "^14.9.1",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "tailwind-merge": "^3.7.0",
+    "three": "^0.187.0"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.17",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.187.0",
     "@vitejs/plugin-react": "^5.1.0",
     "cheerio": "^1.1.2",
     "eslint": "^10.14.0",

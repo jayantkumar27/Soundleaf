@@ -1,10 +1,10 @@
 import { type Scene, type Jellyfish, clamp } from "./types";
 
 const palettes = [
-  ["#9BBFFF", "rgba(133, 174, 255, 0.8)"], // Ice blue
-  ["#809DE8", "rgba(120, 155, 240, 0.8)"], // Sapphire
-  ["#B09CBE", "rgba(191, 157, 220, 0.8)"], // Royal plum
-  ["#CFB384", "rgba(235, 196, 132, 0.8)"], // Champagne gold
+  ["#6366F1", "rgba(165, 180, 252, 0.8)"], // Deep Indigo + Periwinkle Ice
+  ["#3B82F6", "rgba(147, 197, 253, 0.8)"], // Royal Sapphire + Luminous Sky
+  ["#0EA5E9", "rgba(186, 230, 253, 0.8)"], // Electric Cyan + Arctic Ice
+  ["#22D3EE", "rgba(224, 242, 254, 0.8)"], // Glacial Aqua + Diamond White-Blue
 ];
 const sizeFactors = [1.1, 0.72, 0.6, 0.9];
 

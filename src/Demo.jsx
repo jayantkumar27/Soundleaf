@@ -12,15 +12,12 @@ import {
   RefreshCw,
   Check,
   Play,
-  Video,
-  Phone,
   Volume2,
   Monitor,
-  ChevronDown,
 } from "lucide-react";
 import { stages, participants, transcript, summary } from "./data/config";
 const icons = [Mic, FileText, Users, Sparkles];
-export default function Demo({ openDialog }) {
+export default function Demo() {
   const [stage, setStage] = useState(0),
     [tick, setTick] = useState(0),
     [manual, setManual] = useState(false),
@@ -332,60 +329,6 @@ export default function Demo({ openDialog }) {
               </div>
             </div>
           </div>
-          {stage < 2 && (
-            <div className="meeting-side">
-              <div className="video-call">
-                <div className="participant-grid">
-                  {participants.map((name, i) => (
-                    <div className="participant" key={name}>
-                      <img
-                        src={`/assets/${name.split(" ")[0].toLowerCase()}.webp`}
-                        alt={name}
-                      />
-                      <span>
-                        <Mic size={9} />
-                        {name}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-                <div className="call-controls" aria-hidden="true">
-                  <span>
-                    <Mic />
-                  </span>
-                  <span>
-                    <Video />
-                  </span>
-                  <span className="hangup">
-                    <Phone />
-                  </span>
-                </div>
-              </div>
-              <div className="platform-panel">
-                <p>Works with</p>
-                <div className="platform-icons">
-                  {[
-                    ["zoom.png", "Zoom"],
-                    ["teams.png", "Microsoft Teams"],
-                    ["meet.png", "Google Meet"],
-                    ["slack.webp", "Slack"],
-                    ["webex.png", "Webex"],
-                    ["gotomeeting.png", "GoToMeeting"],
-                  ].map(([src, name]) => (
-                    <img
-                      key={src}
-                      src={`/assets/${src}`}
-                      alt={name}
-                      title={name}
-                    />
-                  ))}
-                </div>
-                <button onClick={() => openDialog("platforms")}>
-                  …and more <ChevronDown size={12} />
-                </button>
-              </div>
-            </div>
-          )}
         </div>
         <p className="demo-caption">
           Interactive Demo • Click tabs to explore or let it auto-play

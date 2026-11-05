@@ -436,12 +436,12 @@ export function Values() {
     </section>
   );
 }
-export default function Home({ openDialog }) {
+export default function Home() {
   return (
     <>
       <div className="hero-atmosphere">
         <Hero />
-        <Demo openDialog={openDialog} />
+        <Demo />
       </div>
       <Privacy />
       <Features />

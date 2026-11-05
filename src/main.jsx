@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
-import { Header, Footer, Dialog } from "./components";
+import { Footer, Dialog } from "./components";
+import Navbar from "./Navbar";
 import Home from "./Home";
 import "./styles.css";
 
@@ -14,7 +15,7 @@ if (
     const [dialog, setDialog] = useState(null);
     return (
       <>
-        <Header />
+        <Navbar />
         <main id="main">
           <Home openDialog={setDialog} />
         </main>

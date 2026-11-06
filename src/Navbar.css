@@ -159,7 +159,8 @@
     height: 24px;
   }
 
-  .meetscribe-links {
+  .meetscribe-header .meetscribe-links,
+  .meetscribe-header .meetscribe-download {
     display: none;
   }
 
@@ -177,6 +178,29 @@
   }
 
   .meetscribe-header .meetscribe-mobile-menu {
-    padding: 88px 24px 24px;
+    padding: 12px 16px 24px;
+  }
+
+  .meetscribe-mobile-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 58px;
+    flex-shrink: 0;
+  }
+
+  .meetscribe-mobile-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 1px solid #ffffff30;
+    border-radius: 999px;
+    background: #ffffff10;
+    color: #f1eee6;
+    cursor: pointer;
   }
 }

@@ -122,17 +122,36 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             transition={motionTransition}
           >
+            <div className="meetscribe-mobile-title">
+              <a
+                href="/"
+                className="wordmark meetscribe-brand"
+                onClick={closeMenu}
+              >
+                <img
+                  src="/assets/meetscribe.png"
+                  alt=""
+                  aria-hidden="true"
+                  width="26"
+                  height="26"
+                />
+                <span>MeetScribe</span>
+              </a>
+              <button
+                className="meetscribe-mobile-close"
+                aria-label="Close menu"
+                onClick={closeMenu}
+              >
+                <X size={22} />
+              </button>
+            </div>
             <a href="#workflow" onClick={closeMenu}>
               How it works
             </a>
             <a href="#features" onClick={closeMenu}>
               Features
             </a>
-            <a
-              className="button dark"
-              href="#download"
-              onClick={closeMenu}
-            >
+            <a className="button dark" href="#download" onClick={closeMenu}>
               Download
             </a>
           </motion.div>
